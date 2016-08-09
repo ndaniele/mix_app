@@ -16,6 +16,7 @@ class QuestionsController < ApplicationController
   end
 
   def show
+    @question = Question.find_by(id: params[:id])
   end
 
   private 
