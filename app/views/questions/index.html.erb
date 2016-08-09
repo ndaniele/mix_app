@@ -2,6 +2,6 @@
 
 <% @questions.each do |q| %>
   <ul>
-    <li>?<%= q.query %></li>
+    <li>?<%= link_to "#{q.query}", question_path(q) %></li>
   </ul>
 <% end %>
