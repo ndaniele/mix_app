@@ -1,0 +1,23 @@
+notes:
+
+MIX
+
+the site ‘/‘ home page is an INDEX of questions that can be selected by a user.
+
+clicking on a question links to a show page which has a YES or NO button, the user must click. 
+
+clicking the YES/NO button shows Stats on the same show page. (number of views, number of yes / no, origin of question, etc. ) 
+
+
+there should also be a link to create a response question. (and possibly leave a comment) 
+
+
+TO DO 
+
+#1. set up the Scaffolding for a rails site. 
+
+#2. stub out index (‘/questions‘) action and show (‘/questions/:id‘)action. 
+
+3. create edit (POST/Patch) (‘/questions/:id‘) and destroy actions for questions
+
+4. understand how Yes/No relates to each question. …do i need a separate Answer Model?

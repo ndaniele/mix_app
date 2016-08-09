@@ -19,6 +19,12 @@ class QuestionsController < ApplicationController
     @question = Question.find_by(id: params[:id])
   end
 
+  def destroy
+    #raise params.inspect
+    Question.find_by(id: params[:id]).destroy
+    redirect_to questions_path
+  end
+
   private 
 
   def question_params
