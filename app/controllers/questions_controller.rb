@@ -10,8 +10,9 @@ class QuestionsController < ApplicationController
 
   def create
     #raise params.inspect
-   # @question = Question.new(params[:query])
-   # @question.save
+    @question = Question.new(question_params)
+    @question.save
+    redirect_to questions_path
   end
 
   def show
@@ -19,8 +20,8 @@ class QuestionsController < ApplicationController
 
   private 
 
-#  def question_params
-#    params.require(:question).permit(:query)
-#  end
+  def question_params
+    params.require(:question).permit(:query)
+  end
 
 end
