@@ -18,6 +18,10 @@ TO DO
 
 #2. stub out index (‘/questions‘) action and show (‘/questions/:id‘)action. 
 
-3. create edit (POST/Patch) (‘/questions/:id‘) and destroy actions for questions
+#3. make destroy action for questions (no need for edit action - once a question has been answered, it can't be edited, only deleted)
 
-4. understand how Yes/No relates to each question. …do i need a separate Answer Model?
+#4. understand how Yes/No relates to each question. …do i need a separate Answer Model? - yes
+
+clicking YES or NO records that answer under the question. (i.e. Is the Sky Blue? => YES/NO, records how many yes and how many no answers so you can call Question.yes.count or question.no.count also need total answers question.answers.count)
+
+5. make nested resource for Answers. build out controller and models accordingly. ...make migration to add answer_id to questions table   
