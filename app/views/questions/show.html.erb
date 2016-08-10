@@ -8,11 +8,13 @@
 
 <h2>YES</h2><br></br>
 
-<%= form_for :answer, url: answers_path do |f|%>
-  <%= f.label :input %>
-  <%= f.text_field :input %>
-  <%= f.submit "submit" %>
-<% end %>
+<%= form_for @question do |f| %>
+  <%= f.fields_for  @question.answers.build do |answer| %>
+    <%= answer.label :input %>
+    <%= answer.text_field :input %>
+  <% end %> 
+<% end %> 
+  <br />
 
 <%#= link_to "yes", answers_path %>
 <%#= link_to "no" %>
@@ -22,3 +24,4 @@
 <%= link_to "back to questions", questions_path %>
 
 <p><%= link_to 'Destroy', @question, method: :delete %></p>
+

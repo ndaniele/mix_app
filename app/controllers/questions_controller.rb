@@ -1,3 +1,4 @@
+require 'pry'
 class QuestionsController < ApplicationController
 
   def index
@@ -19,9 +20,15 @@ class QuestionsController < ApplicationController
 #    raise params.inspect
 #  end
 
- # def update
- #   raise params.inspect
- # end
+  def update
+    @question = Question.find(params[:id])
+
+    @question.update(question_params)
+
+binding.pry
+
+    redirect_to @question
+  end
 
   def show
     @question = Question.find_by(id: params[:id])
@@ -36,7 +43,7 @@ class QuestionsController < ApplicationController
   private 
 
   def question_params
-    params.require(:question).permit(:query)
+    params.require(:question).permit(:query, :answer)
   end
 
 end

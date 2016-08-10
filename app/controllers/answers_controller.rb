@@ -13,7 +13,8 @@ class AnswersController < ApplicationController
   def create
 #binding.pry
     #raise params.inspect
-    @answer = @question.answers.build(:input => params[:input])
+    #@question =  Question.find_by(id: params[:id])
+    #@answer = @question.answers.build(:input => params[:input])
    # @answer = Answer.new(answer_params)
     #@answer.id = Question.find_by(id: params[:id])
    # @answer.save
