@@ -8,6 +8,15 @@
 
 <h2>YES</h2><br></br>
 
+<%= form_for :answer, url: answers_path do |f|%>
+  <%= f.label :input %>
+  <%= f.text_field :input %>
+  <%= f.submit "submit" %>
+<% end %>
+
+<%#= link_to "yes", answers_path %>
+<%#= link_to "no" %>
+
 <h2>NO</h2><br></br>
 
 <%= link_to "back to questions", questions_path %>

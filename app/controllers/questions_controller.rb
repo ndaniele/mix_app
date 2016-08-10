@@ -15,6 +15,14 @@ class QuestionsController < ApplicationController
     redirect_to questions_path
   end
 
+#  def edit
+#    raise params.inspect
+#  end
+
+ # def update
+ #   raise params.inspect
+ # end
+
   def show
     @question = Question.find_by(id: params[:id])
   end
