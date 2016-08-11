@@ -10,7 +10,7 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    raise params.inspect
+    #raise params.inspect
     @question = Question.new(question_params)
     @question.save
     redirect_to questions_path
@@ -21,6 +21,7 @@ class QuestionsController < ApplicationController
 #  end
 
   def update
+    #raise params.inspect
     @question = Question.find(params[:id])
 
     @question.update(question_params)
@@ -32,6 +33,7 @@ class QuestionsController < ApplicationController
 
   def show
     @question = Question.find_by(id: params[:id])
+    @question.answers.build
   end
 
   def destroy
@@ -43,7 +45,7 @@ class QuestionsController < ApplicationController
   private 
 
   def question_params
-    params.require(:question).permit(:query, :answer_attributes => [:input])
+    params.require(:question).permit(:query, :answers_attributes => [:input])
   end
 
 end
