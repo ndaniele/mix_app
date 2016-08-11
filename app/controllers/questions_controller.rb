@@ -10,7 +10,7 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    #raise params.inspect
+    raise params.inspect
     @question = Question.new(question_params)
     @question.save
     redirect_to questions_path
@@ -25,7 +25,7 @@ class QuestionsController < ApplicationController
 
     @question.update(question_params)
 
-binding.pry
+#binding.pry
 
     redirect_to @question
   end
@@ -43,7 +43,7 @@ binding.pry
   private 
 
   def question_params
-    params.require(:question).permit(:query, :answer)
+    params.require(:question).permit(:query, :answer_attributes => [:input])
   end
 
 end
