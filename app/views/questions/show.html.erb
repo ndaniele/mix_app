@@ -6,20 +6,23 @@
 
 <h4>ANSWER THE QUESTION TO PARTICPATE</h4>
 
-<h2>YES</h2><br></br>
+
 
 <%= form_for @question do |f| %>
   <%= f.fields_for :answers do |answer| %>
-    <%= answer.label :input %>
-    <%= answer.text_field :input %>
+    <%#= answer.label :input %>
+    <%#= answer.text_field :input %>
+
+    <h2><%= answer.radio_button(:input, "yes") %>
+    <%= answer.label(:yes, "YES") %></h2>
+    <h2><%= answer.radio_button(:input, "NO") %>
+    <%= answer.label(:no, "NO") %></h2><br></br>
+    <%= answer.submit "Create" %>
   <% end %> 
 <% end %> 
   <br />
 
-<%#= link_to "yes", answers_path %>
-<%#= link_to "no" %>
 
-<h2>NO</h2><br></br>
 
 
 <h2>[FLASH FEATURE]ANSWER STATS</h2>
@@ -29,6 +32,9 @@
 <h3>Total NO's: ??</h3>
 
 <h3>Total YES's: ??</h3>
+ 
+
+
 
 <%= link_to "back to questions", questions_path %>
 

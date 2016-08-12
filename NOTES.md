@@ -22,13 +22,17 @@ TO DO
 
 #4. understand how Yes/No relates to each question. …do i need a separate Answer Model? - yes
 
-clicking YES or NO records that answer under the question. (i.e. Is the Sky Blue? => YES/NO, records how many yes and how many no answers so you can call Question.yes.count or question.no.count also need total answers question.answers.count)
+#(clicking YES or NO records that answer under the question. (i.e. Is the Sky Blue? => YES/NO, records how many yes and how many no answers so you can call Question.yes.count or question.no.count also need total answers question.answers.count))
 
 #5. make nested resource for Answers. build out controller and models accordingly. ...make migration to add answer_id to questions table  
 
 
-6. make answers_attributes= method (look at https://learn.co/tracks/full-stack-web-development/rails/associations-and-rails/basic-nested-forms?batch_id=306&track_id=12615) 
+#6. make answers_attributes= method (look at https://learn.co/tracks/full-stack-web-development/rails/associations-and-rails/basic-nested-forms?batch_id=306&track_id=12615) 
 
-also, get answers attributes to successfully update questions. 
+#also, get answers attributes to successfully update questions. 
 
-7. show answers attributes (STATS) on question show page. 
+#7. show answers attributes (STATS) on question show page. 
+
+8. make one answer per user per question (CREATE USERS??)
+
+9. Stop multiple buttons (forms) appearing on reloaded show page
