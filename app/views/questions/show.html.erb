@@ -25,9 +25,10 @@
 <h2>[FLASH FEATURE]ANSWER STATS</h2>
 
 
-<h3>Total number of answers to this question: 100</h3>
-<h3>Total NO's: 50</h3>
-<h3>Total YES's: 50 </h3>
+<h3>Total number of answers to this question: <%= @question.answers.count %></h3>
+<h3>Total NO's: ??</h3>
+
+<h3>Total YES's: ??</h3>
 
 <%= link_to "back to questions", questions_path %>
 
