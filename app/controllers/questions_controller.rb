@@ -38,7 +38,10 @@ class QuestionsController < ApplicationController
 
   def destroy
     #raise params.inspect
-    Question.find_by(id: params[:id]).destroy
+    @question = Question.find_by(id: params[:id])
+    @answers = Answer.find_by(question_id: @question.id)
+    @question.destroy
+    @answers.destroy
     redirect_to questions_path
   end
 

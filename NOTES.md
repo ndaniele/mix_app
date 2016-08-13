@@ -43,8 +43,11 @@ TO DO
 
 
 
-TO DO TODAY
+TO DO TODAY (Aug. 13, 2016)
 
-- make answers be destroyed when question is destroyed. 
-- make correct helper method for stats
+X make answers be destroyed when question is destroyed. 
+X make correct helper method for stats
+X add a create a new question link to home page
+X make '/' root path
+- nest routes?
 - look into creating a user.
