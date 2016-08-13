@@ -27,8 +27,10 @@ class QuestionsController < ApplicationController
     @question.update(question_params)
 
 #binding.pry
+    
+    redirect_to question_answers_path(@question)
 
-    redirect_to @question
+    #redirect_to @question
   end
 
   def show

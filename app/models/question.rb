@@ -27,6 +27,13 @@ class Question < ApplicationRecord
     end
   end
 
+  def winner 
+    if yes_count > no_count
+      "YES"
+    else
+      "NO"
+    end
+  end
 
 
 end

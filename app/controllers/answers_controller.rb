@@ -2,8 +2,10 @@ require 'pry'
 class AnswersController < ApplicationController
 
   def index
-    raise params.inspect
-    @answers = Answer.all
+    #raise params.inspect
+    @question = Question.find_by(id: params[:question_id])
+    @answers = @question.answers
+    #@answers = Answer.all
   end
 
   def show

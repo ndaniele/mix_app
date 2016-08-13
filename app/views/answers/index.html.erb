@@ -1,5 +1,24 @@
-<h3>ANSWERS INDEX</h3>
+<h3>ANSWERS INDEX (for question/:id)</h3>
 
-<% @answers.each do |answer| %>
-  <%= answer.input %>
-<% end %> 
+<h3><%= @question.query %></h3><br></br>
+
+
+<h2>[FLASH FEATURE]ANSWER STATS</h2>
+
+
+<h3>Total number of answers to this question: <%= @question.answers_count %></h3>
+<h3>Total NO's: <%= @question.no_count %></h3>
+
+<h3>Total YES's: <%= @question.yes_count %></h3>
+
+<h3> WINNER IS: <%= @question.winner %></h3><br></br>
+
+<%= link_to "back to questions", questions_path %>
+
+<p>(ADMIN FEATURE)<%= link_to 'Destroy', @question, method: :delete %></p>
+
+
+
+<%# @answers.each do |answer| %>
+  <%#= answer.input %>
+<%# end %> 

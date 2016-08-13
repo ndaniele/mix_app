@@ -22,19 +22,7 @@
 <% end %> 
   <br />
 
-
-
-
-<h2>[FLASH FEATURE]ANSWER STATS</h2>
-
-
-<h3>Total number of answers to this question: <%= @question.answers_count %></h3>
-<h3>Total NO's: <%= @question.no_count %></h3>
-
-<h3>Total YES's: <%= @question.yes_count %></h3>
  
 
 <%= link_to "back to questions", questions_path %>
-
-<p>(ADMIN FEATURE)<%= link_to 'Destroy', @question, method: :delete %></p>
 

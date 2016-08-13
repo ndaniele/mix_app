@@ -49,5 +49,6 @@ X make answers be destroyed when question is destroyed.
 X make correct helper method for stats
 X add a create a new question link to home page
 X make '/' root path
-- nest routes?
+X nest routes
+X change redirect for answered question to question_answers show page
 - look into creating a user.
