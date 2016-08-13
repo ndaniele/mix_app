@@ -36,3 +36,15 @@ TO DO
 8. make one answer per user per question (CREATE USERS??)
 
 9. Stop multiple buttons (forms) appearing on reloaded show page
+
+
+
+
+
+
+
+TO DO TODAY
+
+- make answers be destroyed when question is destroyed. 
+- make correct helper method for stats
+- look into creating a user.

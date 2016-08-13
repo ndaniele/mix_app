@@ -1,0 +1,120 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww13760\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f0\fs28 \cf0 \CocoaLigature0  question.answers.each do |answer|\
+   a_array = []\
+   y_a = answer.input.match(/(yes|YES)/)\
+   a_array << y_a\
+   puts a_array\
+	a_array.class\
+   end\
+\
+\
+2.2.3 :129 > question.answers.map do |answer|\
+2.2.3 :130 >     answer.input.match(/(yes|YES)/)\
+2.2.3 :131?>   end \
+ => [#<MatchData "YES" 1:"YES">, nil, nil]\
+\
+\
+question.answers.map do |answer|\
+	yes_array = []\
+	if !answer=nil? && answer.input.match(/(yes|YES)/)\
+		yes_array << answer \
+	end \
+	yes_array\
+end\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\fs38 \cf0 2.2.3 :110 > question.answers.map do |answer|\
+2.2.3 :111 >     answer.input\
+2.2.3 :112?>   end\
+ => ["YES", "No", "No"] \
+\
+\
+2.2.3 :129 > question.answers.map do |answer|\
+2.2.3 :130 >     answer.input.match(/(yes|YES)/)\
+2.2.3 :131?>   end \
+ => [#<MatchData "YES" 1:"YES">, nil, nil] \
+\
+\
+ question.answers.map do |answer|\
+     y_arry = []\
+   a = answer.input\
+   y_arry << a\
+   y_arry \
+   end\
+ => [["YES"], ["No"], ["No"]]\
+\
+yes_arry = []\
+no_arry = []\
+y_arry.map do |ans| #[\'93YES\'94]\
+x = ans.split\
+	if x.match(/(yes|YES)/) \
+yes_arry << x\
+\
+	elsif x.match(/(no|No)/)\
+no_arry << x\
+\
+end\
+\
+ question.answers.map do |answer_obj|\
+     answers_arry = []\
+   answer = answer_obj.input\
+\
+  answers_arry << answer\
+\
+yes_arry = []\
+no_arry = []\
+\
+   answers_arry.each do |input|\
+       if input.match(/(yes|YES)/)\
+       		yes_arry << input\
+			else\
+				no_arry << input\
+       end\
+     end\
+	yes_arry\
+	no_arry\
+   end\
+match\
+ => [["YES"], ["No"], ["No"]] \
+\
+\
+\
+question.answers.map do |answer|\
+     yes_arry = []\
+		no_arry\
+   answer = # \'93YES\'94 \
+\
+\
+  answers_arry << answer\
+\
+yes_arry = []\
+no_arry = []\
+\
+   answers_arry.each do |input|\
+       if input.match(/(yes|YES)/)\
+       		yes_arry << input\
+			else\
+				no_arry << input\
+       end\
+     end\
+	yes_arry\
+   end\
+\
+\
+<% @question.answers.each do |ans| %>\
+  <% new_arry = [] %>\
+    <% if ans.input == "YES" %>\
+      <% new_arry << ans.input %>\
+    <% end %>\
+    <%= new_arry.count %>\
+<% end %> \
+\
+\
+\
+}

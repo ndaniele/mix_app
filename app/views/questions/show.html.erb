@@ -15,7 +15,7 @@
 
     <h2><%= answer.radio_button(:input, "yes") %>
     <%= answer.label(:yes, "YES") %></h2>
-    <h2><%= answer.radio_button(:input, "NO") %>
+    <h2><%= answer.radio_button(:input, "no") %>
     <%= answer.label(:no, "NO") %></h2><br></br>
     <%= answer.submit "Create" %>
   <% end %> 
@@ -28,13 +28,11 @@
 <h2>[FLASH FEATURE]ANSWER STATS</h2>
 
 
-<h3>Total number of answers to this question: <%= @question.answers.count %></h3>
-<h3>Total NO's: ??</h3>
+<h3>Total number of answers to this question: <%= @question.answers_count %></h3>
+<h3>Total NO's: <%= @question.no_count %></h3>
 
-<h3>Total YES's: ??</h3>
+<h3>Total YES's: <%= @question.yes_count %></h3>
  
-
-
 
 <%= link_to "back to questions", questions_path %>
 
