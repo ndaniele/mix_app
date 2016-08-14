@@ -117,4 +117,37 @@ no_arry = []\
 \
 \
 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\fs34 \cf0  def answers_arry(question)\
+2.2.3 :064?>   question.answers.map do |answer|\
+2.2.3 :065 >        answer.input\
+2.2.3 :066?>     \
+2.2.3 :067 >       end \
+2.2.3 :068?>   end\
+ => :answers_arry \
+2.2.3 :069 > q\
+ => #<Question id: 32, query: "does this work?", created_at: "2016-08-13 19:44:42", updated_at: "2016-08-13 19:44:42"> \
+2.2.3 :070 > answers_arry(q)\
+ => ["yes", "no", "yes"] \
+\
+def yes_count(question)\
+	count = 0\
+	answers_arry(question).map do |answer|\
+		if answer == \'93yes\'94 \
+			count += 1\
+		end\
+	count\
+end \
+\
+answers_arry(question).map do |answer|\
+answer.match(/(yes)/)
+\fs38 \
+\
+
+\fs34 yeses = question.answers.find_by(input: "yes")\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\fs38 \cf0 \
+\
 }

@@ -39,10 +39,6 @@ TO DO
 
 
 
-
-
-
-
 TO DO TODAY (Aug. 13, 2016)
 
 X make answers be destroyed when question is destroyed. 
@@ -51,4 +47,9 @@ X add a create a new question link to home page
 X make '/' root path
 X nest routes
 X change redirect for answered question to question_answers show page
+
+
+TO DO NEXT TIME 
+X get rid of LIMIT 1 on SQL calls for yeses = question.answers.find_by(input: "yes") - it is screwing up my yes_count method
+
 - look into creating a user.

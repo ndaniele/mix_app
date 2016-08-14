@@ -41,9 +41,13 @@ class QuestionsController < ApplicationController
   def destroy
     #raise params.inspect
     @question = Question.find_by(id: params[:id])
-    @answers = Answer.find_by(question_id: @question.id)
+    @answers = Answer.where(question_id: @question.id)
     @question.destroy
-    @answers.destroy
+
+      @answers.each do |answer|
+        answer.destroy
+      end
+      
     redirect_to questions_path
   end
 
