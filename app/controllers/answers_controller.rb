@@ -1,4 +1,3 @@
-require 'pry'
 class AnswersController < ApplicationController
 
   #def index
@@ -11,25 +10,24 @@ class AnswersController < ApplicationController
   def show
     #raise params.inspect
     @question = Question.find_by(id: params[:question_id])
-    @answers = @question.answers
+    @answers = @question.answers.build
   end
 
   def create
-#binding.pry
     #raise params.inspect
-    #@question =  Question.find_by(id: params[:id])
-    #@answer = @question.answers.build(:input => params[:input])
+    @question =  Question.find_by(id: params[:question_id])
+    @answer = @question.answers.build(answer_params)
    # @answer = Answer.new(answer_params)
     #@answer.id = Question.find_by(id: params[:id])
-    #@answer.save
-   # redirect_to answer_path
+    @answer.save
+   redirect_to question_answer_path(@question, @answer)
   end
 
 
   private
 
   def answer_params
-    params.require(:answer).permit(:input, :question_id)
+    params.require(:answer).permit(:input)
   end
 
 end

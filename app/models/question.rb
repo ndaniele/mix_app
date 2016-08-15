@@ -1,6 +1,8 @@
 require 'pry'
 class Question < ApplicationRecord
+  #belongs_to :user
   has_many :answers #, dependant: :destroy
+  validates_presence_of :query
   accepts_nested_attributes_for :answers 
 
 

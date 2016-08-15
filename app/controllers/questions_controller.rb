@@ -16,9 +16,10 @@ class QuestionsController < ApplicationController
     redirect_to questions_path  #=> goes to answers#show
   end
 
-#  def edit
-#    raise params.inspect
-#  end
+  #def edit
+    #raise params.inspect
+    #@question.answers.build
+  #end
 
   def update
     #raise params.inspect
@@ -35,7 +36,7 @@ class QuestionsController < ApplicationController
 
   def show
     @question = Question.find_by(id: params[:id])
-    @question.answers.build
+    @answer = @question.answers.build
   end
 
   def destroy

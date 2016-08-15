@@ -3,32 +3,17 @@
 <h1><%= @question.query %></h1>
 
 
-
-<h4>ANSWER THE QUESTION TO PARTICPATE</h4>
-
+<h4>f THE QUESTION TO PARTICPATE</h4>
 
 
-<%#= form_tag("/questions/:id", method: :patch) do %>
-<%#= binding.pry %>
-  <%#= label_tag('question[answer][input]', "YES") %>
-  <%#= radio_button_tag(:input, "yes") %>
- 
-  <%#= submit_tag "Create" %>
-<%# end %>
+<%= form_for [@question, @answer] do |f| %>
 
-<%= form_for @question do |f| %>
-  <%= f.fields_for :answers do |answer| %>
-  <%# binding.pry %>
-    <%#= answer.label :input %>
-    <%#= answer.text_field :input %>
-
-    <h2><%= answer.radio_button(:input, "yes") %>
-    <%= answer.label(:yes, "YES") %></h2>
-    <h2><%= answer.radio_button(:input, "no") %>
-    <%= answer.label(:no, "NO") %></h2><br></br>
-    <%= answer.submit "Create" %>
+    <h2><%= f.radio_button(:input, "yes") %>
+    <%= f.label(:yes, "YES") %></h2>
+    <h2><%= f.radio_button(:input, "no") %>
+    <%= f.label(:no, "NO") %></h2><br></br>
+    <%= f.submit "Create" %>
   <% end %> 
-<% end %> 
   <br />
 
  
