@@ -13,7 +13,7 @@ class QuestionsController < ApplicationController
     #raise params.inspect
     @question = Question.new(question_params)
     @question.save
-    redirect_to questions_path
+    redirect_to questions_path  #=> goes to answers#show
   end
 
 #  def edit
@@ -28,7 +28,7 @@ class QuestionsController < ApplicationController
 
 #binding.pry
     
-    redirect_to question_answers_path(@question)
+    redirect_to question_answer_path(@question)
 
     #redirect_to @question
   end
@@ -47,7 +47,7 @@ class QuestionsController < ApplicationController
       @answers.each do |answer|
         answer.destroy
       end
-      
+
     redirect_to questions_path
   end
 

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :questions do
-    resources :answers
+    resources :answers, except: [:index]
   end
 
   get '/', to: 'questions#index', as: :root

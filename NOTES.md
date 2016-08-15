@@ -33,11 +33,6 @@ TO DO
 
 #7. show answers attributes (STATS) on question show page. 
 
-8. make one answer per user per question (CREATE USERS??)
-
-9. Stop multiple buttons (forms) appearing on reloaded show page
-
-
 
 TO DO TODAY (Aug. 13, 2016)
 
@@ -47,9 +42,14 @@ X add a create a new question link to home page
 X make '/' root path
 X nest routes
 X change redirect for answered question to question_answers show page
-
-
-TO DO NEXT TIME 
 X get rid of LIMIT 1 on SQL calls for yeses = question.answers.find_by(input: "yes") - it is screwing up my yes_count method
 
+TO DO NEXT TIME
+- do i need to change posting to answers#show from answers#index?
+-  
+- change form_for to form_tags? ..the loop is causing the problem
+  problem is: form objects are being created for all answer objects already associated with a question. 
+  soulution: make a new form for a new association ONLY. 
 - look into creating a user.
+- make one answer per user per question (CREATE USERS??)
+- Stop multiple buttons (forms) appearing on reloaded show page

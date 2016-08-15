@@ -8,8 +8,17 @@
 
 
 
+<%#= form_tag("/questions/:id", method: :patch) do %>
+<%#= binding.pry %>
+  <%#= label_tag('question[answer][input]', "YES") %>
+  <%#= radio_button_tag(:input, "yes") %>
+ 
+  <%#= submit_tag "Create" %>
+<%# end %>
+
 <%= form_for @question do |f| %>
   <%= f.fields_for :answers do |answer| %>
+  <%# binding.pry %>
     <%#= answer.label :input %>
     <%#= answer.text_field :input %>
 

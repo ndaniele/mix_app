@@ -1,6 +1,6 @@
 require 'pry'
 class Question < ApplicationRecord
-  has_many :answers
+  has_many :answers #, dependant: :destroy
   accepts_nested_attributes_for :answers 
 
 
