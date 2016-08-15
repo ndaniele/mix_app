@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :questions do
+  resources :questions, except: [:edit] do
     resources :answers, except: [:index]
   end
 
