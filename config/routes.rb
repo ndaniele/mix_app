@@ -1,11 +1,17 @@
 Rails.application.routes.draw do
 
+
   resources :users, :only => [:new, :create]
 
   resources :questions, :except => [:edit] do
     resources :answers, :only => [:show, :create]
   end
 
+
+  get '/login' => 'sessions#new'
+  post '/sessions' => 'sessions#create'
+
+  get '/logout' => 'sessions#destroy'
 
 
   get '/', to: 'questions#index', as: :root

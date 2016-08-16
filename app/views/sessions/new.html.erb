@@ -1,0 +1,6 @@
+  <h2>LOG IN</h2>
+
+  <%= form_tag(sessions_path) do %>
+    <%= text_field_tag :email, nil, placeholder: "Login with ur email" %>
+    <%= submit_tag "submit" %>
+  <% end %><br></br>

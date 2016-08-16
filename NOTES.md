@@ -67,9 +67,9 @@ TO DO TODAY (Aug. 16, 2016)
       - POST '/users'
         - creates a new user #=> UsersController#create
 
-      - GET '/login'
+      - GET '/login' #=> SessionsController#new
         - form
-      - POST '/sessions'
+      - POST '/sessions' #=> SessionsController#create
         - logs a user into the site
 
     - Model structure 

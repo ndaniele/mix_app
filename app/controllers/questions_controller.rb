@@ -1,6 +1,8 @@
 class QuestionsController < ApplicationController
+  before_action :authentication_required
 
   def index
+    #if you're not logged in you can't see this, goto login page
     @questions = Question.all 
   end
 

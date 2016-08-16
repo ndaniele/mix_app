@@ -13,6 +13,7 @@ class UsersController < ApplicationController
     @user = User.new(:email => params[:user][:email]) 
     if 
       @user.save
+      # log the user in
       redirect_to root_path
     else
       render 'users/new'
