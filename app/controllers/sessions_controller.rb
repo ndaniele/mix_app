@@ -8,7 +8,6 @@ class SessionsController < ApplicationController
     #raise params.inspect
     user = User.find_by(:email => params[:email])
     session[:user_id] = user.id
-
     redirect_to root_path
   end
 
