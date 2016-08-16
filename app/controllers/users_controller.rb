@@ -10,10 +10,10 @@ class UsersController < ApplicationController
     #@user.email = params[:user][:email]
     #@user.save
     
-    @user = User.new(:email => params[:user][:email]) 
+    @user = User.new(:email => params[:user][:email], :password => params[:user][:password]) 
     if 
       @user.save
-      # log the user in
+      session[:user_id] = @user.id
       redirect_to root_path
     else
       render 'users/new'
