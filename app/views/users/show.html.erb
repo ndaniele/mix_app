@@ -1,0 +1,17 @@
+<h2><%=@user.email%> SHOW PAGE(of questions that user has authored)</h2>
+
+<% @user.questions.each do |question| %>
+  
+  <h2><%= question.query %></h2>
+
+  <h3>Total number of answers to this question: <%= question.answers_count %></h3>
+
+  <h3>Total NO's: <%= question.no_count %></h3>
+
+  <h3>Total YES's: <%= question.yes_count %></h3>
+
+  <h3> WINNER IS: <%= question.winner %></h3><br></br>
+
+<% end %>
+
+<%= link_to "back to questions", questions_path %>

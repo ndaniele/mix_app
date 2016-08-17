@@ -9,7 +9,7 @@ get '/logout' => 'sessions#destroy'
 get '/auth/:provider/callback' => 'sessions#create'
 
 
-  resources :users, :only => [:new, :create]
+  resources :users, :only => [:new, :create, :show]
 
   resources :questions, :except => [:edit] do
     resources :answers, :only => [:show, :create]

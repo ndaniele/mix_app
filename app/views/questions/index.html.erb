@@ -10,4 +10,5 @@
 <h3><%= link_to "New Question???", new_question_path %></h3>
 
 <h3>You're logged in as: <%= current_user.email %></h3>
-<%= link_to "logout", logout_path %>
+<%= link_to "logout", logout_path %><br></br>
+<%= link_to "your questions", user_path(current_user) %>

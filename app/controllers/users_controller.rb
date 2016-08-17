@@ -5,11 +5,6 @@ class UsersController < ApplicationController
   end
 
   def create
-    #raise params.inspect
-    #@user = User.new
-    #@user.email = params[:user][:email]
-    #@user.save
-    
     @user = User.new(:email => params[:user][:email], :password => params[:user][:password]) 
     if 
       @user.save
@@ -18,6 +13,10 @@ class UsersController < ApplicationController
     else
       render 'users/new'
     end   
+  end
+
+  def show
+    @user = User.find_by(:id => params[:id])
   end
   
 end
