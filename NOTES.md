@@ -54,14 +54,14 @@ X change form_for to form_tags? ..the loop is causing the problem
 
 TO DO TODAY (Aug. 16, 2016)
 
-- add a new model, User (has email)
+X add a new model, User (has email)
 
 
-    - DB change
+    X DB change
       create table for :user, 
         t.string: email
 
-    URL change
+    X URL change
       - GET '/users/new' #=> UsersController#new
         - sign up form
       - POST '/users'
@@ -90,6 +90,8 @@ TO DO TODAY (Aug. 16, 2016)
           join table
 
 
-- look into creating a user.
+X look into creating a user.
 - make one answer per user per question (CREATE USERS??)
+
+X add omniauth for github
 
