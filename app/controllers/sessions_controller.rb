@@ -7,7 +7,6 @@ class SessionsController < ApplicationController
     #raise cookies.inspect
     #raise params.inspect
     if auth_hash = request.env["omniauth.auth"]
-    raise auth_hash.inspect
       #then user has logged in via omniauth
       oauth_email = request.env["omniauth.auth"]["info"]["email"]
       if 
