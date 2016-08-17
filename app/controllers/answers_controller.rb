@@ -8,6 +8,7 @@ class AnswersController < ApplicationController
   def create
     @question =  Question.find_by(id: params[:question_id])
     @answer = @question.answers.build(answer_params)
+    @answer.user_id = session[:user_id]
     @answer.save
    redirect_to question_answer_path(@question, @answer)
   end

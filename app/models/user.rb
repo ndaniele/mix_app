@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+  has_many :questions
+  #has_many :answers
+
   has_secure_password
   validates_presence_of :email #, :message => "you need an email"
   validates :email, :uniqueness => true #, :message => "need a unique email"

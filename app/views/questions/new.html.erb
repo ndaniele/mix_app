@@ -1,6 +1,7 @@
 <h3>Create a New Y/N question!!</h3>
 
 <%=form_for(@question) do |f| %>
+<%#= binding.pry %>
   <%= f.label :query %><br>
   <%= f.text_area :query %><br>
   <%= f.submit "submit" %>

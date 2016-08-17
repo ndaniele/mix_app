@@ -11,7 +11,9 @@ class QuestionsController < ApplicationController
   end
 
   def create
+    #raise params.inspect
     @question = Question.new(question_params)
+    @question.user_id = session[:user_id]
     @question.save
     redirect_to questions_path  #=> goes to answers#show
   end

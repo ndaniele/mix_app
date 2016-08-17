@@ -78,16 +78,17 @@ X add a new model, User (has email)
       a user has_many answered questions
 
 
-      a user has_many questions (which the user created)
-        - user.questions (lists all questions a user has answered)
-        User 
-        has_many :questions
+     X a user has_many questions (which the user created)
+        X user.questions (lists all questions a user has created (/ or answered)
+       X User 
+       X has_many :questions
 
-        Question
-          belongs_to :user (add user_id to question table)
+      X  Question
+      X    belongs_to :user (add user_id to question table)
 
         Answers
           join table
+          (belongs_to user, belongs_to question)
 
 
 X look into creating a user.

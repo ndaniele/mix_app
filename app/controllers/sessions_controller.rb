@@ -4,10 +4,8 @@ class SessionsController < ApplicationController
   end
 
   def create
-    #raise cookies.inspect
-    #raise params.inspect
     if auth_hash = request.env["omniauth.auth"]
-      user = User.find_or_create_by_omniauth(auth_hash)
+      user = User.find_or_create_by_omniauth(auth_hash) #=> class method in user.rb
       session[:user_id] = user.id
       redirect_to root_path
     else 
