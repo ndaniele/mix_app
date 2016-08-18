@@ -97,10 +97,10 @@ X add omniauth for github
 
 X add user/questions/show (show page displaying all questions created by a user)
 
-- make one answer per user per question (CREATE USERS??)
-
-TO DO 
-
-- make a link to all questioned that have been answered by a user
+X make a link to all questioned that have been answered by a user
   (user_answers path??) ...maybe it also goes to the show page and breaks into categories there? questions you have created / ...you have answered.
 
+TO DO 
+X make one answer per user per question (user can only answer a question one time) - limit on create action (check if user id exists in db? if no => create, if yes => error message)
+
+- refactor / clean up code 

@@ -3,6 +3,7 @@ class Answer < ApplicationRecord
   belongs_to :user
   
   validates_presence_of :input
+  validates :user_id && :question_id, :uniqueness => true
 
 
 
