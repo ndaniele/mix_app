@@ -2,33 +2,18 @@
 
 <h2>Questions Created By <%=@user.email%> </h2>
 
-<% @user.questions.each do |question| %>
-  
-  <h2><%= question.query %></h2>
-
-  <h3>Total number of answers to this question: <%= question.answers_count %></h3>
-
-  <h3>Total NO's: <%= question.no_count %></h3>
-
-  <h3>Total YES's: <%= question.yes_count %></h3>
-
-  <h3> WINNER IS: <%= question.winner %></h3><br></br>
-
-<% end %>
+  <ul>
+    <% @user.questions.each do |question| %>
+      <%= render :partial => 'questions/question_li', :locals => {:question => question} %>
+    <% end %>
+  </ul>
 
 <h2>Questions Answered By <%=@user.email%> </h2>
-<% find_question_by_answer(@user) %>
-<h3><%= question_by_answer_query %></h3>
-<h3>Total number of answers to this question: <%=question_by_answer_count%></h3>
-<h3>Total NO's: <%= question_by_answer_no_count %></h3>
-<h3>Total YES's: <%= question_by_answer_yes_count %></h3>
-<h3>WINNER IS: <%= question_by_answer_winner %></h3>
 
-
-
-
-
-
+  <ul>
+    <% find_question_by_answer(@user) %>
+      <%= render :partial => 'answers/answers_li', :locals => {:answer_question => @answer_question} %>
+  </ul>
 
 
 <%= link_to "back to questions", questions_path %>

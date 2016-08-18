@@ -104,3 +104,5 @@ TO DO
 X make one answer per user per question (user can only answer a question one time) - limit on create action (check if user id exists in db? if no => create, if yes => error message)
 
 - refactor / clean up code 
+
+- flash messages for errors
