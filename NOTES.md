@@ -90,11 +90,17 @@ X add a new model, User (has email)
        X   join table
         X  (belongs_to user, belongs_to question)
 
+TO DO TODAY (aug. 17, 2016)
 
 X look into creating a user.
 X add omniauth for github
 
-- add user/questions/show (show page displaying all questions created by a user)
+X add user/questions/show (show page displaying all questions created by a user)
 
 - make one answer per user per question (CREATE USERS??)
+
+TO DO 
+
+- make a link to all questioned that have been answered by a user
+  (user_answers path??) ...maybe it also goes to the show page and breaks into categories there? questions you have created / ...you have answered.
 
