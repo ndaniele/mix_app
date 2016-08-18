@@ -13,6 +13,8 @@
 
 <h3> WINNER IS: <%= @question.winner %></h3><br></br>
 
-<%= link_to "back to questions", questions_path %>
+<%= link_to "back to ALL questions", questions_path %><br></br>
+
+<%= link_to "YOUR questions", user_path(current_user) %><br>
 
 <p>(ADMIN FEATURE)<%= link_to 'Destroy', @question, method: :delete %></p>
