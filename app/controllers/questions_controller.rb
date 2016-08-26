@@ -1,9 +1,14 @@
 class QuestionsController < ApplicationController
-  before_action :authentication_required
+  #before_action :authentication_required
 
   def index
     #if you're not logged in you can't see this, goto login page
-    @questions = Question.all 
+    #raise params.inspect
+    if current_user.nil?
+      redirect_to new_user_session_path
+    else
+    @questions = Question.all
+    end 
   end
 
   def new
@@ -13,7 +18,7 @@ class QuestionsController < ApplicationController
   def create
     #raise params.inspect
     @question = Question.new(question_params)
-    @question.user_id = session[:user_id]
+    @question.user_id = current_user.id #session[:user_id]
     @question.save
     redirect_to questions_path  #=> goes to answers#show
   end

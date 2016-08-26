@@ -1,15 +1,25 @@
 Rails.application.routes.draw do
-get '/', to: 'questions#index', as: :root
 
-get '/login' => 'sessions#new'
-post '/sessions' => 'sessions#create'
+root 'questions#index'
+#get '/', to: 'questions#index', as: :root #=> maybe needs to be devise/sessions#new
 
-get '/logout' => 'sessions#destroy'
+#get '/login' => 'sessions#new'
+#post '/sessions' => 'sessions#create'
+#
+#get '/logout' => 'sessions#destroy'
+#
+#get '/auth/:provider/callback' => 'sessions#create'
 
-get '/auth/:provider/callback' => 'sessions#create'
+
+devise_scope :user do 
+ get '/users/sign_out' => 'devise/sessions#destroy'
+ get '/' => 'devise/sessions#new'
+end
+
+devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
 
-  resources :users, :only => [:new, :create, :show]
+  resources :users, :only => [:show, :create, :new]
 
   resources :questions, :except => [:edit] do
     resources :answers, :only => [:show, :create]

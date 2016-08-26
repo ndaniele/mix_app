@@ -100,9 +100,19 @@ X add user/questions/show (show page displaying all questions created by a user)
 X make a link to all questioned that have been answered by a user
   (user_answers path??) ...maybe it also goes to the show page and breaks into categories there? questions you have created / ...you have answered.
 
-TO DO 
+TO DO (Aug. 19, 2016)
 X make one answer per user per question (user can only answer a question one time) - limit on create action (check if user id exists in db? if no => create, if yes => error message)
 
-- refactor / clean up code 
+X refactor / clean up code 
 
-- flash messages for errors
+X flash messages for errors
+
+TO DO 
+
+- merge current version with github repo (do i need to rename?)
+
+(- add omniauth for github, twitter)
+
+- add authorization roles for User
+  - User can only destroy questions created by User
+  - User can answer all questions

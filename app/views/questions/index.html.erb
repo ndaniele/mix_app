@@ -2,7 +2,7 @@
 
 <% @questions.each do |q| %>
   <ul>
-    <li>?<%= link_to "#{q.query}", question_path(q) %></li>
+    <li><h3>¿<%= link_to "#{q.query}", question_path(q) %>?<h3></li>
   </ul>
 <% end %>
 
@@ -10,5 +10,5 @@
 <h3><%= link_to "New Question???", new_question_path %></h3>
 
 <h3>You're logged in as: <%= current_user.email %></h3>
-<%= link_to "logout", logout_path %><br></br>
+<%= link_to "logout", destroy_user_session_path %><br></br>
 <%= link_to "your questions", user_path(current_user) %>

@@ -2,6 +2,9 @@
 
 <%=form_for(@question) do |f| %>
   <%= f.label :query %><br>
-  <%= f.text_area :query %><br>
+<h2>¿<%= f.text_area :query %>?</h2><br>
   <%= f.submit "submit" %>
 <% end %> 
+
+
+<h2>Possibly add answer here (instantiate with answer) - then redirect_to question show page</h2>

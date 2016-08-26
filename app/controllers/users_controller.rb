@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
-
-  def new
-    @user = User.new
+  def show
+    @user = current_user #User.find_by(:id => params[:id])
   end
 
   def create
@@ -11,12 +10,12 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to root_path
     else
-      render 'users/new'
+      render '/users/sign_up' #'users/new'
     end   
   end
 
-  def show
-    @user = User.find_by(:id => params[:id])
+  def new
+    @user = User.new
   end
-  
+
 end
