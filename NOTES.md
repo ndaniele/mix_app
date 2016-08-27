@@ -113,11 +113,14 @@ X merge current version with github repo (do i need to rename?)
 
 (- add omniauth for github, twitter)
 
+
+
+TO DO FOR ASSESMENT
+X change relationship to has_many_through
+
 - add authorization roles for User
   - User can only destroy questions created by User
   - User can answer all questions
 
-TO DO FOR ASSESMENT
-X change relationship to has_many_through
 - possibly add a .most_popular_question class method
 - 
