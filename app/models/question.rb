@@ -3,7 +3,7 @@ class Question < ApplicationRecord
   has_many :answers, dependent: :destroy
   
   validates_presence_of :query
-  accepts_nested_attributes_for :answers 
+  #accepts_nested_attributes_for :answers 
 
 
   def answers_count

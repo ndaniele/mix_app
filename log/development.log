@@ -7772,3 +7772,83 @@ Processing by QuestionsController#show as HTML
 Completed 200 OK in 153ms (Views: 136.4ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/questions" for 127.0.0.1 at 2016-08-27 15:18:11 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (51.6ms)
+  Rendered layouts/_messages.html.erb (1.5ms)
+Completed 200 OK in 758ms (Views: 505.4ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/questions/new" for 127.0.0.1 at 2016-08-27 15:18:22 -0400
+Processing by QuestionsController#new as HTML
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_messages.html.erb (1.4ms)
+Completed 200 OK in 156ms (Views: 137.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/questions" for 127.0.0.1 at 2016-08-27 15:18:33 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eNbJAoFD2ipOWM91RAnJoZtAJni7t8T8rXTthD5b1PJVyy8bvKppqG0hPVy25xHhX1u9gzLNTT+eNhRvDdamqg==", "question"=>{"query"=>"is this  a blank question"}, "commit"=>"submit"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (16.6ms)[0m  [1m[32mINSERT INTO "questions" ("query", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["query", "is this  a blank question"], ["created_at", 2016-08-27 19:18:33 UTC], ["updated_at", 2016-08-27 19:18:33 UTC], ["user_id", 3]]
+  [1m[35m (233.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/questions
+Completed 302 Found in 321ms (ActiveRecord: 251.3ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2016-08-27 15:18:34 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_messages.html.erb (1.5ms)
+Completed 200 OK in 75ms (Views: 69.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/questions/9" for 127.0.0.1 at 2016-08-27 15:18:36 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+Completed 200 OK in 103ms (Views: 52.8ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/questions/9/answers" for 127.0.0.1 at 2016-08-27 15:18:40 -0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pcX+7RPJ1Xl6mqw6xtluYNa5buJM3kcCBeLtYSAP5+ejKXKytRzqKToSZP9EBjhqoniXbpFBFr0a+nPM8l9x8A==", "answer"=>{"input"=>"no"}, "commit"=>"Create", "question_id"=>"9"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAnswer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "answers" WHERE "answers"."question_id" = ? LIMIT ?[0m  [["question_id", 9], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "answers" ("input", "question_id", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["input", "no"], ["question_id", 9], ["created_at", 2016-08-27 19:18:40 UTC], ["updated_at", 2016-08-27 19:18:40 UTC], ["user_id", 3]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/questions/9/answers/9
+Completed 302 Found in 58ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/questions/9/answers/9" for 127.0.0.1 at 2016-08-27 15:18:40 -0400
+Processing by AnswersController#show as HTML
+  Parameters: {"question_id"=>"9", "id"=>"9"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering answers/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 9]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 9], ["input", "no"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 9], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 9], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 9], ["input", "no"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered answers/show.html.erb within layouts/application (14.5ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 95ms (Views: 86.7ms | ActiveRecord: 1.6ms)
+
+
