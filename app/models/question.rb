@@ -26,13 +26,4 @@ class Question < ApplicationRecord
     end
   end
 
-
-#def most_common_value(a)
-#  a.group_by(&:itself).values.max_by(&:size).first
-#end
-
-
-
-  #helper_method :most_popular
-
 end
