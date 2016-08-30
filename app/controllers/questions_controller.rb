@@ -46,6 +46,9 @@ class QuestionsController < ApplicationController
     redirect_to questions_path
   end
 
+  def most_popular
+  end
+
   private 
 
   def question_params

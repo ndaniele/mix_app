@@ -21,8 +21,8 @@ Specs:
       => Answer   validates_presence_of :input
                   validates :user_id && :question_id, :uniqueness => true
 
-- [ ] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
-      => does .no_count?, etc.. qualify?
+- [X] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
+      => /questions/most_popular  => gives stats for question with the most answers
 
 - [ ] Include a nested form writing to an associated model using a custom attribute writer (form URL, model name e.g. /recipe/new, Item)
       => does answers form qualify?

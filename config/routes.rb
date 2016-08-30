@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 root 'questions#index'
+get '/questions/most_popular' => 'questions#most_popular'
 #get '/', to: 'questions#index', as: :root #=> maybe needs to be devise/sessions#new
 
 #get '/login' => 'sessions#new'
