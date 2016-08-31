@@ -1,6 +1,11 @@
 class QuestionsController < ApplicationController
   #before_action :authentication_required
 
+  def answer_attributes=(answer)
+    self.answer = Answer.find_or_create_by(:user_id => answer.user_id)
+    self.answer.update(answer)
+  end
+
   def index
     #if you're not logged in you can't see this, goto login page
     #raise params.inspect
@@ -13,6 +18,7 @@ class QuestionsController < ApplicationController
 
   def new
     @question = Question.new 
+    @question.answers.build
   end
 
   def create
@@ -31,7 +37,9 @@ class QuestionsController < ApplicationController
 
   def show
     @question = Question.find_by(id: params[:id])
-    @answer = @question.answers.build
+    if current_user 
+      @answer = @question.answers.build
+    end
   end
 
   def destroy
@@ -49,10 +57,13 @@ class QuestionsController < ApplicationController
   def most_popular
   end
 
-  private 
+
+private 
 
   def question_params
-    params.require(:question).permit(:query, :answers_attributes => [:input, :user_id])
+    params.require(:question).permit(:query, {:answers_attributes => [:input, :user_id]})
   end
+
+
 
 end

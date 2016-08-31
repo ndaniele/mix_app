@@ -3,7 +3,15 @@
 <%=form_for(@question) do |f| %>
   <%= f.label :query %><br>
 <h2>¿<%= f.text_area :query %>?</h2><br>
-  <%= f.submit "submit" %>
+
+  <%=f.fields_for :answers do |a| %>
+   <h2><%= a.radio_button(:input, "yes") %>
+    <%= a.label(:yes, "YES") %></h2>
+    <h2><%= a.radio_button(:input, "no") %>
+    <%= a.label(:no, "NO") %></h2><br></br>
+    <%= a.hidden_field :user_id, :value => current_user.id %>
+    <%= f.submit "submit" %>
+  <% end %>
 <% end %> 
 
 

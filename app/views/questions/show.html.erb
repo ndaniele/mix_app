@@ -8,15 +8,13 @@
 
 <%= form_for [@question, @answer] do |f| %>
 
-    <h2><%= f.radio_button(:input, "yes") %>
-    <%= f.label(:yes, "YES") %></h2>
-    <h2><%= f.radio_button(:input, "no") %>
-    <%= f.label(:no, "NO") %></h2><br></br>
-    <%= f.submit "Create" %>
-  <% end %> 
+  <h2><%= f.radio_button(:input, "yes") %>
+  <%= f.label(:yes, "YES") %></h2>
+  <h2><%= f.radio_button(:input, "no") %>
+  <%= f.label(:no, "NO") %></h2><br></br>
+  <%= f.submit "Create" %>
+<% end %> 
   <br />
-
- 
 
 <%= link_to "back to questions", questions_path %>
 

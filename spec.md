@@ -25,7 +25,7 @@ Specs:
       => /questions/most_popular  => gives stats for question with the most answers
 
 - [ ] Include a nested form writing to an associated model using a custom attribute writer (form URL, model name e.g. /recipe/new, Item)
-      => does answers form qualify?
+      => does 'form_for [@question, @answer]' qualify?
 
 - [X] Include signup (how e.g. Devise)
       => Devise
