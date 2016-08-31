@@ -18,7 +18,8 @@ Specs:
 
 - [X] Include reasonable validations for simple model objects (list of model objects with validations e.g. User, Recipe, Ingredient, Item)
       => Question validates_presence_of :query
-      => Answer   validates_presence_of :input
+      
+      #=> Answer   validates_presence_of :input
                   validates :user_id && :question_id, :uniqueness => true
 
 - [X] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)

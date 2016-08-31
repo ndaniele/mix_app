@@ -4,7 +4,9 @@
 
   <ul>
     <% @user.questions.each do |question| %>
-      <%= render :partial => 'questions/question_li', :locals => {:question => question} %>
+      <% if question.user_id == @user.id %>
+        <%= render :partial => 'questions/question_li', :locals => {:question => question} %>
+      <% end %>
     <% end %>
   </ul>
 

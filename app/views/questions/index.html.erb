@@ -1,5 +1,12 @@
-<h2>Choose a Question To Answer</h2><br></br>
+<h1>MIX_APP</h1> 
+<h2>Get in the mix!!</h2>
 
+<h3>You're logged in as: <%= current_user.email %></h3>
+<%= link_to "logout", destroy_user_session_path %> |
+<%= link_to "your questions", user_path(current_user) %> |
+<%= link_to "most popular question", questions_most_popular_path %>
+
+<h2>Choose a Question To Answer</h2>
 <% @questions.each do |q| %>
   <ul>
     <li><h3>¿<%= link_to "#{q.query}", question_path(q) %>?<h3></li>
@@ -9,6 +16,4 @@
 <h2>Or create a new Question</h2>
 <h3><%= link_to "New Question???", new_question_path %></h3>
 
-<h3>You're logged in as: <%= current_user.email %></h3>
-<%= link_to "logout", destroy_user_session_path %><br></br>
-<%= link_to "your questions", user_path(current_user) %>
+

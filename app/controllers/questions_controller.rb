@@ -1,10 +1,10 @@
 class QuestionsController < ApplicationController
   #before_action :authentication_required
 
-  def answer_attributes=(answer)
-    self.answer = Answer.find_or_create_by(:user_id => answer.user_id)
-    self.answer.update(answer)
-  end
+ # def answer_attributes=(answer)
+ #   self.answer = Answer.find_or_create_by(:user_id => answer.user_id)
+ #   self.answer.update(answer)
+ # end
 
   def index
     #if you're not logged in you can't see this, goto login page
@@ -25,8 +25,13 @@ class QuestionsController < ApplicationController
     #raise params.inspect
     @question = Question.new(question_params)
     @question.user_id = current_user.id #session[:user_id]
-    @question.save
-    redirect_to questions_path  #=> goes to answers#show
+    if 
+      @question.save
+      redirect_to questions_path  #=> goes to answers#show
+    else
+      flash[:error] = "!!Can't create a blank question!!"
+      redirect_to new_question_path
+    end
   end
 
   def update

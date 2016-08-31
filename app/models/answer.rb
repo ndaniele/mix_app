@@ -3,7 +3,9 @@ class Answer < ApplicationRecord
   belongs_to :user
   
   validates_presence_of :input
-  validates :user_id && :question_id, :uniqueness => true
+  #validates :user_id, :uniqueness => true
+  #validates :question_id, :uniqueness => true
+  #&& :question_id,
 
 
   def answers_count
