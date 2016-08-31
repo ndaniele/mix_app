@@ -11,9 +11,9 @@
 <h2>Questions Answered By <%=@user.email%> </h2>
 
   <ul>
-    <% find_question_by_answer(@user) %> 
-    <%#iterate over array of all questions answered.%>
-      <%= render :partial => 'answers/answers_li', :locals => {:answer_question => @answer_question} %>
+    <% @answers.each do |answer_question| %>
+      <%= render :partial => 'answers/answers_li', :locals => {:answer_question => answer_question} %>
+      <% end %>
   </ul>
 
 

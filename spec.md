@@ -24,8 +24,8 @@ Specs:
 - [X] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
       => /questions/most_popular  => gives stats for question with the most answers
 
-- [ ] Include a nested form writing to an associated model using a custom attribute writer (form URL, model name e.g. /recipe/new, Item)
-      => does 'form_for [@question, @answer]' qualify?
+- [X] Include a nested form writing to an associated model using a custom attribute writer (form URL, model name e.g. /recipe/new, Item)
+      => /views/questions/new.html.erb
 
 - [X] Include signup (how e.g. Devise)
       => Devise
@@ -42,7 +42,7 @@ Specs:
 - [X] Include nested resource "new" form (URL e.g. recipes/1/ingredients)
       => /questions/:question_id/answers => creates answer to a question
 
-- [ ] Include form display of validation errors (form URL e.g. /recipes/new)
+- [X] Include form display of validation errors (form URL e.g. /recipes/new)
       => errors do display but not in a field_with_errors div
 
 Confirm:

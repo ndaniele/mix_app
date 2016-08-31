@@ -5,4 +5,25 @@ class Answer < ApplicationRecord
   validates_presence_of :input
   validates :user_id && :question_id, :uniqueness => true
 
+
+  def answers_count
+    self.question.answers.count
+  end 
+
+  def yes_count
+    self.question.answers.where(input: "yes").count
+  end
+
+  def no_count
+    self.question.answers.where(input: "no").count
+  end
+
+  def winner 
+    if yes_count > no_count
+      "YES"
+    else
+      "NO"
+    end
+  end
+
 end

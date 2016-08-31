@@ -14,7 +14,7 @@ class AnswersController < ApplicationController
       redirect_to question_answer_path(@question, @answer)
     else
       flash[:error] = "!!You can only answer a question once!!"
-      #redirect_to question_path(@question)
+      redirect_to question_path(@question)
     end
   end
 

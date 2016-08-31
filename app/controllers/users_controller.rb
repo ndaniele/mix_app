@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def show
     @user = current_user #User.find_by(:id => params[:id])
+    @answers = Answer.where(:user_id => @user.id)
   end
 
   def create

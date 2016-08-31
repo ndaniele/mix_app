@@ -1,9 +1,9 @@
-<li><h3><%= question_by_answer_query %></h3>
+<li><h2><%= answer_question.question.query %></h2>
 
-<li><h3>Total number of answers to this question: <%=question_by_answer_count%></h3>
+<li><h3>Total number of answers to this question: <%= answer_question.answers_count %></h3>
 
-<li><h3>Total NO's: <%= question_by_answer_no_count %></h3>
+<li><h3>Total NO's: <%= answer_question.no_count %></h3>
 
-<li><h3>Total YES's: <%= question_by_answer_yes_count %></h3>
+<li><h3>Total YES's: <%= answer_question.yes_count %></h3>
 
-<li><h3>WINNER IS: <%= question_by_answer_winner %></h3>
+<li><h3> WINNER IS: <%= answer_question.winner %></h3><br></br>
