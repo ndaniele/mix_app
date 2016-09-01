@@ -9,7 +9,6 @@ class AnswersController < ApplicationController
     @question =  Question.find_by(id: params[:question_id])
     @answer = @question.answers.build(answer_params)
     @answer.user_id = current_user.id #session[:user_id]
-  #binding.pry
     if
       @answer.save
       redirect_to question_answer_path(@question, @answer)
