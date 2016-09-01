@@ -22296,3 +22296,526 @@ Processing by QuestionsController#new as HTML
 Completed 200 OK in 66ms (Views: 61.3ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/questions" for ::1 at 2016-09-01 11:41:13 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (12.8ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 130ms (Views: 83.3ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/questions/most_popular" for ::1 at 2016-09-01 11:41:16 -0400
+Processing by QuestionsController#most_popular as HTML
+  Rendering questions/most_popular.html.erb within layouts/application
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers"[0m
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 36]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "no"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (11.9ms)
+  Rendered questions/most_popular.html.erb within layouts/application (53.8ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 125ms (Views: 95.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/questions/most_popular" for ::1 at 2016-09-01 11:42:11 -0400
+Processing by QuestionsController#most_popular as HTML
+  Rendering questions/most_popular.html.erb within layouts/application
+  [1m[36mAnswer Load (0.5ms)[0m  [1m[34mSELECT "answers".* FROM "answers"[0m
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 36]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "no"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (8.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered questions/most_popular.html.erb within layouts/application (25.6ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 2.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `user_id' for nil:NilClass):
+     9: 
+    10: <%= link_to "YOUR questions", user_path(current_user) %><br>
+    11: 
+    12: <% if @question.user_id == current_user.id %>
+    13: 
+    14:   <p><%= link_to 'Destroy this question', @question, method: :delete %></p>
+    15: 
+  
+app/views/questions/most_popular.html.erb:12:in `_app_views_questions_most_popular_html_erb___2116264058711712807_70145715526600'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (17.5ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.5ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (153.5ms)
+Started GET "/questions/most_popular" for ::1 at 2016-09-01 11:42:42 -0400
+Processing by QuestionsController#most_popular as HTML
+  Rendering questions/most_popular.html.erb within layouts/application
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers"[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 36]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "no"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (8.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered questions/most_popular.html.erb within layouts/application (17.6ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 72ms (Views: 67.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/questions" for ::1 at 2016-09-01 11:42:47 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 68ms (Views: 55.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/questions/35" for ::1 at 2016-09-01 11:49:21 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mQuestion Load (1.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 75ms (Views: 51.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/questions/35/answers" for ::1 at 2016-09-01 11:49:27 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/questions/35/answers"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `call'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered collection of /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [33 times] (15.6ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (203.2ms)
+Started GET "/questions/33/answers" for ::1 at 2016-09-01 11:50:33 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/questions/33/answers"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `call'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered collection of /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [33 times] (16.1ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (200.4ms)
+Started GET "/questions/33/answers" for ::1 at 2016-09-01 11:51:42 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/questions/33/answers"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `call'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered collection of /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [34 times] (14.2ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (199.1ms)
+Started GET "/questions/33/answers" for ::1 at 2016-09-01 11:51:45 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/questions/33/answers"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `call'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered collection of /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [34 times] (17.2ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (202.2ms)
+Started GET "/questions/33/answers" for ::1 at 2016-09-01 11:51:47 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/questions/33/answers"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `call'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered collection of /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [34 times] (16.4ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (197.7ms)
+Started GET "/questions" for ::1 at 2016-09-01 11:53:16 -0400
+Processing by QuestionsController#index as HTML
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-09-01 11:53:16 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (1.9ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (12.4ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 126ms (Views: 104.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/12" for ::1 at 2016-09-01 11:53:18 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/users_controller.rb:4:in `show'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (15.3ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.7ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (167.9ms)
+Started GET "/users/12" for ::1 at 2016-09-01 11:53:26 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/users_controller.rb:4:in `show'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.5ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (132.1ms)
+Started GET "/questions/48/answers/12" for ::1 at 2016-09-01 11:53:56 -0400
+Processing by AnswersController#show as HTML
+  Parameters: {"question_id"=>"48", "id"=>"12"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 48], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `answers' for nil:NilClass):
+  
+app/controllers/answers_controller.rb:5:in `show'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (13.5ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.3ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (150.3ms)
+Started GET "/questions/44/answers/47" for ::1 at 2016-09-01 11:53:58 -0400
+Processing by AnswersController#show as HTML
+  Parameters: {"question_id"=>"44", "id"=>"47"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering answers/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 44]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 44], ["input", "no"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 44], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 44], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 44], ["input", "no"]]
+  Rendered answers/show.html.erb within layouts/application (11.6ms)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 2.4ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users", :id=>nil} missing required keys: [:id]):
+    17: 
+    18: <%= link_to "back to ALL questions", questions_path %> |
+    19: 
+    20: <%= link_to "YOUR questions", user_path(current_user) %><br>
+    21: 
+    22: <% if @question.user_id == current_user.id %>
+    23: 
+  
+app/views/answers/show.html.erb:20:in `_app_views_answers_show_html_erb__2691049201156802410_70145688050360'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (17.2ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.8ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (157.0ms)
+Started GET "/questions" for ::1 at 2016-09-01 11:54:01 -0400
+Processing by QuestionsController#index as HTML
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-09-01 11:54:01 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (3.0ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (11.7ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 74ms (Views: 68.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-09-01 11:54:16 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (2.5ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/registrations/new.html.erb within layouts/application (11.6ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 71ms (Views: 69.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-09-01 11:54:32 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (2.9ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (12.3ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 83ms (Views: 79.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-09-01 11:54:34 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (4.6ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/registrations/new.html.erb within layouts/application (16.3ms)
+  Rendered layouts/_messages.html.erb (1.4ms)
+Completed 200 OK in 88ms (Views: 86.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-09-01 11:54:46 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z3EvOkHBzck3Cp3L/q5tbK9aBKsPESB1sRkkngqPjoD2T+7YUMbT84/O7bAZd6EuBOGLQouTGkCA9Zz69KSi9g==", "user"=>{"email"=>"guestuser@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "guestuser@email.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "guestuser@email.com"], ["encrypted_password", "$2a$11$PVnHq24qbq7Sh7Qz4.0pturhPbCk9JujDxz8jmpgVf2Q0YIlCijce"], ["created_at", 2016-09-01 15:54:46 UTC], ["updated_at", 2016-09-01 15:54:46 UTC]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", 2016-09-01 15:54:46 UTC], ["last_sign_in_at", 2016-09-01 15:54:46 UTC], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["updated_at", 2016-09-01 15:54:46 UTC], ["id", 13]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 221ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/" for ::1 at 2016-09-01 11:54:46 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 69ms (Views: 62.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/questions/50" for ::1 at 2016-09-01 11:54:51 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 50], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 59ms (Views: 47.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/questions/50/answers" for ::1 at 2016-09-01 11:55:13 -0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0nVfzhTwRJLh7JlJamym6dZksHKbe/g3VT8DqW0YT9wOd5g0U9GmmXMqPJjoFSRInhJqUMsuQjSwE+Qu4qSlOA==", "answer"=>{"input"=>"yes"}, "commit"=>"Create", "question_id"=>"50"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 50], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mAnswer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "answers" WHERE "answers"."user_id" = ? AND "answers"."question_id" = ? LIMIT ?[0m  [["user_id", 13], ["question_id", 50], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "answers" ("input", "question_id", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["input", "yes"], ["question_id", 50], ["created_at", 2016-09-01 15:55:13 UTC], ["updated_at", 2016-09-01 15:55:13 UTC], ["user_id", 13]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/questions/50/answers/50
+Completed 302 Found in 29ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/questions/50/answers/50" for ::1 at 2016-09-01 11:55:13 -0400
+Processing by AnswersController#show as HTML
+  Parameters: {"question_id"=>"50", "id"=>"50"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 50], ["LIMIT", 1]]
+  Rendering answers/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 50]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 50], ["input", "no"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 50], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 50], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 50], ["input", "no"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered answers/show.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 59ms (Views: 52.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/13" for ::1 at 2016-09-01 11:55:18 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "answers" ON "questions"."id" = "answers"."question_id" WHERE "answers"."user_id" = ?[0m  [["user_id", 13]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."user_id" = ?[0m  [["user_id", 13]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 50], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 50]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 50], ["input", "no"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 50], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 50], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 50], ["input", "no"]]
+  Rendered answers/_answers_li.html.erb (10.9ms)
+  Rendered users/show.html.erb within layouts/application (38.6ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 93ms (Views: 82.2ms | ActiveRecord: 1.8ms)
+
+

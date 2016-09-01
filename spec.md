@@ -23,10 +23,32 @@ Specs:
                   validates_uniqueness_of :user_id, scope: :question_id
 
 - [X] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
-      => /questions/most_popular  => gives stats for question with the most answers
+      => /questions/most_popular (gives stats for question with the most answers)
 
 - [X] Include a nested form writing to an associated model using a custom attribute writer (form URL, model name e.g. /recipe/new, Item)
       => /views/questions/new.html.erb
+            => <h3>Create a New Y/N question!!</h3>
+                  <%=form_for(@question) do |f| %>
+                    <%= f.label :query %><br>
+                  <h2>¿<%= f.text_field :query %>?</h2><br>
+
+                    <%=f.fields_for :answers do |a| %>
+                     <h2><%= a.radio_button(:input, "yes") %>
+                      <%= a.label(:yes, "YES") %></h2>
+                      <h2><%= a.radio_button(:input, "no") %>
+                      <%= a.label(:no, "NO") %></h2><br></br>
+                      <%= a.hidden_field :user_id, :value => current_user.id %>
+                      <%= f.submit "submit" %>
+                    <% end %>
+                  <% end %> 
+
+      => /models/question.rb
+            => def answers_attributes=(answers_attributes)
+                  answers_attributes.each do |answer_attributes|
+                    self.answers.build(answer_attributes[1])       
+                  end
+               end
+
 
 - [X] Include signup (how e.g. Devise)
       => Devise
@@ -38,13 +60,16 @@ Specs:
       => Devise OmniAuth for Facebook
 
 - [X] Include nested resource show or index (URL e.g. users/2/recipes)
-      =>/questions/:id/answers/:id => question_answers show page
+      => resources :questions, :except => [:edit] do
+           resources :answers, :only => [:show, :create]
+         end  
+            =>/questions/:id/answers/:id (question_answers show page)
 
 - [X] Include nested resource "new" form (URL e.g. recipes/1/ingredients)
-      => /questions/:question_id/answers => creates answer to a question
+      => /questions/:id => updates question with a NEW answer
 
 - [X] Include form display of validation errors (form URL e.g. /recipes/new)
-      => errors do display but not in a field_with_errors div
+      => flash[:error] = "#{@question.errors.full_messages.join(" & ")}"
 
 Confirm:
 - [X] The application is pretty DRY
