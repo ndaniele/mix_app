@@ -3,6 +3,7 @@ class Question < ApplicationRecord
   has_many :answers, dependent: :destroy
   
   validates_presence_of :query
+  validates :query, length: { maximum: 10, too_long: "%{count} characters is the maximum allowed" }
   #accepts_nested_attributes_for :answers 
 
   def answers_attributes=(answers_attributes)

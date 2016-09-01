@@ -29,7 +29,7 @@ class QuestionsController < ApplicationController
       @question.save
       redirect_to questions_path  #=> goes to answers#show
     else
-      flash[:error] = "!!Can't create a blank question!!"
+      flash[:error] = "#{@question.errors.full_messages.join(" & ")}"
       redirect_to new_question_path
     end
   end
