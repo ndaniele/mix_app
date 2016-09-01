@@ -1,11 +1,6 @@
 class QuestionsController < ApplicationController
   #before_action :authentication_required
 
- # def answer_attributes=(answer)
- #   self.answer = Answer.find_or_create_by(:user_id => answer.user_id)
- #   self.answer.update(answer)
- # end
-
   def index
     #if you're not logged in you can't see this, goto login page
     #raise params.inspect
