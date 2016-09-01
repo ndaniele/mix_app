@@ -55,8 +55,8 @@ class QuestionsController < ApplicationController
       @answers.each do |answer|
         answer.destroy
       end
-
-    redirect_to questions_path
+      redirect_to user_path(current_user)
+    #redirect_to questions_path
   end
 
   def most_popular

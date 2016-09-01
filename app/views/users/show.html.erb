@@ -5,7 +5,8 @@
   <ul>
     <% @user.questions.each do |question| %>
       <% if question.user_id == @user.id %>
-        <%= render :partial => 'questions/question_li', :locals => {:question => question} %>
+        <%= render :partial => 'questions/question_li', :locals => {:question => question} %> 
+        <h3><%= link_to 'Show Page', question_answer_path(question) %></h3><br></br>
       <% end %>
     <% end %>
   </ul>
@@ -15,6 +16,7 @@
   <ul>
     <% @answers.each do |answer_question| %>
       <%= render :partial => 'answers/answers_li', :locals => {:answer_question => answer_question} %>
+      <h3><%= link_to 'Show Page', question_answer_path(answer_question.question) %></h3><br></br>
       <% end %>
   </ul>
 

@@ -1,9 +1,9 @@
-<h2>ANSWERS SHOW PAGE</h2>
+<h2>ANSWERS SHOW PAGE FOR</h2>
 
-<h3><%= @question.query %></h3><br></br>
+<h2>¿<%= @question.query %>?</h2><br></br>
 
 
-<h2>[FLASH FEATURE]ANSWER STATS</h2>
+<h2>Answer Stats:</h2>
 
 
 <h3>Total number of answers to this question: <%= @question.answers_count %></h3>
@@ -15,12 +15,12 @@
 <h3> WINNER IS: <%= @question.winner %></h3><br></br>
 
 
-<%= link_to "back to ALL questions", questions_path %><br></br>
+<%= link_to "back to ALL questions", questions_path %> |
 
 <%= link_to "YOUR questions", user_path(current_user) %><br>
 
 <% if @question.user_id == current_user.id %>
 
-  <p><%= link_to 'Destroy', @question, method: :delete %></p>
+  <p><%= link_to 'Destroy this question', @question, method: :delete %></p>
 
 <% end %>
