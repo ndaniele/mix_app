@@ -1,5 +1,15 @@
 class AnswersController < ApplicationController
 
+  def new
+    @question =  Question.find_by(id: params[:question_id])
+    if @question == nil
+        redirect_to root_path
+    else
+      #flash[:error] = "please select a question to answer"
+      redirect_to question_path(@question)
+    end
+  end
+
   def show
     @question = Question.find_by(id: params[:question_id])
     @answers = @question.answers.build

@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   has_many :answers
   has_many :questions, through: :answers
-  #has_many :questions
+  has_many :asked_questions, class_name: 'Question'
 
   #enum role: [:user, :moderator, :admin] => for pundit, if needed
 

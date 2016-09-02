@@ -3,11 +3,9 @@
 <h2>Questions Created By <%=@user.email%> </h2>
 
   <ul>
-    <% @user.questions.each do |question| %>
-      <% if question.user_id == @user.id %>
-        <%= render :partial => 'questions/question_li', :locals => {:question => question} %> 
-        <h3><%= link_to 'Show Page', question_answer_path(question) %></h3><br></br>
-      <% end %>
+    <% @user_questions.each do |question| %>
+      <%= render :partial => 'questions/question_li', :locals => {:question => question} %> 
+      <h3><%= link_to 'Show Page', question_answer_path(question) %></h3><br></br>
     <% end %>
   </ul>
 

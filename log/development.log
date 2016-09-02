@@ -22933,3 +22933,1306 @@ Processing by QuestionsController#index as HTML
 Completed 200 OK in 55ms (Views: 50.0ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/users/sign_out" for ::1 at 2016-09-01 12:11:58 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 288ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2016-09-01 12:11:58 -0400
+Processing by QuestionsController#index as HTML
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 12ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-09-01 12:11:58 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (2.8ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (115.5ms)
+  Rendered layouts/_messages.html.erb (1.7ms)
+Completed 200 OK in 825ms (Views: 805.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_out" for ::1 at 2016-09-01 12:12:04 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2016-09-01 12:12:04 -0400
+Processing by QuestionsController#index as HTML
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-09-01 12:12:04 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (2.6ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (12.1ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 78ms (Views: 75.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-09-02 13:14:03 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by QuestionsController#index as HTML
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 165ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-09-02 13:14:04 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (3.0ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (347.7ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 1169ms (Views: 1114.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2016-09-02 13:14:10 -0400
+Started GET "/users/auth/facebook" for ::1 at 2016-09-02 13:14:10 -0400
+Started GET "/users/auth/facebook/callback?code=AQC_OI9a_av_bbz-t0OtpmZ7esuSco_ZarPBTST07VYhlEyK2zFGzGPo_9RYm_9yrsKbEtrQNcmy8pdtdZEQAQtQoUYAd63DuamlJm4ahoHjDSYIDlSDda2041O4JZzGPkREgsCWYdUuiXRcgur2RhvNuHfsHF21wgc0gzkucUXuhh1ugGjIZFtIiyiWGVT7dKZL0hGPhbQGNQjDUi7emQeDQ47UC1HH_XZxUCt0BDgsoc62PPN3kc-gEdVwMnnA9hDWmfvI7xlpNXxjIbu6MyPzHvyHGQXR403uYJrD_PMlNwuBibayQiXHjoXvj-6v5SeT09J1GE_0N9Gzu8FGUGnT0VTnW04XnB6-cPc14_trMQ&state=b2699534dea9dc9bf1dcf491bbeaa9a9d01842cbc22769b8" for ::1 at 2016-09-02 13:14:11 -0400
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQC_OI9a_av_bbz-t0OtpmZ7esuSco_ZarPBTST07VYhlEyK2zFGzGPo_9RYm_9yrsKbEtrQNcmy8pdtdZEQAQtQoUYAd63DuamlJm4ahoHjDSYIDlSDda2041O4JZzGPkREgsCWYdUuiXRcgur2RhvNuHfsHF21wgc0gzkucUXuhh1ugGjIZFtIiyiWGVT7dKZL0hGPhbQGNQjDUi7emQeDQ47UC1HH_XZxUCt0BDgsoc62PPN3kc-gEdVwMnnA9hDWmfvI7xlpNXxjIbu6MyPzHvyHGQXR403uYJrD_PMlNwuBibayQiXHjoXvj-6v5SeT09J1GE_0N9Gzu8FGUGnT0VTnW04XnB6-cPc14_trMQ", "state"=>"b2699534dea9dc9bf1dcf491bbeaa9a9d01842cbc22769b8"}
+  [1m[36mUser Load (17.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "facebook"], ["uid", "10153602064052811"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-09-02 17:14:11 UTC], ["last_sign_in_at", 2016-09-01 14:16:06 UTC], ["sign_in_count", 3], ["updated_at", 2016-09-02 17:14:11 UTC], ["id", 7]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 64ms (ActiveRecord: 20.2ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-09-02 13:14:11 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-09-02 13:14:11 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (11.7ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 190ms (Views: 57.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/questions/50" for ::1 at 2016-09-02 13:14:18 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 50], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (60.2ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 1533ms (Views: 146.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/questions/50/answers/1" for ::1 at 2016-09-02 13:14:30 -0400
+Processing by AnswersController#show as HTML
+  Parameters: {"question_id"=>"50", "id"=>"1"}
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 50], ["LIMIT", 1]]
+  Rendering answers/show.html.erb within layouts/application
+  [1m[35m (26.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 50]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 50], ["input", "no"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 50], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 50], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 50], ["input", "no"]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered answers/show.html.erb within layouts/application (37.1ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 178ms (Views: 126.0ms | ActiveRecord: 28.0ms)
+
+
+Started DELETE "/questions/50" for ::1 at 2016-09-02 13:14:32 -0400
+Processing by QuestionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3oTZLMc0ZUdov/AQlL6qyulbYuyb3IEN9TxpQcfEfnAiJMdGxYJilkDhYBaDHKYPtQ6o2qY5dZ++TiOSx9mKaw==", "id"=>"50"}
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 50], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 50]]
+  [1m[35mSQL (1.4ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 49]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 50]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 50]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mAnswer Load (0.4ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 50]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 17ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/users/7" for ::1 at 2016-09-02 13:14:32 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "answers" ON "questions"."id" = "answers"."question_id" WHERE "answers"."user_id" = ?[0m  [["user_id", 7]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 34]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "no"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (12.3ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 35]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "no"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (9.2ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 36]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "no"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (8.1ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 37]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "no"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (10.1ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 38]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "no"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "yes"]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (9.6ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 39]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "no"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (7.8ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 44]]
+  [1m[35m (5.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 44], ["input", "no"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 44], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 44], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 44], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (14.7ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 49]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 49], ["input", "no"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 49], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 49], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 49], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (8.7ms)
+  [1m[36mAnswer Load (0.5ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."user_id" = ?[0m  [["user_id", 7]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 34]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "no"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "no"]]
+  Rendered answers/_answers_li.html.erb (12.0ms)
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 35]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "no"]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "yes"]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "no"]]
+  Rendered answers/_answers_li.html.erb (10.1ms)
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 36]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "no"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "no"]]
+  Rendered answers/_answers_li.html.erb (8.6ms)
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 37]]
+  [1m[36mCACHE (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "no"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "no"]]
+  Rendered answers/_answers_li.html.erb (11.7ms)
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 38]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "no"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "no"]]
+  Rendered answers/_answers_li.html.erb (9.7ms)
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 39]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "no"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "no"]]
+  Rendered answers/_answers_li.html.erb (9.5ms)
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 44]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 44], ["input", "no"]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 44], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 44], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 44], ["input", "no"]]
+  Rendered answers/_answers_li.html.erb (10.2ms)
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 49], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 49], ["input", "no"]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 49], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 49], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 49], ["input", "no"]]
+  Rendered answers/_answers_li.html.erb (10.2ms)
+  Rendered users/show.html.erb within layouts/application (357.0ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 458ms (Views: 419.8ms | ActiveRecord: 17.4ms)
+
+
+Started GET "/questions/49/answers/7" for ::1 at 2016-09-02 13:14:41 -0400
+Processing by AnswersController#show as HTML
+  Parameters: {"question_id"=>"49", "id"=>"7"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 49], ["LIMIT", 1]]
+  Rendering answers/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 49]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 49], ["input", "no"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 49], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 49], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 49], ["input", "no"]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered answers/show.html.erb within layouts/application (15.8ms)
+  Rendered layouts/_messages.html.erb (1.5ms)
+Completed 200 OK in 101ms (Views: 93.2ms | ActiveRecord: 2.3ms)
+
+
+Started DELETE "/questions/49" for ::1 at 2016-09-02 13:14:42 -0400
+Processing by QuestionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sYEiQa5j+YOntEN0zmJ9EuQr5WXM7DkW8WijxAZmH7hNITwrrNX+Uo/q03LZwHHXuH4vU/EJzYS6GukXBnvrow==", "id"=>"49"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 49], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 49]]
+  [1m[35mSQL (77.8ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 48]]
+  [1m[35mSQL (7.8ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 49]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 49]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 100ms (ActiveRecord: 88.5ms)
+
+
+Started GET "/users/7" for ::1 at 2016-09-02 13:14:42 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "answers" ON "questions"."id" = "answers"."question_id" WHERE "answers"."user_id" = ?[0m  [["user_id", 7]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 34]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "no"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (11.6ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 35]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "no"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (11.6ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 36]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "no"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (10.3ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 37]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "no"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (9.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 38]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "no"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (9.3ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 39]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "no"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (9.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 44]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 44], ["input", "no"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 44], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 44], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 44], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (18.0ms)
+  [1m[36mAnswer Load (0.4ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."user_id" = ?[0m  [["user_id", 7]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 34]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "no"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "yes"]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "no"]]
+  Rendered answers/_answers_li.html.erb (12.1ms)
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 35]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "no"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "no"]]
+  Rendered answers/_answers_li.html.erb (9.4ms)
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 36]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "no"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "no"]]
+  Rendered answers/_answers_li.html.erb (10.7ms)
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 37]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "no"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "no"]]
+  Rendered answers/_answers_li.html.erb (10.6ms)
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 38]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "no"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "no"]]
+  Rendered answers/_answers_li.html.erb (10.9ms)
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 39]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "no"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "no"]]
+  Rendered answers/_answers_li.html.erb (10.0ms)
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 44]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 44], ["input", "no"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 44], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 44], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 44], ["input", "no"]]
+  Rendered answers/_answers_li.html.erb (13.2ms)
+  Rendered users/show.html.erb within layouts/application (203.2ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 266ms (Views: 250.5ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/questions/44/answers/7" for ::1 at 2016-09-02 13:14:48 -0400
+Processing by AnswersController#show as HTML
+  Parameters: {"question_id"=>"44", "id"=>"7"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering answers/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 44]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 44], ["input", "no"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 44], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 44], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 44], ["input", "no"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered answers/show.html.erb within layouts/application (13.9ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 95ms (Views: 86.8ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/questions/44" for ::1 at 2016-09-02 13:14:50 -0400
+Processing by QuestionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8qgsIb7TX2IFeXiul0Ef23ftzIyDmMogLx7NyaLueuMOCDJLvGVYsy0n6KiA4xMeK7gGur59PrJkbIcaovOO+A==", "id"=>"44"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 44]]
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 40]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 47]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 44]]
+  [1m[35m (64.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 44]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 80ms (ActiveRecord: 66.5ms)
+
+
+Started GET "/users/7" for ::1 at 2016-09-02 13:14:50 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "answers" ON "questions"."id" = "answers"."question_id" WHERE "answers"."user_id" = ?[0m  [["user_id", 7]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 34]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "no"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (7.6ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 35]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "no"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (7.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 36]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "no"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "yes"]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (7.2ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 37]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "no"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (7.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 38]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "no"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (14.9ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 39]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "no"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (7.6ms)
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."user_id" = ?[0m  [["user_id", 7]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 34]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "no"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "no"]]
+  Rendered answers/_answers_li.html.erb (10.3ms)
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 35]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "no"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "no"]]
+  Rendered answers/_answers_li.html.erb (12.9ms)
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 36]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "no"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "no"]]
+  Rendered answers/_answers_li.html.erb (8.5ms)
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 37]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "no"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "no"]]
+  Rendered answers/_answers_li.html.erb (9.0ms)
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 38]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "no"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "no"]]
+  Rendered answers/_answers_li.html.erb (9.5ms)
+  [1m[36mQuestion Load (1.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 39]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "no"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "no"]]
+  Rendered answers/_answers_li.html.erb (10.9ms)
+  Rendered users/show.html.erb within layouts/application (150.4ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 275ms (Views: 262.6ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/questions" for ::1 at 2016-09-02 13:15:00 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 55ms (Views: 47.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/questions/35" for ::1 at 2016-09-02 13:15:09 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+Completed 200 OK in 60ms (Views: 52.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/questions/35/answers" for ::1 at 2016-09-02 13:15:11 -0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0Aqj9iiWePtlCO+A2aNKWkxHtF1Q4Cj7XJPI5Pn0ppzyHC1Tk/KY/oL6bwQVVzkQCzWm49gW/7gD5nPKpm+phA==", "answer"=>{"input"=>"yes"}, "commit"=>"Create", "question_id"=>"35"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mAnswer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "answers" WHERE "answers"."user_id" = ? AND "answers"."question_id" = ? LIMIT ?[0m  [["user_id", 7], ["question_id", 35], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://localhost:3000/questions/35
+Completed 302 Found in 47ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/questions/35" for ::1 at 2016-09-02 13:15:11 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+Completed 200 OK in 70ms (Views: 61.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/questions" for ::1 at 2016-09-02 13:15:13 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 77ms (Views: 69.8ms | ActiveRecord: 1.4ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "answers" ON "questions"."id" = "answers"."question_id" WHERE "answers"."user_id" = ?[0m  [["user_id", 13]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."user_id" = ?[0m  [["user_id", 7]]
+Started GET "/users/7" for ::1 at 2016-09-02 13:31:46 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."user_id" = ?[0m  [["user_id", 7]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 34]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "no"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "yes"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "yes"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (15.7ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 35]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "no"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "yes"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "yes"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (13.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 36]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "no"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "yes"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "yes"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (13.3ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 37]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "no"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "yes"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "yes"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (8.8ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 38]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "no"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "yes"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "yes"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (24.0ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 39]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "no"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "yes"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "yes"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (8.1ms)
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."user_id" = ?[0m  [["user_id", 7]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 34]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "no"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "yes"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "yes"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "no"]]
+  Rendered answers/_answers_li.html.erb (13.8ms)
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 35]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "no"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "yes"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "yes"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "no"]]
+  Rendered answers/_answers_li.html.erb (8.6ms)
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 36]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "no"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "yes"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "yes"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "no"]]
+  Rendered answers/_answers_li.html.erb (10.6ms)
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 37]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "no"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "yes"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "yes"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "no"]]
+  Rendered answers/_answers_li.html.erb (9.8ms)
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 38]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "no"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "yes"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "yes"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "no"]]
+  Rendered answers/_answers_li.html.erb (10.8ms)
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 39]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "no"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "yes"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "yes"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "no"]]
+  Rendered answers/_answers_li.html.erb (13.5ms)
+  Rendered users/show.html.erb within layouts/application (222.7ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 311ms (Views: 258.5ms | ActiveRecord: 22.6ms)
+
+
+Started GET "/users/7" for ::1 at 2016-09-02 13:33:56 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."user_id" = ?[0m  [["user_id", 7]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 34]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "no"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "yes"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "yes"]]
+  [1m[35m (8.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (33.2ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 35]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "no"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "yes"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "yes"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (9.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 36]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "no"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "yes"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "yes"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (10.1ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 37]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "no"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "yes"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "yes"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (28.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 38]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "no"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "yes"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "yes"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (14.6ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 39]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "no"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "yes"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "yes"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "no"]]
+  Rendered questions/_question_li.html.erb (8.4ms)
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."user_id" = ?[0m  [["user_id", 7]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 34]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "no"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "yes"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "yes"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 34], ["input", "no"]]
+  Rendered answers/_answers_li.html.erb (36.4ms)
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 35]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "no"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "yes"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "yes"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 35], ["input", "no"]]
+  Rendered answers/_answers_li.html.erb (10.7ms)
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 36]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "no"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "yes"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "yes"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 36], ["input", "no"]]
+  Rendered answers/_answers_li.html.erb (15.8ms)
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 37]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "no"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "yes"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "yes"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 37], ["input", "no"]]
+  Rendered answers/_answers_li.html.erb (17.7ms)
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 38]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "no"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "yes"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "yes"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 38], ["input", "no"]]
+  Rendered answers/_answers_li.html.erb (14.3ms)
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 39]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "no"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "yes"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "yes"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 39], ["input", "no"]]
+  Rendered answers/_answers_li.html.erb (38.4ms)
+  Rendered users/show.html.erb within layouts/application (323.0ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 482ms (Views: 397.4ms | ActiveRecord: 33.0ms)
+
+
+Started GET "/questions" for ::1 at 2016-09-02 13:37:52 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_messages.html.erb (1.8ms)
+Completed 200 OK in 109ms (Views: 76.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/questions/new" for ::1 at 2016-09-02 13:37:53 -0400
+Processing by QuestionsController#new as HTML
+  Rendering questions/new.html.erb within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered questions/new.html.erb within layouts/application (27.0ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+Completed 200 OK in 113ms (Views: 83.9ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/questions" for ::1 at 2016-09-02 13:37:58 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9I0UjU9ZYfn/U/11ioK/RLRYEPtX5/y/HunFncsOtlxouUEDMMpiEz3YW5HfbL8jxoABO4G0M5srD5bO3x8MJg==", "question"=>{"query"=>"does this work", "answers_attributes"=>{"0"=>{"input"=>"yes", "user_id"=>"7"}}}, "commit"=>"submit"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mAnswer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "answers" WHERE "answers"."user_id" = ? AND "answers"."question_id" IS NULL LIMIT ?[0m  [["user_id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://localhost:3000/questions/new
+Completed 302 Found in 33ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/questions/new" for ::1 at 2016-09-02 13:37:58 -0400
+Processing by QuestionsController#new as HTML
+  Rendering questions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered questions/new.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+Completed 200 OK in 79ms (Views: 73.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/questions" for ::1 at 2016-09-02 13:38:28 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0chQOv6gIuPBGjKTmVpqoe5c7F592x69oLE11R8j3PAtaE5Q/BYlMulEopWO+GZksgkmaEA+6i/rw38GHz4o6w==", "question"=>{"query"=>"does this work", "answers_attributes"=>{"0"=>{"input"=>"yes", "user_id"=>"7"}}}, "commit"=>"submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mAnswer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "answers" WHERE "answers"."user_id" = ? AND "answers"."question_id" IS NULL LIMIT ?[0m  [["user_id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "questions" ("query", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["query", "does this work"], ["created_at", 2016-09-02 17:38:28 UTC], ["updated_at", 2016-09-02 17:38:28 UTC], ["user_id", 7]]
+  [1m[36mAnswer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "answers" WHERE "answers"."user_id" = ? AND "answers"."question_id" = ? LIMIT ?[0m  [["user_id", 7], ["question_id", 51], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "answers" ("input", "question_id", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["input", "yes"], ["question_id", 51], ["created_at", 2016-09-02 17:38:28 UTC], ["updated_at", 2016-09-02 17:38:28 UTC], ["user_id", 7]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/questions
+Completed 302 Found in 148ms (ActiveRecord: 8.9ms)
+
+
+Started GET "/questions" for ::1 at 2016-09-02 13:38:28 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 77ms (Views: 71.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/questions/new" for ::1 at 2016-09-02 13:43:39 -0400
+Processing by QuestionsController#new as HTML
+  Rendering questions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered questions/new.html.erb within layouts/application (43.4ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 145ms (Views: 97.9ms | ActiveRecord: 4.1ms)
+
+
+Started POST "/questions" for ::1 at 2016-09-02 13:43:44 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Th5WL1r06sgn3VnCrKvjMYXLZDQDBksky5YIUjJEdm7SKgOhJWfpIuVW/yb5ReNW9xN19NVVhAD+cFsBJlXMFA==", "question"=>{"query"=>"what about this", "answers_attributes"=>{"0"=>{"input"=>"yes", "user_id"=>"7"}}}, "commit"=>"submit"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mAnswer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "answers" WHERE "answers"."user_id" = ? AND "answers"."question_id" IS NULL LIMIT ?[0m  [["user_id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://localhost:3000/questions/new
+Completed 302 Found in 83ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/questions/new" for ::1 at 2016-09-02 13:43:44 -0400
+Processing by QuestionsController#new as HTML
+  Rendering questions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered questions/new.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_messages.html.erb (1.4ms)
+Completed 200 OK in 106ms (Views: 87.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/questions" for ::1 at 2016-09-02 13:44:35 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X7ic4OsjYfG+EBP4UPqLSSJh+i+cV8CS5z2w8en7WlyjGIKK6ZVmIJZOg/5HWIeMfjQwGaGyNACsT/oi6eauRw==", "question"=>{"query"=>"asdfasfsa", "answers_attributes"=>{"0"=>{"input"=>"no", "user_id"=>"7"}}}, "commit"=>"submit"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "answers" ON "questions"."id" = "answers"."question_id" WHERE "answers"."user_id" = ?[0m  [["user_id", 7]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mAnswer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "answers" WHERE "answers"."user_id" = ? AND "answers"."question_id" IS NULL LIMIT ?[0m  [["user_id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://localhost:3000/questions/new
+Completed 302 Found in 107301ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/questions/new" for ::1 at 2016-09-02 13:46:22 -0400
+Processing by QuestionsController#new as HTML
+  Rendering questions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered questions/new.html.erb within layouts/application (35.2ms)
+  Rendered layouts/_messages.html.erb (2.1ms)
+Completed 200 OK in 233ms (Views: 159.1ms | ActiveRecord: 10.2ms)
+
+
+Started POST "/questions" for ::1 at 2016-09-02 13:46:31 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CewinVJczwMVPTk3Mkq0Ti1bo+Xr9m0PnvzbOnO3isb1TDz3UOrI0j1jqTEl6LiLcQ5p09YTmZ3VjpHpc6p+3Q==", "question"=>{"query"=>"test test", "answers_attributes"=>{"0"=>{"input"=>"yes", "user_id"=>"7"}}}, "commit"=>"submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mAnswer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "answers" WHERE "answers"."user_id" = ? AND "answers"."question_id" IS NULL LIMIT ?[0m  [["user_id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "questions" ("query", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["query", "test test"], ["created_at", 2016-09-02 17:46:31 UTC], ["updated_at", 2016-09-02 17:46:31 UTC], ["user_id", 7]]
+  [1m[36mAnswer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "answers" WHERE "answers"."user_id" = ? AND "answers"."question_id" = ? LIMIT ?[0m  [["user_id", 7], ["question_id", 52], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "answers" ("input", "question_id", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["input", "yes"], ["question_id", 52], ["created_at", 2016-09-02 17:46:31 UTC], ["updated_at", 2016-09-02 17:46:31 UTC], ["user_id", 7]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/questions
+Completed 302 Found in 65ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/questions" for ::1 at 2016-09-02 13:46:31 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 217ms (Views: 189.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/questions/new" for ::1 at 2016-09-02 13:52:20 -0400
+Processing by QuestionsController#new as HTML
+  Rendering questions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered questions/new.html.erb within layouts/application (20.8ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 108ms (Views: 89.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/questions" for ::1 at 2016-09-02 13:52:22 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xmLXRnLw4/D4ZxP/w55Byr7MtowGi/c2BhrTigyZRAFaVoLIDWPgGjrstRuWcEGtzBSnTNDYOBIz/IDZGIj+ew==", "question"=>{"query"=>"", "answers_attributes"=>{"0"=>{"user_id"=>"7"}}}, "commit"=>"submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mAnswer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "answers" WHERE "answers"."user_id" = ? AND "answers"."question_id" IS NULL LIMIT ?[0m  [["user_id", 7], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://localhost:3000/questions/new
+Completed 302 Found in 43ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/questions/new" for ::1 at 2016-09-02 13:52:22 -0400
+Processing by QuestionsController#new as HTML
+  Rendering questions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered questions/new.html.erb within layouts/application (18.1ms)
+  Rendered layouts/_messages.html.erb (1.2ms)
+Completed 200 OK in 106ms (Views: 98.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/questions" for ::1 at 2016-09-02 13:52:30 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8OZw89y81GBGtPuh9bh9OJQKbHeo1x/y+Iay3Ql7vTsMRm6Z3grTsW7qa6fiGnH9yF+mQZUy62Cz9PgOCWZJIA==", "question"=>{"query"=>"", "answers_attributes"=>{"0"=>{"input"=>"yes", "user_id"=>"7"}}}, "commit"=>"submit"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mAnswer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "answers" WHERE "answers"."user_id" = ? AND "answers"."question_id" IS NULL LIMIT ?[0m  [["user_id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://localhost:3000/questions/new
+Completed 302 Found in 22ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/questions/new" for ::1 at 2016-09-02 13:52:30 -0400
+Processing by QuestionsController#new as HTML
+  Rendering questions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered questions/new.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 101ms (Views: 95.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/questions" for ::1 at 2016-09-02 13:52:34 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mg76UxgHhwa7Rq5LzpcfbuhDQGXPU3Cxud0Z7/0TutZmruQ5GrGA15MYPk3ZNROrtBaKU/K2hCPyr1M8/Q5OzQ==", "question"=>{"query"=>"SDfasdfa", "answers_attributes"=>{"0"=>{"user_id"=>"7"}}}, "commit"=>"submit"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mAnswer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "answers" WHERE "answers"."user_id" = ? AND "answers"."question_id" IS NULL LIMIT ?[0m  [["user_id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://localhost:3000/questions/new
+Completed 302 Found in 41ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/questions/new" for ::1 at 2016-09-02 13:52:34 -0400
+Processing by QuestionsController#new as HTML
+  Rendering questions/new.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered questions/new.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_messages.html.erb (1.4ms)
+Completed 200 OK in 135ms (Views: 112.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "//questions/:question_id/answers/new" for ::1 at 2016-09-02 13:55:27 -0400
+  
+AbstractController::ActionNotFound (The action 'new' could not be found for AnswersController):
+  
+actionpack (5.0.0) lib/abstract_controller/base.rb:121:in `process'
+actionview (5.0.0) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.0) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.0) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.0) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.0) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.0) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.0) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.0) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.0) lib/action_dispatch/routing/route_set.rb:725:in `call'
+omniauth (1.3.1) lib/omniauth/strategy.rb:186:in `call!'
+omniauth (1.3.1) lib/omniauth/strategy.rb:164:in `call'
+omniauth (1.3.1) lib/omniauth/strategy.rb:186:in `call!'
+omniauth (1.3.1) lib/omniauth/strategy.rb:164:in `call'
+omniauth (1.3.1) lib/omniauth/builder.rb:63:in `call'
+warden (1.2.6) lib/warden/manager.rb:35:in `block in call'
+warden (1.2.6) lib/warden/manager.rb:34:in `catch'
+warden (1.2.6) lib/warden/manager.rb:34:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.0) lib/active_record/migration.rb:552:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `call'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.8ms)
+Started GET "//questions/:question_id/answers/new" for ::1 at 2016-09-02 13:55:53 -0400
+Processing by AnswersController#new as HTML
+  Parameters: {"question_id"=>":question_id"}
+Completed 406 Not Acceptable in 217ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (AnswersController#new is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not… nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.0.0) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
+actionpack (5.0.0) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.0.0) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.0.0) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.0) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.0) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.0) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.0) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.0) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.0) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.0) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.0) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.0) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.0) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.0) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.0) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.0) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.0) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.0) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.0) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.0) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.0) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.0) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.0) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.0) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.0) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.0) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.0) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.0) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.0) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.0) lib/action_dispatch/routing/route_set.rb:725:in `call'
+omniauth (1.3.1) lib/omniauth/strategy.rb:186:in `call!'
+omniauth (1.3.1) lib/omniauth/strategy.rb:164:in `call'
+omniauth (1.3.1) lib/omniauth/strategy.rb:186:in `call!'
+omniauth (1.3.1) lib/omniauth/strategy.rb:164:in `call'
+omniauth (1.3.1) lib/omniauth/builder.rb:63:in `call'
+warden (1.2.6) lib/warden/manager.rb:35:in `block in call'
+warden (1.2.6) lib/warden/manager.rb:34:in `catch'
+warden (1.2.6) lib/warden/manager.rb:34:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.0) lib/active_record/migration.rb:552:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `call'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.2ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (156.1ms)
+Started GET "//questions/:question_id/answers/new" for ::1 at 2016-09-02 13:56:38 -0400
+Processing by AnswersController#new as HTML
+  Parameters: {"question_id"=>":question_id"}
+  Rendering answers/new.html.erb within layouts/application
+  Rendered answers/new.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+Completed 200 OK in 72ms (Views: 68.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "//questions/:question_id/answers/new" for ::1 at 2016-09-02 13:57:52 -0400
+Processing by AnswersController#new as HTML
+  Parameters: {"question_id"=>":question_id"}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template answers/questions#show, application/questions#show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/ntd/Development/mix_app/app/views"
+  * "/Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views"
+):
+  
+app/controllers/answers_controller.rb:4:in `new'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (31.0ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.1ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (161.8ms)
+Started GET "//questions/:question_id/answers/new" for ::1 at 2016-09-02 13:58:53 -0400
+Processing by AnswersController#new as HTML
+  Parameters: {"question_id"=>":question_id"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"questions", :id=>nil} missing required keys: [:id]):
+  
+app/controllers/answers_controller.rb:5:in `new'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (23.7ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.9ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (153.9ms)
+Started GET "//questions/35/answers/new" for ::1 at 2016-09-02 13:59:40 -0400
+Processing by AnswersController#new as HTML
+  Parameters: {"question_id"=>"35"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+Redirected to http://localhost:3000/questions/35
+Completed 302 Found in 13ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/questions/35" for ::1 at 2016-09-02 13:59:40 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 122ms (Views: 53.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "//questions" for ::1 at 2016-09-02 14:00:08 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 57ms (Views: 51.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/questions/36" for ::1 at 2016-09-02 14:00:12 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+Completed 200 OK in 61ms (Views: 50.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "//questions/:question_id/answers/new" for ::1 at 2016-09-02 14:02:12 -0400
+Processing by AnswersController#new as HTML
+  Parameters: {"question_id"=>":question_id"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/answers_controller.rb:5:in `new'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.8ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (135.2ms)
+Started PUT "/__web_console/repl_sessions/7b85024cd0677c0416c99116cd0c0911" for ::1 at 2016-09-02 14:02:23 -0400
+Started GET "//questions/:question_id/answers/new" for ::1 at 2016-09-02 14:02:32 -0400
+Processing by AnswersController#new as HTML
+  Parameters: {"question_id"=>":question_id"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2016-09-02 14:02:32 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 83ms (Views: 55.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/questions/39" for ::1 at 2016-09-02 14:02:35 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"39"}
+  [1m[36mQuestion Load (2.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 82ms (Views: 48.4ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/questions/:question_id/answers/new" for ::1 at 2016-09-02 14:04:36 -0400
+Processing by AnswersController#new as HTML
+  Parameters: {"question_id"=>":question_id"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-09-02 14:04:36 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (11.2ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 90ms (Views: 61.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2016-09-02 14:05:44 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 72ms (Views: 67.0ms | ActiveRecord: 0.6ms)
+
+

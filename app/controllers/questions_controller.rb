@@ -18,8 +18,8 @@ class QuestionsController < ApplicationController
 
   def create
     #raise params.inspect
-    @question = Question.new(question_params)
-    @question.user_id = current_user.id #session[:user_id]
+    @question = current_user.asked_questions.build(question_params)
+    #@question.user_id = current_user.id #session[:user_id]
     if 
       @question.save
       redirect_to questions_path  #=> goes to answers#show

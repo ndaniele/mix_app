@@ -26,7 +26,7 @@ devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_call
   resources :users, :only => [:show, :create, :new]
 
   resources :questions, :except => [:edit] do
-    resources :answers, :only => [:show, :create]
+    resources :answers, :only => [:show, :create, :new]
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

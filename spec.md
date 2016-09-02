@@ -66,7 +66,7 @@ Specs:
             =>/questions/:id/answers/:id (question_answers show page)
 
 - [X] Include nested resource "new" form (URL e.g. recipes/1/ingredients)
-      => /questions/:id => updates question with a NEW answer
+      => /questions/:question_id/answers/new => creates a new answer for a question
 
 - [X] Include form display of validation errors (form URL e.g. /recipes/new)
       => flash[:error] = "#{@question.errors.full_messages.join(" & ")}"
