@@ -1,6 +1,7 @@
 <h1>Most Popular Question</h1>
 
-<%question = Question.find_by(id: "#{most_popular}") %>
+<%question = Question.find_by(id: "#{Answer.most_popular}") %>
+                          <%#(id: "#{Question.most_popular}")%>
 
 <%= render :partial => 'questions/question_li', :locals => {:question => question} %>
 
