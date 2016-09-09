@@ -2,6 +2,11 @@
 
 <h3><%= @group.name %></h3>
 
+  <%=form_for(@group) do |f| %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <h3><%= f.submit "Join This Group" %></h3>
+  <% end %>
+
 <h3>Group Members: </h3>
 <% @group.members.each do |member| %>
   <ul>
