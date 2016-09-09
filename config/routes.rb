@@ -22,6 +22,7 @@ end
 
 devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
+  resources :groups, :only => [:show, :create, :new, :index]
 
   resources :users, :only => [:show, :create, :new]
 

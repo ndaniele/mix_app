@@ -118,9 +118,19 @@ X merge current version with github repo (do i need to rename?)
 TO DO FOR ASSESMENT
 X change relationship to has_many_through
 
-- add authorization roles for User
+X add authorization roles for User
   - User can only destroy questions created by User
   - User can answer all questions
 
-- possibly add a .most_popular_question class method
-- 
+X possibly add a .most_popular_question class method
+
+
+TO DO 
+- add groups for users and questions
+- add functionallity
+  - user can belong to a group and/or create a new group
+  - a user can post their questions to their group or publicly(to all)
+  - functions should work in groups
+   - most popular question (in this group)
+   
+

@@ -6,6 +6,8 @@ class Question < ApplicationRecord
   validates :query, length: { maximum: 140, too_long: "- %{count} characters is the maximum allowed" }
   #accepts_nested_attributes_for :answers 
 
+  groupify :group_member
+
   def answers_attributes=(answers_attributes)
     #raise answers_attributes.inspect
     answers_attributes.each do |id, answer_attributes|
