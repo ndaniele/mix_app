@@ -35,6 +35,7 @@ gem 'devise'
 
 gem 'rack-flash3'
 gem "pundit"
+gem 'groupify'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
