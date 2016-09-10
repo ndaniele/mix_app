@@ -6,6 +6,7 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find_by(:id => params[:id])
+    @manager = User.find_by(:id => User.in_group(@group).as(:manager).to_a.to_s.split[2].to_i)
     @question = Question.new
     @question.answers.build
   end

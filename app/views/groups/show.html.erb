@@ -28,7 +28,9 @@
   <% end %>
 <% end %>
 
-<h3>Group Manager:<%= User.in_group(@group).as(:manager).to_a.to_s.split[4] %></h3>
+<%# User.in_group(@group).as(:manager).to_a.to_s.split[2].to_i %>
+
+<h3>Group Manager: <%= @manager.email %></h3>
 <h3>Group Members: </h3>
 <% @group.members.each do |member| %>
   <ul>
@@ -44,8 +46,8 @@
   </ul>
 <% end %>
 
-<%# if @question.user_id == current_user.id %>
+<% if @manager.id == current_user.id %>
 
   <p><%= link_to 'Destroy this Group', @group, method: :delete %></p>
 
-<%# end %>
+<% end %>

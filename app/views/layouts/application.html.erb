@@ -2,8 +2,9 @@
 <html>
   <head>
     <title>Mix</title>
-
- <%= render 'layouts/navbar' %>
+  <% if session[:user_id] %>
+    <%= render 'layouts/navbar' %>
+  <% end %>
 
     <%= csrf_meta_tags %>
 
