@@ -6,6 +6,8 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find_by(:id => params[:id])
+    @question = Question.new
+    @question.answers.build
   end
 
   def update

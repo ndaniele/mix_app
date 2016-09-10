@@ -21,8 +21,13 @@ class QuestionsController < ApplicationController
     @question = current_user.asked_questions.build(question_params)
     #@question.user_id = current_user.id #session[:user_id]
     if 
-      @question.save
+      @question.save && params[:question][:group_member] == nil
       redirect_to questions_path  #=> goes to answers#show
+    elsif @question.save && params[:question][:group_member] != nil
+      @group = Group.find_by(:id => params[:question][:group_member])
+      @question.groups << @group
+      @group.save
+      redirect_to group_path(@group)
     else
       flash[:error] = "#{@question.errors.full_messages.join(" & ")}"
       redirect_to new_question_path

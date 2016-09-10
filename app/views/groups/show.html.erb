@@ -2,10 +2,31 @@
 
 <h3><%= @group.name %></h3>
 
+<% if @group.members.include?(current_user) %>
+  <%= "Post a question to this group" %>
+
+  <%=form_for(@question) do |f| %>
+  <%= f.label :query %><br>
+<h2>¿<%= f.text_field :query %>?</h2><br>
+  <%= f.hidden_field :group_member, :value => @group.id %>
+
+  <%=f.fields_for :answers do |a| %>
+   <h2><%= a.radio_button(:input, "yes") %>
+    <%= a.label(:yes, "YES") %></h2>
+    <h2><%= a.radio_button(:input, "no") %>
+    <%= a.label(:no, "NO") %></h2><br></br>
+    <%= a.hidden_field :user_id, :value => current_user.id %>
+    <%= f.submit "submit" %>
+  <% end %>
+<% end %> 
+
+
+<% else %>
   <%=form_for(@group) do |f| %>
     <%= f.hidden_field :user_id, :value => current_user.id %>
     <h3><%= f.submit "Join This Group" %></h3>
   <% end %>
+<% end %>
 
 <h3>Group Members: </h3>
 <% @group.members.each do |member| %>
