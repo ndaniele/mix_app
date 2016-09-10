@@ -31,8 +31,10 @@ class Question < ApplicationRecord
   def winner 
     if yes_count > no_count
       "YES"
-    else
+    elsif no_count > yes_count
       "NO"
+    elsif yes_count = no_count
+      "TIE"      
     end
   end
 

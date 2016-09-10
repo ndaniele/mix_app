@@ -18,11 +18,13 @@ class Answer < ApplicationRecord
     self.question.answers.where(input: "no").count
   end
 
-  def winner 
+   def winner 
     if yes_count > no_count
       "YES"
-    else
+    elsif no_count > yes_count
       "NO"
+    elsif yes_count = no_count
+      "TIE"      
     end
   end
 
