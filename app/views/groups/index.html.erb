@@ -1,5 +1,8 @@
 <h2>Groups Index Page</h2>
 
+<h3>Click on a group name to Join the group or create a new group</h3>
+<%= link_to "Create a Group", new_group_path %>
+
 <% @groups.each do |group| %>
   <ul>
     <li><p><%= link_to group.name, group_path(group) %></p></li>

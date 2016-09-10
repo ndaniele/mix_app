@@ -28,6 +28,7 @@
   <% end %>
 <% end %>
 
+<h3>Group Manager:<%= User.in_group(@group).as(:manager) %></h3>
 <h3>Group Members: </h3>
 <% @group.members.each do |member| %>
   <ul>

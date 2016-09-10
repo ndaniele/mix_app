@@ -1,0 +1,7 @@
+<h1>NEW GROUP PAGE</h1>
+
+  <%=form_for(@group) do |f| %>
+<h2>Group Name:<%= f.text_field :name %></h2><br>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <h3><%= f.submit "Create This Group" %></h3>
+  <% end %>
