@@ -43,3 +43,9 @@
       <li>¿<%= link_to question.query, question_answer_path(question)%>?</li>
   </ul>
 <% end %>
+
+<%# if @question.user_id == current_user.id %>
+
+  <p><%= link_to 'Destroy this Group', @group, method: :delete %></p>
+
+<%# end %>
