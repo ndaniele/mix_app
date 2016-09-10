@@ -42,7 +42,7 @@
 
 <% @group.questions.each do |question| %>
   <ul>
-      <li>¿<%= link_to question.query, question_answer_path(question)%>?</li>
+      <li>¿<%= link_to question.query, question_path(question)%>?</li>
   </ul>
 <% end %>
 
