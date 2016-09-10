@@ -2,6 +2,14 @@
 
 <h3><%= @group.name %></h3>
 
+<h3>Group Manager: <%= @manager.email %></h3>
+<h3>Group Members: </h3>
+<% @group.members.each do |member| %>
+  <ul>
+      <li><%= member.email %></li>
+  </ul>
+<% end %>
+
 <% if @group.members.include?(current_user) %>
   <%= "Post a question to this group" %>
 
@@ -29,14 +37,6 @@
 <% end %>
 
 <%# User.in_group(@group).as(:manager).to_a.to_s.split[2].to_i %>
-
-<h3>Group Manager: <%= @manager.email %></h3>
-<h3>Group Members: </h3>
-<% @group.members.each do |member| %>
-  <ul>
-      <li><%= member.email %></li>
-  </ul>
-<% end %>
 
 <h3>Questions posed to this group: </h3>
 

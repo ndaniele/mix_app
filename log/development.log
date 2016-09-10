@@ -32406,3 +32406,81 @@ Processing by AnswersController#show as HTML
 Completed 200 OK in 135ms (Views: 88.5ms | ActiveRecord: 5.3ms)
 
 
+Started GET "/groups/12" for 127.0.0.1 at 2016-09-10 16:23:05 -0400
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from show at /Users/ntd/Development/mix_app/app/controllers/groups_controller.rb:9)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "users".* FROM "users" INNER JOIN "group_memberships" ON "group_memberships"."member_id" = "users"."id" AND "group_memberships"."member_type" = ? WHERE "group_memberships"."group_id" = ? AND "group_memberships"."membership_type" = ?[0m  [["member_type", "User"], ["group_id", 12], ["membership_type", :manager]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from _app_views_groups_show_html_erb___2213964175687037224_70332241726240 at /Users/ntd/Development/mix_app/app/views/groups/show.html.erb:5)
+DEPRECATION WARNING: Passing a class as a value in an Active Record query is deprecated and will be removed. Pass a string instead. (called from _app_views_groups_show_html_erb___2213964175687037224_70332241726240 at /Users/ntd/Development/mix_app/app/views/groups/show.html.erb:5)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  DISTINCT 1 AS one FROM "users" INNER JOIN "group_memberships" ON "users"."id" = "group_memberships"."member_id" WHERE "group_memberships"."group_id" = ? AND "group_memberships"."group_type" = ? AND "group_memberships"."member_type" = 'User' AND "users"."id" = ? LIMIT ?[0m  [["group_id", 12], ["group_type", "Group"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "users".* FROM "users" INNER JOIN "group_memberships" ON "users"."id" = "group_memberships"."member_id" WHERE "group_memberships"."group_id" = ? AND "group_memberships"."group_type" = ? AND "group_memberships"."member_type" = 'User'[0m  [["group_id", 12], ["group_type", "Group"]]
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from _app_views_groups_show_html_erb___2213964175687037224_70332241726240 at /Users/ntd/Development/mix_app/app/views/groups/show.html.erb:43)
+DEPRECATION WARNING: Passing a class as a value in an Active Record query is deprecated and will be removed. Pass a string instead. (called from _app_views_groups_show_html_erb___2213964175687037224_70332241726240 at /Users/ntd/Development/mix_app/app/views/groups/show.html.erb:43)
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "questions".* FROM "questions" INNER JOIN "group_memberships" ON "questions"."id" = "group_memberships"."member_id" WHERE "group_memberships"."group_id" = ? AND "group_memberships"."group_type" = ? AND "group_memberships"."member_type" = 'Question'[0m  [["group_id", 12], ["group_type", "Group"]]
+  Rendered groups/show.html.erb within layouts/application (24.6ms)
+  Rendered layouts/_messages.html.erb (1.2ms)
+Completed 200 OK in 149ms (Views: 76.8ms | ActiveRecord: 3.6ms)
+
+
+Started PATCH "/groups/12" for 127.0.0.1 at 2016-09-10 16:23:44 -0400
+Processing by GroupsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zfRBj2QD2GJU+vDIvqVDWGt7VOxpyeRp67qqjFnLqirSmt6cZd97oLIvIf3ZP6hfxujAZ62QyUaUHLyOcmHXyw==", "group"=>{"user_id"=>"3"}, "commit"=>"Join This Group", "id"=>"12"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from update at /Users/ntd/Development/mix_app/app/controllers/groups_controller.rb:33)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "group_memberships" ("member_type", "member_id", "group_type", "group_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["member_type", "User"], ["member_id", 3], ["group_type", "Group"], ["group_id", 12], ["created_at", 2016-09-10 20:23:44 UTC], ["updated_at", 2016-09-10 20:23:44 UTC]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/groups/12
+Completed 302 Found in 146ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/groups/12" for 127.0.0.1 at 2016-09-10 16:23:44 -0400
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from show at /Users/ntd/Development/mix_app/app/controllers/groups_controller.rb:9)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "users".* FROM "users" INNER JOIN "group_memberships" ON "group_memberships"."member_id" = "users"."id" AND "group_memberships"."member_type" = ? WHERE "group_memberships"."group_id" = ? AND "group_memberships"."membership_type" = ?[0m  [["member_type", "User"], ["group_id", 12], ["membership_type", :manager]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from _app_views_groups_show_html_erb___2213964175687037224_70332262226860 at /Users/ntd/Development/mix_app/app/views/groups/show.html.erb:5)
+DEPRECATION WARNING: Passing a class as a value in an Active Record query is deprecated and will be removed. Pass a string instead. (called from _app_views_groups_show_html_erb___2213964175687037224_70332262226860 at /Users/ntd/Development/mix_app/app/views/groups/show.html.erb:5)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  DISTINCT 1 AS one FROM "users" INNER JOIN "group_memberships" ON "users"."id" = "group_memberships"."member_id" WHERE "group_memberships"."group_id" = ? AND "group_memberships"."group_type" = ? AND "group_memberships"."member_type" = 'User' AND "users"."id" = ? LIMIT ?[0m  [["group_id", 12], ["group_type", "Group"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "users".* FROM "users" INNER JOIN "group_memberships" ON "users"."id" = "group_memberships"."member_id" WHERE "group_memberships"."group_id" = ? AND "group_memberships"."group_type" = ? AND "group_memberships"."member_type" = 'User'[0m  [["group_id", 12], ["group_type", "Group"]]
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from _app_views_groups_show_html_erb___2213964175687037224_70332262226860 at /Users/ntd/Development/mix_app/app/views/groups/show.html.erb:43)
+DEPRECATION WARNING: Passing a class as a value in an Active Record query is deprecated and will be removed. Pass a string instead. (called from _app_views_groups_show_html_erb___2213964175687037224_70332262226860 at /Users/ntd/Development/mix_app/app/views/groups/show.html.erb:43)
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "questions".* FROM "questions" INNER JOIN "group_memberships" ON "questions"."id" = "group_memberships"."member_id" WHERE "group_memberships"."group_id" = ? AND "group_memberships"."group_type" = ? AND "group_memberships"."member_type" = 'Question'[0m  [["group_id", 12], ["group_type", "Group"]]
+  Rendered groups/show.html.erb within layouts/application (27.7ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 101ms (Views: 86.1ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/groups/12" for 127.0.0.1 at 2016-09-10 16:25:16 -0400
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from show at /Users/ntd/Development/mix_app/app/controllers/groups_controller.rb:9)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "users".* FROM "users" INNER JOIN "group_memberships" ON "group_memberships"."member_id" = "users"."id" AND "group_memberships"."member_type" = ? WHERE "group_memberships"."group_id" = ? AND "group_memberships"."membership_type" = ?[0m  [["member_type", "User"], ["group_id", 12], ["membership_type", :manager]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from _app_views_groups_show_html_erb___2213964175687037224_70332262335240 at /Users/ntd/Development/mix_app/app/views/groups/show.html.erb:7)
+DEPRECATION WARNING: Passing a class as a value in an Active Record query is deprecated and will be removed. Pass a string instead. (called from _app_views_groups_show_html_erb___2213964175687037224_70332262335240 at /Users/ntd/Development/mix_app/app/views/groups/show.html.erb:7)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "users".* FROM "users" INNER JOIN "group_memberships" ON "users"."id" = "group_memberships"."member_id" WHERE "group_memberships"."group_id" = ? AND "group_memberships"."group_type" = ? AND "group_memberships"."member_type" = 'User'[0m  [["group_id", 12], ["group_type", "Group"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from _app_views_groups_show_html_erb___2213964175687037224_70332262335240 at /Users/ntd/Development/mix_app/app/views/groups/show.html.erb:43)
+DEPRECATION WARNING: Passing a class as a value in an Active Record query is deprecated and will be removed. Pass a string instead. (called from _app_views_groups_show_html_erb___2213964175687037224_70332262335240 at /Users/ntd/Development/mix_app/app/views/groups/show.html.erb:43)
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "questions".* FROM "questions" INNER JOIN "group_memberships" ON "questions"."id" = "group_memberships"."member_id" WHERE "group_memberships"."group_id" = ? AND "group_memberships"."group_type" = ? AND "group_memberships"."member_type" = 'Question'[0m  [["group_id", 12], ["group_type", "Group"]]
+  Rendered groups/show.html.erb within layouts/application (20.3ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 95ms (Views: 80.9ms | ActiveRecord: 3.0ms)
+
+
