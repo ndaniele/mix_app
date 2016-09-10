@@ -125,12 +125,15 @@ X add authorization roles for User
 X possibly add a .most_popular_question class method
 
 
-TO DO 
-- add groups for users and questions
-- add functionallity
+TO DO (sept. 10, 2016)
+X add groups for users and questions
+X add functionallity
   - user can belong to a group and/or create a new group
   - a user can post their questions to their group or publicly(to all)
   - functions should work in groups
    - most popular question (in this group)
    
-
+TO DO
+- add permissions (pundit?)
+  - questions posted to groups can be private (answerable only by group memebers)
+  
