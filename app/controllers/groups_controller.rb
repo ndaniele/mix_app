@@ -21,7 +21,7 @@ class GroupsController < ApplicationController
     @user = User.find_by(:id => params[:group][:user_id])
     @group.add(@user, as: 'manager')
     #@group.save
-    redirect_to groups_path
+    redirect_to group_path(@group)
   end
 
   def update
@@ -39,6 +39,10 @@ class GroupsController < ApplicationController
    @group = Group.find_by(:id => params[:id])
    @group.destroy
    redirect_to root_path
+  end
+
+  def my_groups
+    @user = current_user
   end
 
 end
