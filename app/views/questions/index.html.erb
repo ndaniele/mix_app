@@ -5,9 +5,11 @@
 
 <h2>Choose a Question To Answer</h2>
 <% @questions.each do |q| %>
-  <ul>
-    <li><h3>¿<%= link_to "#{q.query}", question_path(q) %>?<h3></li>
-  </ul>
+  <% if q.groups == [] %>
+    <ul>
+      <li><h3>¿<%= link_to "#{q.query}", question_path(q) %>?<h3></li>
+    </ul>
+  <% end %>
 <% end %>
 
 <h2>Or create a new Question</h2>
