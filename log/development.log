@@ -33664,3 +33664,252 @@ DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use 
 Completed 200 OK in 129ms (Views: 114.6ms | ActiveRecord: 6.6ms)
 
 
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGroupMembership Load (0.4ms)[0m  [1m[34mSELECT "group_memberships".* FROM "group_memberships" WHERE "group_memberships"."group_id" = ? AND "group_memberships"."group_type" = ?[0m  [["group_id", 13], ["group_type", "Group"]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "group_memberships" WHERE "group_memberships"."id" = ?[0m  [["id", 20]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "group_memberships" WHERE "group_memberships"."id" = ?[0m  [["id", 21]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "group_memberships" WHERE "group_memberships"."id" = ?[0m  [["id", 22]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "group_memberships" WHERE "group_memberships"."id" = ?[0m  [["id", 23]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "groups" WHERE "groups"."id" = ?[0m  [["id", 13]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGroupMembership Load (0.2ms)[0m  [1m[34mSELECT "group_memberships".* FROM "group_memberships" WHERE "group_memberships"."group_id" = ? AND "group_memberships"."group_type" = ?[0m  [["group_id", 14], ["group_type", "Group"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "group_memberships" WHERE "group_memberships"."id" = ?[0m  [["id", 24]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "group_memberships" WHERE "group_memberships"."id" = ?[0m  [["id", 25]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "groups" WHERE "groups"."id" = ?[0m  [["id", 14]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGroupMembership Load (0.3ms)[0m  [1m[34mSELECT "group_memberships".* FROM "group_memberships" WHERE "group_memberships"."group_id" = ? AND "group_memberships"."group_type" = ?[0m  [["group_id", 15], ["group_type", "Group"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "group_memberships" WHERE "group_memberships"."id" = ?[0m  [["id", 26]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "group_memberships" WHERE "group_memberships"."id" = ?[0m  [["id", 27]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "group_memberships" WHERE "group_memberships"."id" = ?[0m  [["id", 28]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "groups" WHERE "groups"."id" = ?[0m  [["id", 15]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 1]]
+  [1m[36mGroupMembership Load (0.7ms)[0m  [1m[34mSELECT "group_memberships".* FROM "group_memberships" WHERE "group_memberships"."member_id" = ? AND "group_memberships"."member_type" = ?[0m  [["member_id", 1], ["member_type", "Question"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 1]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+  [1m[36mGroupMembership Load (0.1ms)[0m  [1m[34mSELECT "group_memberships".* FROM "group_memberships" WHERE "group_memberships"."member_id" = ? AND "group_memberships"."member_type" = ?[0m  [["member_id", 2], ["member_type", "Question"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 2]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 3]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 2]]
+  [1m[36mGroupMembership Load (0.1ms)[0m  [1m[34mSELECT "group_memberships".* FROM "group_memberships" WHERE "group_memberships"."member_id" = ? AND "group_memberships"."member_type" = ?[0m  [["member_id", 3], ["member_type", "Question"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 3]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 4]]
+  [1m[36mGroupMembership Load (0.1ms)[0m  [1m[34mSELECT "group_memberships".* FROM "group_memberships" WHERE "group_memberships"."member_id" = ? AND "group_memberships"."member_type" = ?[0m  [["member_id", 4], ["member_type", "Question"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 4]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 5]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 3]]
+  [1m[36mGroupMembership Load (0.1ms)[0m  [1m[34mSELECT "group_memberships".* FROM "group_memberships" WHERE "group_memberships"."member_id" = ? AND "group_memberships"."member_type" = ?[0m  [["member_id", 5], ["member_type", "Question"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 5]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 6]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 4]]
+  [1m[36mGroupMembership Load (0.1ms)[0m  [1m[34mSELECT "group_memberships".* FROM "group_memberships" WHERE "group_memberships"."member_id" = ? AND "group_memberships"."member_type" = ?[0m  [["member_id", 6], ["member_type", "Question"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 6]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 7]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 5]]
+  [1m[36mGroupMembership Load (0.1ms)[0m  [1m[34mSELECT "group_memberships".* FROM "group_memberships" WHERE "group_memberships"."member_id" = ? AND "group_memberships"."member_type" = ?[0m  [["member_id", 7], ["member_type", "Question"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 7]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 8]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 6]]
+  [1m[36mGroupMembership Load (0.1ms)[0m  [1m[34mSELECT "group_memberships".* FROM "group_memberships" WHERE "group_memberships"."member_id" = ? AND "group_memberships"."member_type" = ?[0m  [["member_id", 8], ["member_type", "Question"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 8]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 9]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 7]]
+  [1m[36mGroupMembership Load (0.1ms)[0m  [1m[34mSELECT "group_memberships".* FROM "group_memberships" WHERE "group_memberships"."member_id" = ? AND "group_memberships"."member_type" = ?[0m  [["member_id", 9], ["member_type", "Question"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 9]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 10]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 8]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 9]]
+  [1m[36mGroupMembership Load (0.1ms)[0m  [1m[34mSELECT "group_memberships".* FROM "group_memberships" WHERE "group_memberships"."member_id" = ? AND "group_memberships"."member_type" = ?[0m  [["member_id", 10], ["member_type", "Question"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 10]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 11]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 10]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 11]]
+  [1m[36mGroupMembership Load (0.1ms)[0m  [1m[34mSELECT "group_memberships".* FROM "group_memberships" WHERE "group_memberships"."member_id" = ? AND "group_memberships"."member_type" = ?[0m  [["member_id", 11], ["member_type", "Question"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 11]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 12]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 12]]
+  [1m[36mGroupMembership Load (0.1ms)[0m  [1m[34mSELECT "group_memberships".* FROM "group_memberships" WHERE "group_memberships"."member_id" = ? AND "group_memberships"."member_type" = ?[0m  [["member_id", 12], ["member_type", "Question"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 12]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/" for ::1 at 2016-09-10 21:30:00 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 56ms (Views: 50.3ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/" for ::1 at 2016-09-10 21:42:41 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (1.3ms)
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 65ms (Views: 59.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-09-10 21:42:45 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (1.5ms)
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 79ms (Views: 74.0ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sampleuser@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sampleuser@email.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "sampleuser@email.com"], ["encrypted_password", "$2a$11$cfJWpH.AzrJkHypURWld.eQtMbzod1w/VmGngLNWA0jSYCGuC3Pny"], ["created_at", 2016-09-11 01:45:57 UTC], ["updated_at", 2016-09-11 01:45:57 UTC]]
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGroupMembership Load (0.2ms)[0m  [1m[34mSELECT "group_memberships".* FROM "group_memberships" WHERE "group_memberships"."member_id" = ? AND "group_memberships"."member_type" = ?[0m  [["member_id", 4], ["member_type", "User"]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 4]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sampleuser@email.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "sampleuser@email.com"], ["encrypted_password", "$2a$11$Yhf.uYOVG4JPZJaQxL.gQOGyPrU6xKidHDlp10Dsqq5SSbarj93hW"], ["created_at", 2016-09-11 01:48:17 UTC], ["updated_at", 2016-09-11 01:48:17 UTC]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("query", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["query", "Have you ever seen a monkey"], ["created_at", 2016-09-11 01:48:17 UTC], ["updated_at", 2016-09-11 01:48:17 UTC], ["user_id", 5]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2016-09-10 21:48:20 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (1.4ms)
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from block in _app_views_questions_index_html_erb__4321529446893406664_70117238592880 at /Users/ntd/Development/mix_app/app/views/questions/index.html.erb:8)
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "groups".* FROM "groups" INNER JOIN "group_memberships" ON "groups"."id" = "group_memberships"."group_id" WHERE "group_memberships"."member_id" = ? AND "group_memberships"."member_type" = ? AND "group_memberships"."group_type" = ?[0m  [["member_id", 13], ["member_type", "Question"], ["group_type", "Group"]]
+  Rendered questions/index.html.erb within layouts/application (11.5ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 74ms (Views: 67.4ms | ActiveRecord: 1.1ms)
+
+
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" ORDER BY "questions"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" ORDER BY "questions"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 13]]
+  [1m[36mGroupMembership Load (0.1ms)[0m  [1m[34mSELECT "group_memberships".* FROM "group_memberships" WHERE "group_memberships"."member_id" = ? AND "group_memberships"."member_type" = ?[0m  [["member_id", 13], ["member_type", "Question"]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 13]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGroupMembership Load (0.2ms)[0m  [1m[34mSELECT "group_memberships".* FROM "group_memberships" WHERE "group_memberships"."member_id" = ? AND "group_memberships"."member_type" = ?[0m  [["member_id", 5], ["member_type", "User"]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 5]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2016-09-10 21:50:10 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (1.4ms)
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 67ms (Views: 62.2ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sampleuser@email.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "sampleuser@email.com"], ["encrypted_password", "$2a$11$83ZoHyYY6LJhEB/GakrwzeNC2NzMsrpw0m261apdiejI26cwIDUWm"], ["created_at", 2016-09-11 01:50:19 UTC], ["updated_at", 2016-09-11 01:50:19 UTC]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "questions" ("query", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["query", "Have you ever seen a monkey"], ["created_at", 2016-09-11 01:50:19 UTC], ["updated_at", 2016-09-11 01:50:19 UTC], ["user_id", 6]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("query", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["query", "Do Badgers Scare You"], ["created_at", 2016-09-11 01:50:19 UTC], ["updated_at", 2016-09-11 01:50:19 UTC], ["user_id", 6]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("query", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["query", "Do You Get Nervous When Its Your Turn To Order Food At A Resraunt"], ["created_at", 2016-09-11 01:50:19 UTC], ["updated_at", 2016-09-11 01:50:19 UTC], ["user_id", 6]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "questions" ("query", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["query", "Do you like cats"], ["created_at", 2016-09-11 01:50:19 UTC], ["updated_at", 2016-09-11 01:50:19 UTC], ["user_id", 6]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("query", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["query", "Would you ever like to go to Sweden"], ["created_at", 2016-09-11 01:50:19 UTC], ["updated_at", 2016-09-11 01:50:19 UTC], ["user_id", 6]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("query", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["query", "Do you like Korean Pop"], ["created_at", 2016-09-11 01:50:19 UTC], ["updated_at", 2016-09-11 01:50:19 UTC], ["user_id", 6]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2016-09-10 21:50:25 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (1.3ms)
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from block in _app_views_questions_index_html_erb__4321529446893406664_70117227843040 at /Users/ntd/Development/mix_app/app/views/questions/index.html.erb:8)
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "groups".* FROM "groups" INNER JOIN "group_memberships" ON "groups"."id" = "group_memberships"."group_id" WHERE "group_memberships"."member_id" = ? AND "group_memberships"."member_type" = ? AND "group_memberships"."group_type" = ?[0m  [["member_id", 14], ["member_type", "Question"], ["group_type", "Group"]]
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from block in _app_views_questions_index_html_erb__4321529446893406664_70117227843040 at /Users/ntd/Development/mix_app/app/views/questions/index.html.erb:8)
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "groups".* FROM "groups" INNER JOIN "group_memberships" ON "groups"."id" = "group_memberships"."group_id" WHERE "group_memberships"."member_id" = ? AND "group_memberships"."member_type" = ? AND "group_memberships"."group_type" = ?[0m  [["member_id", 15], ["member_type", "Question"], ["group_type", "Group"]]
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from block in _app_views_questions_index_html_erb__4321529446893406664_70117227843040 at /Users/ntd/Development/mix_app/app/views/questions/index.html.erb:8)
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "groups".* FROM "groups" INNER JOIN "group_memberships" ON "groups"."id" = "group_memberships"."group_id" WHERE "group_memberships"."member_id" = ? AND "group_memberships"."member_type" = ? AND "group_memberships"."group_type" = ?[0m  [["member_id", 16], ["member_type", "Question"], ["group_type", "Group"]]
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from block in _app_views_questions_index_html_erb__4321529446893406664_70117227843040 at /Users/ntd/Development/mix_app/app/views/questions/index.html.erb:8)
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "groups".* FROM "groups" INNER JOIN "group_memberships" ON "groups"."id" = "group_memberships"."group_id" WHERE "group_memberships"."member_id" = ? AND "group_memberships"."member_type" = ? AND "group_memberships"."group_type" = ?[0m  [["member_id", 17], ["member_type", "Question"], ["group_type", "Group"]]
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from block in _app_views_questions_index_html_erb__4321529446893406664_70117227843040 at /Users/ntd/Development/mix_app/app/views/questions/index.html.erb:8)
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "groups".* FROM "groups" INNER JOIN "group_memberships" ON "groups"."id" = "group_memberships"."group_id" WHERE "group_memberships"."member_id" = ? AND "group_memberships"."member_type" = ? AND "group_memberships"."group_type" = ?[0m  [["member_id", 18], ["member_type", "Question"], ["group_type", "Group"]]
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from block in _app_views_questions_index_html_erb__4321529446893406664_70117227843040 at /Users/ntd/Development/mix_app/app/views/questions/index.html.erb:8)
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "groups".* FROM "groups" INNER JOIN "group_memberships" ON "groups"."id" = "group_memberships"."group_id" WHERE "group_memberships"."member_id" = ? AND "group_memberships"."member_type" = ? AND "group_memberships"."group_type" = ?[0m  [["member_id", 19], ["member_type", "Question"], ["group_type", "Group"]]
+  Rendered questions/index.html.erb within layouts/application (36.5ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 94ms (Views: 85.3ms | ActiveRecord: 3.1ms)
+
+
