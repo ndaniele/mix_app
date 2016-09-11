@@ -1,5 +1,7 @@
 <h2>My Groups</h2>
 
+<%= render 'layouts/navbar' %>
+
 <h3>Groups I manage</h3>
 
 <% @user.groups.as(:manager).each do |group| %>
