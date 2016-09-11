@@ -1,5 +1,15 @@
 <h2>My Groups</h2>
 
+<h3>Groups I manage</h3>
+
+<% @user.groups.as(:manager).each do |group| %>
+    <ul>
+      <li><h3><%= link_to group.name, group_path(group) %>
+    </ul>
+<% end %>
+
+<h3>Groups I belong to:</h3>
+
 <% @user.groups.each do |group| %>
   <ul>
     <li><h3><%=link_to group.name, group_path(group) %><h3></li>
