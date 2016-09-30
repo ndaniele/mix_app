@@ -132,5 +132,14 @@ ADD PUNDIT (Sept. 30, 2016)
   - a user can only answer questions within their own group. 
   -this isn't gonna work. i need to add the group manually first. 
 
+  ADD GROUPS + MEMBERSHIPS
+  X add migration and model for group
+  X add migration and model for membership
+  - add group controller
+  - add group creation function to site
+  - add membership controller (?)
+  - add membership function to site
+  
+
   
 
