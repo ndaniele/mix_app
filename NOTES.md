@@ -124,3 +124,13 @@ X change relationship to has_many_through
 
 - possibly add a .most_popular_question class method
 - 
+
+
+ADD PUNDIT (Sept. 30, 2016)
+- pretend that the main site is already group specific (i.e. that what you are seeing are the questions that belong to your group.)
+- add permissions
+  - a user can only answer questions within their own group. 
+  -this isn't gonna work. i need to add the group manually first. 
+
+  
+
