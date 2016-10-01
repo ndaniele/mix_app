@@ -27127,3 +27127,47 @@ Processing by QuestionsController#index as HTML
 Completed 200 OK in 113ms (Views: 75.5ms | ActiveRecord: 0.9ms)
 
 
+Started GET "/groups/my_groups" for ::1 at 2016-10-01 13:46:46 -0400
+Processing by GroupsController#my_groups as HTML
+  [1m[36mUser Load (12.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering groups/my_groups.html.erb within layouts/application
+  [1m[36mMembership Load (0.4ms)[0m  [1m[34mSELECT "memberships".* FROM "memberships" WHERE "memberships"."user_id" = ?[0m  [["user_id", 14]]
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered groups/my_groups.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 106ms (Views: 60.5ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/groups/1" for ::1 at 2016-10-01 13:46:48 -0400
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mMembership Load (0.2ms)[0m  [1m[34mSELECT "memberships".* FROM "memberships" WHERE "memberships"."group_id" = ?[0m  [["group_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendered groups/show.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 73ms (Views: 68.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/groups" for ::1 at 2016-10-01 13:46:57 -0400
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 102ms (Views: 64.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups/4" for ::1 at 2016-10-01 13:46:59 -0400
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mMembership Load (0.2ms)[0m  [1m[34mSELECT "memberships".* FROM "memberships" WHERE "memberships"."group_id" = ?[0m  [["group_id", 4]]
+  Rendered groups/show.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_messages.html.erb (7.2ms)
+Completed 200 OK in 114ms (Views: 82.3ms | ActiveRecord: 0.7ms)
+
+

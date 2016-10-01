@@ -135,8 +135,8 @@ ADD PUNDIT (Sept. 30, 2016)
   ADD GROUPS + MEMBERSHIPS
   X add migration and model for group
   X add migration and model for membership
-  - add group controller
-  - add group creation function to site
+  X add group controller
+  X add group creation function to site
   - add membership controller (?)
   - add membership function to site
   
