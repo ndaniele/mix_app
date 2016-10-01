@@ -9,7 +9,9 @@ class GroupsController < ApplicationController
   end
 
   def create 
-    @group = Group.build(group_params)
+    #raise params.inspect 
+    @group = Group.create(group_params)
+    redirect_to group_path(@group)
   end
 
   def update
