@@ -4,7 +4,7 @@
 
 <% memberships = Membership.where(:user_id => @user.id) %>
   <% memberships.each do |membership| %>
-  <% group = Group.find_by(:id => membership.id)%>
+  <% group = Group.find_by(:id => membership.group_id)%>
   <ul>
     <li><%= link_to group.name, group_path(group) %></li>
   </ul>

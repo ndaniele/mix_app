@@ -137,8 +137,14 @@ ADD PUNDIT (Sept. 30, 2016)
   X add migration and model for membership
   X add group controller
   X add group creation function to site
-  - add membership controller (?)
-  - add membership function to site
+  X add membership controller (?)
+  X add membership function to site
+
+  ADD GROUP QUESTIONS
+  - associate questions to a group
+  - add column group_id to questions table
+
+  
   
 
   
