@@ -5,13 +5,17 @@ class MembershipsController < ApplicationController
   end
 
   def new
+    #raise params.inspect 
     @membership = Membership.new
+    #@group = Group.find_by(:id => params[:id])
+    #@question.answers.build
   end
 
   def create 
-    #raise params.inspect 
-    @membership = Membership.create(membership_params)
-    redirect_to membership_path(@membership)
+    #raise params.inspect
+    @group = Group.find_by(:id => params[:group_id]) 
+    @membership = Membership.create(:user_id => current_user.id, :group_id => @group.id)
+    redirect_to group_path(@group)
   end
 
   def update

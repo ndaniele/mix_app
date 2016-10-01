@@ -6,6 +6,7 @@ class GroupsController < ApplicationController
 
   def new
     @group = Group.new
+    @group.memberships.build
   end
 
   def create 
@@ -19,6 +20,7 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
+    @membership = Membership.new
   end
 
   def destroy

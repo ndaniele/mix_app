@@ -7,4 +7,11 @@
   </ul>
   <% end %>
 
-  form to join this group
+ 
+join this group
+
+  <%= form_for [@group, @membership] do |f| %>
+
+  <%= f.submit "Join" %>
+<% end %> 
+  <br />
