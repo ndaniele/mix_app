@@ -24,6 +24,10 @@ class GroupsController < ApplicationController
   def destroy
   end
 
+  def my_groups
+    @user = current_user
+  end
+
   private 
 
   def group_params

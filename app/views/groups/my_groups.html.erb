@@ -1,0 +1,11 @@
+<h2>My Groups</h2>
+
+<h3>Groups I belong to:</h3>
+
+<% memberships = Membership.where(:user_id => @user.id) %>
+  <% memberships.each do |membership| %>
+  <% group = Group.find_by(:id => membership.id)%>
+  <ul>
+    <li><%= link_to group.name, group_path(group) %></li>
+  </ul>
+<% end %>
