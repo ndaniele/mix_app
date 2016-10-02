@@ -1,6 +1,7 @@
 class Question < ApplicationRecord
   belongs_to :user
   has_many :answers, dependent: :destroy
+  belongs_to :group
   
   validates_presence_of :query
   validates :query, length: { maximum: 140, too_long: "%{count} characters is the maximum allowed" }
