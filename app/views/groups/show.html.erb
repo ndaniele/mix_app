@@ -22,6 +22,6 @@ join this group
   <h2>Questions posted to this group</h2>
   <% @questions.each do |question| %>
     <ul>
-      <li><%= question.query %></li>
+      <li><%= link_to "#{question.query}", question_path(question) %></li>
     </ul>
   <% end %>

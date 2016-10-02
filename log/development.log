@@ -29134,3 +29134,201 @@ Processing by GroupsController#show as HTML
 Completed 200 OK in 162ms (Views: 120.1ms | ActiveRecord: 4.5ms)
 
 
+Started GET "/groups/5" for ::1 at 2016-10-02 13:46:04 -0400
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mMembership Load (0.2ms)[0m  [1m[34mSELECT "memberships".* FROM "memberships" WHERE "memberships"."group_id" = ?[0m  [["group_id", 5]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."group_id" = ?[0m  [["group_id", 5]]
+  Rendered groups/show.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 78ms (Views: 71.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/questions/54" for ::1 at 2016-10-02 13:46:06 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"54"}
+  [1m[36mQuestion Load (4.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 132ms (Views: 66.6ms | ActiveRecord: 6.1ms)
+
+
+Started POST "/questions/54/answers" for ::1 at 2016-10-02 13:46:11 -0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SDIVkH9EG5hXPkk3K0YYGyjvh3K30+h/vZLW5hva+KjzfgV0eJc4OaZXjna8RPKTe9O6D65wXqXqJE4KxiTGqw==", "answer"=>{"input"=>"yes"}, "commit"=>"Create", "question_id"=>"54"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mAnswer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "answers" WHERE "answers"."user_id" = ? AND "answers"."question_id" = ? LIMIT ?[0m  [["user_id", 14], ["question_id", 54], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "answers" ("input", "question_id", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["input", "yes"], ["question_id", 54], ["created_at", 2016-10-02 17:46:12 UTC], ["updated_at", 2016-10-02 17:46:12 UTC], ["user_id", 14]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/questions/54/answers/57
+Completed 302 Found in 24ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/questions/54/answers/57" for ::1 at 2016-10-02 13:46:12 -0400
+Processing by AnswersController#show as HTML
+  Parameters: {"question_id"=>"54", "id"=>"57"}
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  Rendering answers/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 54]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 54], ["input", "no"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 54], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 54], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 54], ["input", "no"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendered answers/show.html.erb within layouts/application (11.8ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 117ms (Views: 74.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/groups/5" for ::1 at 2016-10-02 13:46:23 -0400
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mMembership Load (0.4ms)[0m  [1m[34mSELECT "memberships".* FROM "memberships" WHERE "memberships"."group_id" = ?[0m  [["group_id", 5]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."group_id" = ?[0m  [["group_id", 5]]
+  Rendered groups/show.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 65ms (Views: 58.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/questions/55" for ::1 at 2016-10-02 13:46:24 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"55"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 64ms (Views: 55.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/questions/55/answers" for ::1 at 2016-10-02 13:46:26 -0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T4bzoXGrwe0IgLaI3Rpk5TUdcF10FHjCM1oL/xN2oM1CzN77BOhCqZJrxCTT4eSAa4Ir53xpump4VwqV1t8fvQ==", "answer"=>{"input"=>"no"}, "commit"=>"Create", "question_id"=>"55"}
+  [1m[36mQuestion Load (1.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mAnswer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "answers" WHERE "answers"."user_id" = ? AND "answers"."question_id" = ? LIMIT ?[0m  [["user_id", 14], ["question_id", 55], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://localhost:3000/questions/55
+Completed 302 Found in 17ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/questions/55" for ::1 at 2016-10-02 13:46:26 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"55"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_messages.html.erb (2.2ms)
+Completed 200 OK in 63ms (Views: 56.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/questions/55/answers" for ::1 at 2016-10-02 13:46:34 -0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iGMl3n5ulGRSKNnQ30pXzGqJo/LwbwVsaD9KoRzRwMD3+foD31aI5UuI8JMMfl+bPMIHIM6O6zmLoK5U/A2UDA==", "answer"=>{"input"=>"yes"}, "commit"=>"Create", "question_id"=>"55"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mAnswer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "answers" WHERE "answers"."user_id" = ? AND "answers"."question_id" = ? LIMIT ?[0m  [["user_id", 14], ["question_id", 55], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://localhost:3000/questions/55
+Completed 302 Found in 16ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/questions/55" for ::1 at 2016-10-02 13:46:34 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"55"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_messages.html.erb (1.5ms)
+Completed 200 OK in 71ms (Views: 63.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/groups/5" for ::1 at 2016-10-02 13:46:39 -0400
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mMembership Load (0.2ms)[0m  [1m[34mSELECT "memberships".* FROM "memberships" WHERE "memberships"."group_id" = ?[0m  [["group_id", 5]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."group_id" = ?[0m  [["group_id", 5]]
+  Rendered groups/show.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 71ms (Views: 58.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/questions/55" for ::1 at 2016-10-02 13:46:43 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"55"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 84ms (Views: 65.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/questions/54" for ::1 at 2016-10-02 13:46:51 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"54"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 78ms (Views: 59.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/questions/54/answers" for ::1 at 2016-10-02 13:46:54 -0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YAcxXzVBWEtW6bWJl56komcFySbB4z/9VZJhotv8RvLbSyG7MpJ76qeAcsgAnE4qNDn0W9hAiScCJPlOBgJ48Q==", "answer"=>{"input"=>"no"}, "commit"=>"Create", "question_id"=>"54"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mAnswer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "answers" WHERE "answers"."user_id" = ? AND "answers"."question_id" = ? LIMIT ?[0m  [["user_id", 14], ["question_id", 54], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://localhost:3000/questions/54
+Completed 302 Found in 17ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/questions/54" for ::1 at 2016-10-02 13:46:54 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"54"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+Completed 200 OK in 72ms (Views: 64.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/groups/5" for ::1 at 2016-10-02 13:46:58 -0400
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mMembership Load (0.3ms)[0m  [1m[34mSELECT "memberships".* FROM "memberships" WHERE "memberships"."group_id" = ?[0m  [["group_id", 5]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."group_id" = ?[0m  [["group_id", 5]]
+  Rendered groups/show.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 68ms (Views: 61.8ms | ActiveRecord: 1.2ms)
+
+
