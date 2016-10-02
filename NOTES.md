@@ -141,8 +141,8 @@ ADD PUNDIT (Sept. 30, 2016)
   X add membership function to site
 
   ADD GROUP QUESTIONS
-  - associate questions to a group
-  - add column group_id to questions table
+  X associate questions to a group
+  X add column group_id to questions table
 
   
   
