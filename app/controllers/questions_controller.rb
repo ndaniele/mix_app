@@ -7,7 +7,7 @@ class QuestionsController < ApplicationController
     if current_user.nil?
       redirect_to new_user_session_path
     else
-    @questions = Question.all
+    @questions = Question.all.where(:group_id => 0)
     end 
   end
 
