@@ -3,6 +3,7 @@
 <%=form_for(@question) do |f| %>
   <%= f.label :query %><br>
 <h2>¿<%= f.text_field :query %>?</h2><br>
+ <%= f.hidden_field :group_id, :value => @group.id %>
 
   <%=f.fields_for :answers do |a| %>
    <h2><%= a.radio_button(:input, "yes") %>

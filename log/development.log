@@ -28757,3 +28757,380 @@ Completed 200 OK in 147ms (Views: 82.2ms | ActiveRecord: 3.8ms)
   [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
   [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
   [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."group_id" = ?[0m  [["group_id", 5]]
+Started GET "/groups/1" for ::1 at 2016-10-02 13:16:25 -0400
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mMembership Load (0.3ms)[0m  [1m[34mSELECT "memberships".* FROM "memberships" WHERE "memberships"."group_id" = ?[0m  [["group_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendered groups/show.html.erb within layouts/application (40.1ms)
+Completed 500 Internal Server Error in 123ms (ActiveRecord: 3.8ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"question", :group=>1, :id=>"1"}):
+    20: 
+    21:   <%#= link_to "Post a question to this group",  new_question_path %>
+    22: 
+    23:   <%= link_to "Post a question to this group", {:controller => "question", :action => "new", :group => @group.id }%>
+  
+app/views/groups/show.html.erb:23:in `_app_views_groups_show_html_erb__368076924872098719_70238320967820'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (15.3ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.1ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (144.9ms)
+Started GET "/groups/1" for ::1 at 2016-10-02 13:17:14 -0400
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mMembership Load (0.2ms)[0m  [1m[34mSELECT "memberships".* FROM "memberships" WHERE "memberships"."group_id" = ?[0m  [["group_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendered groups/show.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 191ms (Views: 184.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/questions/new?group=1" for ::1 at 2016-10-02 13:17:16 -0400
+Processing by QuestionsController#new as HTML
+  Parameters: {"group"=>"1"}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"group"=>"1", "controller"=>"questions", "action"=>"new"} permitted: false>):
+  
+app/controllers/questions_controller.rb:15:in `new'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.1ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (145.5ms)
+Started PUT "/__web_console/repl_sessions/892815c28999e8e3452ce4d7cead3264" for ::1 at 2016-10-02 13:17:31 -0400
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/questions/new?group=1" for ::1 at 2016-10-02 13:17:45 -0400
+Processing by QuestionsController#new as HTML
+  Parameters: {"group"=>"1"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendered questions/new.html.erb within layouts/application (26.1ms)
+  Rendered layouts/_messages.html.erb (1.8ms)
+Completed 200 OK in 208ms (Views: 100.9ms | ActiveRecord: 3.9ms)
+
+
+Started POST "/questions" for ::1 at 2016-10-02 13:18:11 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d7JiQXmCLxQlQmWlPQ2wGDVhGMiZ2vrGzS7oyuJNC4kIKL2c2LozlTziTObuObhPYyq8Gqc7FJMusQw/ApFfRQ==", "question"=>{"query"=>"can i make this match with the group", "answers_attributes"=>{"0"=>{"input"=>"yes", "user_id"=>"14"}}}, "commit"=>"submit"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "authenticity_token"=>"d7JiQXmCLxQlQmWlPQ2wGDVhGMiZ2vrGzS7oyuJNC4kIKL2c2LozlTziTObuObhPYyq8Gqc7FJMusQw/ApFfRQ==", "question"=>{"query"=>"can i make this match with the group", "answers_attributes"=>{"0"=>{"input"=>"yes", "user_id"=>"14"}}}, "commit"=>"submit", "controller"=>"questions", "action"=>"create"} permitted: false>):
+  
+app/controllers/questions_controller.rb:22:in `create'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.5ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.4ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (140.4ms)
+Started PUT "/__web_console/repl_sessions/531f7edb5e6ddcf20933b31f16db9cf2" for ::1 at 2016-10-02 13:18:27 -0400
+Started GET "/questions/new?group=1" for ::1 at 2016-10-02 13:20:30 -0400
+Processing by QuestionsController#new as HTML
+  Parameters: {"group"=>"1"}
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendered questions/new.html.erb within layouts/application (28.3ms)
+  Rendered layouts/_messages.html.erb (1.3ms)
+Completed 200 OK in 291ms (Views: 173.1ms | ActiveRecord: 4.9ms)
+
+
+Started POST "/questions" for ::1 at 2016-10-02 13:20:40 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b1IGERxHChGgKAh7+o/BRipp6pjLop5Dvw/V/HExBPcQyNnMvX8WkLmIITgpu8kRfCJOSvVDcBZckDEJke1QOw==", "question"=>{"query"=>"can i make this match with the group", "answers_attributes"=>{"0"=>{"input"=>"yes", "user_id"=>"14", "group_id"=>"1"}}}, "commit"=>"submit"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "authenticity_token"=>"b1IGERxHChGgKAh7+o/BRipp6pjLop5Dvw/V/HExBPcQyNnMvX8WkLmIITgpu8kRfCJOSvVDcBZckDEJke1QOw==", "question"=>{"query"=>"can i make this match with the group", "answers_attributes"=>{"0"=>{"input"=>"yes", "user_id"=>"14", "group_id"=>"1"}}}, "commit"=>"submit", "controller"=>"questions", "action"=>"create"} permitted: false>):
+  
+app/controllers/questions_controller.rb:22:in `create'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.2ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.8ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (145.4ms)
+Started POST "/questions" for ::1 at 2016-10-02 13:28:17 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b1IGERxHChGgKAh7+o/BRipp6pjLop5Dvw/V/HExBPcQyNnMvX8WkLmIITgpu8kRfCJOSvVDcBZckDEJke1QOw==", "question"=>{"query"=>"can i make this match with the group", "answers_attributes"=>{"0"=>{"input"=>"yes", "user_id"=>"14", "group_id"=>"1"}}}, "commit"=>"submit"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "authenticity_token"=>"b1IGERxHChGgKAh7+o/BRipp6pjLop5Dvw/V/HExBPcQyNnMvX8WkLmIITgpu8kRfCJOSvVDcBZckDEJke1QOw==", "question"=>{"query"=>"can i make this match with the group", "answers_attributes"=>{"0"=>{"input"=>"yes", "user_id"=>"14", "group_id"=>"1"}}}, "commit"=>"submit", "controller"=>"questions", "action"=>"create"} permitted: false>):
+  
+app/controllers/questions_controller.rb:22:in `create'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (13.2ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.5ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (150.8ms)
+Started POST "/questions" for ::1 at 2016-10-02 13:29:06 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b1IGERxHChGgKAh7+o/BRipp6pjLop5Dvw/V/HExBPcQyNnMvX8WkLmIITgpu8kRfCJOSvVDcBZckDEJke1QOw==", "question"=>{"query"=>"can i make this match with the group", "answers_attributes"=>{"0"=>{"input"=>"yes", "user_id"=>"14", "group_id"=>"1"}}}, "commit"=>"submit"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+Unpermitted parameter: group_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mAnswer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "answers" WHERE "answers"."user_id" = ? AND "answers"."question_id" IS NULL LIMIT ?[0m  [["user_id", 14], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://localhost:3000/questions/new
+Completed 302 Found in 249ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/questions/new" for ::1 at 2016-10-02 13:29:06 -0400
+Processing by QuestionsController#new as HTML
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 6ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Group with 'id'=):
+  
+app/controllers/questions_controller.rb:16:in `new'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.0ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (155.9ms)
+Started PUT "/__web_console/repl_sessions/c266ad2e6cf085f349ddd8e57ddedcd9" for ::1 at 2016-10-02 13:30:05 -0400
+Started PUT "/__web_console/repl_sessions/c266ad2e6cf085f349ddd8e57ddedcd9" for ::1 at 2016-10-02 13:30:09 -0400
+Started GET "/" for ::1 at 2016-10-02 13:31:53 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 213ms (Views: 175.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/groups/my_groups" for ::1 at 2016-10-02 13:32:08 -0400
+Processing by GroupsController#my_groups as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering groups/my_groups.html.erb within layouts/application
+  [1m[36mMembership Load (0.2ms)[0m  [1m[34mSELECT "memberships".* FROM "memberships" WHERE "memberships"."user_id" = ?[0m  [["user_id", 14]]
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered groups/my_groups.html.erb within layouts/application (37.6ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 119ms (Views: 86.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/groups/5" for ::1 at 2016-10-02 13:32:10 -0400
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mMembership Load (0.2ms)[0m  [1m[34mSELECT "memberships".* FROM "memberships" WHERE "memberships"."group_id" = ?[0m  [["group_id", 5]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendered groups/show.html.erb within layouts/application (12.0ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 85ms (Views: 58.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/questions/new?group=5" for ::1 at 2016-10-02 13:32:14 -0400
+Processing by QuestionsController#new as HTML
+  Parameters: {"group"=>"5"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendered questions/new.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 93ms (Views: 53.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/questions" for ::1 at 2016-10-02 13:32:32 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3KmxSWwFj/o/Uh3MhuvFYzpemlYc5bUno50fV8y5p3iH+eSqucmSHatGqSleoaVdXsPdrtEqKfCw6/Z0NMqv+Q==", "question"=>{"query"=>"will this go into group 5", "answers_attributes"=>{"0"=>{"input"=>"yes", "user_id"=>"14", "group_id"=>"5"}}}, "commit"=>"submit"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "authenticity_token"=>"3KmxSWwFj/o/Uh3MhuvFYzpemlYc5bUno50fV8y5p3iH+eSqucmSHatGqSleoaVdXsPdrtEqKfCw6/Z0NMqv+Q==", "question"=>{"query"=>"will this go into group 5", "answers_attributes"=>{"0"=>{"input"=>"yes", "user_id"=>"14", "group_id"=>"5"}}}, "commit"=>"submit", "controller"=>"questions", "action"=>"create"} permitted: false>):
+  
+app/controllers/questions_controller.rb:22:in `create'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.7ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (148.7ms)
+Started PUT "/__web_console/repl_sessions/bc3ff9b13e7fdd54d25d93bd3e1ba669" for ::1 at 2016-10-02 13:33:02 -0400
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+Unpermitted parameter: group_id
+Started PUT "/__web_console/repl_sessions/bc3ff9b13e7fdd54d25d93bd3e1ba669" for ::1 at 2016-10-02 13:33:57 -0400
+Started PUT "/__web_console/repl_sessions/bc3ff9b13e7fdd54d25d93bd3e1ba669" for ::1 at 2016-10-02 13:34:05 -0400
+Started PUT "/__web_console/repl_sessions/bc3ff9b13e7fdd54d25d93bd3e1ba669" for ::1 at 2016-10-02 13:34:36 -0400
+Started PUT "/__web_console/repl_sessions/bc3ff9b13e7fdd54d25d93bd3e1ba669" for ::1 at 2016-10-02 13:34:39 -0400
+Started PUT "/__web_console/repl_sessions/bc3ff9b13e7fdd54d25d93bd3e1ba669" for ::1 at 2016-10-02 13:34:49 -0400
+Started PUT "/__web_console/repl_sessions/bc3ff9b13e7fdd54d25d93bd3e1ba669" for ::1 at 2016-10-02 13:34:57 -0400
+Started PUT "/__web_console/repl_sessions/bc3ff9b13e7fdd54d25d93bd3e1ba669" for ::1 at 2016-10-02 13:35:10 -0400
+Started PUT "/__web_console/repl_sessions/bc3ff9b13e7fdd54d25d93bd3e1ba669" for ::1 at 2016-10-02 13:35:32 -0400
+Started PUT "/__web_console/repl_sessions/bc3ff9b13e7fdd54d25d93bd3e1ba669" for ::1 at 2016-10-02 13:35:41 -0400
+Started GET "/questions/new?group=5" for ::1 at 2016-10-02 13:38:04 -0400
+Processing by QuestionsController#new as HTML
+  Parameters: {"group"=>"5"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/new.html.erb within layouts/application (358.6ms)
+Completed 500 Internal Server Error in 571ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `a' for #<#<Class:0x007fc3442248b8>:0x007fc3425eb818>):
+    3: <%=form_for(@question) do |f| %>
+    4:   <%= f.label :query %><br>
+    5: <h2>¿<%= f.text_field :query %>?</h2><br>
+    6:  <%= a.hidden_field :group_id, :value => @group.id %>
+    7: 
+    8:   <%=f.fields_for :answers do |a| %>
+    9:    <h2><%= a.radio_button(:input, "yes") %>
+  
+app/views/questions/new.html.erb:6:in `block in _app_views_questions_new_html_erb___142901152633344667_70238319225020'
+app/views/questions/new.html.erb:3:in `_app_views_questions_new_html_erb___142901152633344667_70238319225020'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (20.8ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (158.7ms)
+Started GET "/questions/new?group=5" for ::1 at 2016-10-02 13:38:21 -0400
+Processing by QuestionsController#new as HTML
+  Parameters: {"group"=>"5"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering questions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendered questions/new.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+Completed 200 OK in 335ms (Views: 327.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/questions" for ::1 at 2016-10-02 13:38:29 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hTU2nOB5SzahSwMtPASIzPAAPwQzcCMMLLNCGpyNUu76r+lBQUFXt7jrKm7vMICbpkub1g2RzVnPLKbvfFEGIg==", "question"=>{"query"=>"wil this work for 5", "group_id"=>"5", "answers_attributes"=>{"0"=>{"input"=>"yes", "user_id"=>"14"}}}, "commit"=>"submit"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "authenticity_token"=>"hTU2nOB5SzahSwMtPASIzPAAPwQzcCMMLLNCGpyNUu76r+lBQUFXt7jrKm7vMICbpkub1g2RzVnPLKbvfFEGIg==", "question"=>{"query"=>"wil this work for 5", "group_id"=>"5", "answers_attributes"=>{"0"=>{"input"=>"yes", "user_id"=>"14"}}}, "commit"=>"submit", "controller"=>"questions", "action"=>"create"} permitted: false>):
+  
+app/controllers/questions_controller.rb:22:in `create'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.1ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.8ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (144.2ms)
+Started PUT "/__web_console/repl_sessions/04206b1e16b492a036c2efd78575a8d9" for ::1 at 2016-10-02 13:38:59 -0400
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+Started POST "/questions" for ::1 at 2016-10-02 13:39:15 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hTU2nOB5SzahSwMtPASIzPAAPwQzcCMMLLNCGpyNUu76r+lBQUFXt7jrKm7vMICbpkub1g2RzVnPLKbvfFEGIg==", "question"=>{"query"=>"wil this work for 5", "group_id"=>"5", "answers_attributes"=>{"0"=>{"input"=>"yes", "user_id"=>"14"}}}, "commit"=>"submit"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mAnswer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "answers" WHERE "answers"."user_id" = ? AND "answers"."question_id" IS NULL LIMIT ?[0m  [["user_id", 14], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (24.4ms)[0m  [1m[32mINSERT INTO "questions" ("query", "created_at", "updated_at", "user_id", "group_id") VALUES (?, ?, ?, ?, ?)[0m  [["query", "wil this work for 5"], ["created_at", 2016-10-02 17:39:16 UTC], ["updated_at", 2016-10-02 17:39:16 UTC], ["user_id", 14], ["group_id", 5]]
+  [1m[36mAnswer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "answers" WHERE "answers"."user_id" = ? AND "answers"."question_id" = ? LIMIT ?[0m  [["user_id", 14], ["question_id", 55], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "answers" ("input", "question_id", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["input", "yes"], ["question_id", 55], ["created_at", 2016-10-02 17:39:16 UTC], ["updated_at", 2016-10-02 17:39:16 UTC], ["user_id", 14]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/questions
+Completed 302 Found in 148ms (ActiveRecord: 31.4ms)
+
+
+Started GET "/questions" for ::1 at 2016-10-02 13:39:16 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+Completed 200 OK in 93ms (Views: 59.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/groups" for ::1 at 2016-10-02 13:39:35 -0400
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_messages.html.erb (1.2ms)
+Completed 200 OK in 95ms (Views: 62.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups/5" for ::1 at 2016-10-02 13:39:37 -0400
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGroup Load (4.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mMembership Load (0.3ms)[0m  [1m[34mSELECT "memberships".* FROM "memberships" WHERE "memberships"."group_id" = ?[0m  [["group_id", 5]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendered groups/show.html.erb within layouts/application (12.8ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 129ms (Views: 65.8ms | ActiveRecord: 5.7ms)
+
+
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" ORDER BY "questions"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."group_id" = ?[0m  [["group_id", 5]]
+Started GET "/groups/5" for ::1 at 2016-10-02 13:44:06 -0400
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mMembership Load (0.3ms)[0m  [1m[34mSELECT "memberships".* FROM "memberships" WHERE "memberships"."group_id" = ?[0m  [["group_id", 5]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."group_id" = ?[0m  [["group_id", 5]]
+  Rendered groups/show.html.erb within layouts/application (72.6ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 162ms (Views: 120.1ms | ActiveRecord: 4.5ms)
+
+

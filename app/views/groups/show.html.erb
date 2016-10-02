@@ -17,5 +17,11 @@ join this group
 <% end %> 
   <br />
 
+  <%= link_to "Post a question to this group", {:controller => "questions", :action => "new", :group => @group.id }%>
 
-  <%= link_to "Post a question to this group",  new_question_path %>
+  <h2>Questions posted to this group</h2>
+  <% @questions.each do |question| %>
+    <ul>
+      <li><%= question.query %></li>
+    </ul>
+  <% end %>

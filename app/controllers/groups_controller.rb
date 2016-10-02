@@ -21,6 +21,7 @@ class GroupsController < ApplicationController
   def show
     @group = Group.find(params[:id])
     @membership = Membership.new
+    @questions = Question.all.where(:group_id => @group.id)
   end
 
   def destroy

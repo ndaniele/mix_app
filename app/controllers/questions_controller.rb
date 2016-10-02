@@ -12,6 +12,8 @@ class QuestionsController < ApplicationController
   end
 
   def new
+    #raise params.inspect
+    @group = Group.find(params[:group])
     @question = Question.new 
     @question.answers.build
   end
@@ -61,7 +63,7 @@ class QuestionsController < ApplicationController
 private 
 
   def question_params
-    params.require(:question).permit(:query, {:answers_attributes => [:input, :user_id]})
+    params.require(:question).permit(:query, :group_id, {:answers_attributes => [:input, :user_id]})
   end
 
 
