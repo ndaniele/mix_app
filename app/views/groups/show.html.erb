@@ -1,4 +1,5 @@
 <h1> Group Show Page </h1>
+<h2><%= @group.name %></h2>
 
 <% @group.memberships.each do |membership| %>
   <% member = User.find_by(:id => membership.user_id) %>
@@ -15,3 +16,5 @@ join this group
   <%= f.submit "Join" %>
 <% end %> 
   <br />
+
+  Post a question to this group
