@@ -144,6 +144,10 @@ ADD PUNDIT (Sept. 30, 2016)
   X associate questions to a group
   X add column group_id to questions table
 
+  ADD VALIDATIONS
+  - a single user can only join a single group once
+  
+
   
   
 
