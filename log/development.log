@@ -31264,3 +31264,5 @@ Processing by GroupsController#show as HTML
 Completed 200 OK in 107ms (Views: 102.1ms | ActiveRecord: 0.8ms)
 
 
+  [1m[36mQuestion Load (1.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" ORDER BY "questions"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]

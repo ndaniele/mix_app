@@ -149,6 +149,10 @@ ADD PUNDIT (Sept. 30, 2016)
 
   ADD VALIDATIONS
   - a single user can only join a single group once
+  - user who creates a group is group admin
+  - only group admin can change the name of a group
+  - Questions can be marked private (for groups only) or public (group 0)
+  
 
 
   
