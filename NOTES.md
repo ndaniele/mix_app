@@ -145,7 +145,7 @@ ADD PUNDIT (Sept. 30, 2016)
   X add column group_id to questions table
 
   ADD GROUP UPDATE 
-  - be able to change the name of a group
+  X be able to change the name of a group
 
   ADD VALIDATIONS
   - a single user can only join a single group once
