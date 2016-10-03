@@ -31691,3 +31691,48 @@ Processing by GroupsController#show as HTML
 Completed 200 OK in 76ms (Views: 68.3ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/groups" for ::1 at 2016-10-03 15:23:15 -0400
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (1.9ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (16.5ms)
+  Rendered layouts/_messages.html.erb (3.0ms)
+Completed 200 OK in 557ms (Views: 473.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2016-10-03 15:23:17 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."group_id" = ?[0m  [["group_id", 0]]
+  Rendered questions/index.html.erb within layouts/application (15.2ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 162ms (Views: 87.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/groups/new" for ::1 at 2016-10-03 15:23:20 -0400
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_messages.html.erb (1.3ms)
+Completed 200 OK in 616ms (Views: 67.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/groups" for ::1 at 2016-10-03 15:23:25 -0400
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n2RbdcAHI0ZoIrPI2Xx3B6R+xScs5Yk7fIcRLAQyTNWuNoJpWbaeNO5nJi9OkYVWxd35/Rd1tJZgMNRfCyu19w==", "group"=>{"name"=>"a new test group"}, "commit"=>"Create"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "authenticity_token"=>"n2RbdcAHI0ZoIrPI2Xx3B6R+xScs5Yk7fIcRLAQyTNWuNoJpWbaeNO5nJi9OkYVWxd35/Rd1tJZgMNRfCyu19w==", "group"=>{"name"=>"a new test group"}, "commit"=>"Create", "controller"=>"groups", "action"=>"create"} permitted: false>):
+  
+app/controllers/groups_controller.rb:13:in `create'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (17.8ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (152.0ms)
