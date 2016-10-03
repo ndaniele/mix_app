@@ -1,8 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  #include Pundit
-    #  protect_from_forgery
+  include Pundit
+      protect_from_forgery
 
   def after_sign_in_path_for(resource)
     request.env['omniauth.origin'] || root_path

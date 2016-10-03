@@ -1,0 +1,6 @@
+class QuestionPolicy < ApplicationPolicy
+
+ 
+
+
+end

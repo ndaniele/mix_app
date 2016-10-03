@@ -18,8 +18,13 @@ class GroupsController < ApplicationController
   def update
     #raise params.inspect 
     @group = Group.find_by(:id => params[:id])
-    @group.update(group_params)
-    redirect_to group_path(@group)
+    authorize @group
+    if @group.update(group_params)
+      redirect_to group_path(@group)
+    else
+      flash[:error] = "#{@group.errors.full_messages.join(" & ")}"
+      #redirect_to group_path(@group)
+    end
   end
 
   def show

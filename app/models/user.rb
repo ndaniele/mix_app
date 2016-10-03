@@ -3,7 +3,7 @@ class User < ApplicationRecord
   has_many :questions, through: :answers #=> user.questions = all questions a user has answered
   has_many :asked_questions, class_name: 'Question' #=> user.asked_questions = all questions a user has asked
 
-  #enum role: [:user, :moderator, :admin] => for pundit, if needed
+  enum role: [:guest, :user, :moderator, :admin] #=> for pundit, if needed
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
