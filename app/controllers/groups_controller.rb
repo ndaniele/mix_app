@@ -16,6 +16,10 @@ class GroupsController < ApplicationController
   end
 
   def update
+    #raise params.inspect 
+    @group = Group.find_by(:id => params[:id])
+    @group.update(group_params)
+    redirect_to group_path(@group)
   end
 
   def show

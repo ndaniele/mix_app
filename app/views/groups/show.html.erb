@@ -1,6 +1,13 @@
 <h1> Group Show Page </h1>
 <h2><%= @group.name %></h2>
 
+<%=form_for @group do |f| %>
+  <%= f.label "rename this group" %><br>
+<h2><%= f.text_field :name %></h2><br>
+   <%= f.submit "submit" %>
+  <% end %>
+
+
 <% @group.memberships.each do |membership| %>
   <% member = User.find_by(:id => membership.user_id) %>
   <ul>

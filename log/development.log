@@ -31027,3 +31027,240 @@ Processing by GroupsController#my_groups as HTML
 Completed 200 OK in 107ms (Views: 74.5ms | ActiveRecord: 2.7ms)
 
 
+Started GET "/groups/my_groups" for ::1 at 2016-10-03 12:36:53 -0400
+Processing by GroupsController#my_groups as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering groups/my_groups.html.erb within layouts/application
+  [1m[36mMembership Load (0.6ms)[0m  [1m[34mSELECT "memberships".* FROM "memberships" WHERE "memberships"."user_id" = ?[0m  [["user_id", 14]]
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  Rendered groups/my_groups.html.erb within layouts/application (21.8ms)
+  Rendered layouts/_messages.html.erb (3.6ms)
+Completed 200 OK in 1029ms (Views: 932.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/groups/1" for ::1 at 2016-10-03 12:36:55 -0400
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mMembership Load (0.3ms)[0m  [1m[34mSELECT "memberships".* FROM "memberships" WHERE "memberships"."group_id" = ?[0m  [["group_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."group_id" = ?[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (9.3ms)
+  Rendered layouts/_messages.html.erb (1.7ms)
+Completed 200 OK in 195ms (Views: 106.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/groups/1" for ::1 at 2016-10-03 12:37:24 -0400
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mMembership Load (0.2ms)[0m  [1m[34mSELECT "memberships".* FROM "memberships" WHERE "memberships"."group_id" = ?[0m  [["group_id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."group_id" = ?[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_messages.html.erb (1.3ms)
+Completed 200 OK in 77ms (Views: 70.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/groups/1" for ::1 at 2016-10-03 12:39:16 -0400
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mMembership Load (0.2ms)[0m  [1m[34mSELECT "memberships".* FROM "memberships" WHERE "memberships"."group_id" = ?[0m  [["group_id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."group_id" = ?[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (10.7ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 252ms (Views: 246.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/groups/1" for ::1 at 2016-10-03 12:42:06 -0400
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (1.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mMembership Load (0.3ms)[0m  [1m[34mSELECT "memberships".* FROM "memberships" WHERE "memberships"."group_id" = ?[0m  [["group_id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."group_id" = ?[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (83.8ms)
+  Rendered layouts/_messages.html.erb (2.2ms)
+Completed 200 OK in 654ms (Views: 605.9ms | ActiveRecord: 2.8ms)
+
+
+Started PATCH "/groups/1" for ::1 at 2016-10-03 12:42:27 -0400
+Processing by GroupsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FUy11kxUYHQTOsf3ErCC0mjErsy1MmFvO/LPwRIEjJNq1moL7Wx89Qqa7rTBhIqFPo8KHovTjzrYbSs08tjYXw==", "group"=>{"name"=>"Test_Group_1"}, "commit"=>"submit", "id"=>"1"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "_method"=>"patch", "authenticity_token"=>"FUy11kxUYHQTOsf3ErCC0mjErsy1MmFvO/LPwRIEjJNq1moL7Wx89Qqa7rTBhIqFPo8KHovTjzrYbSs08tjYXw==", "group"=>{"name"=>"Test_Group_1"}, "commit"=>"submit", "controller"=>"groups", "action"=>"update", "id"=>"1"} permitted: false>):
+  
+app/controllers/groups_controller.rb:19:in `update'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (14.3ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (160.8ms)
+Started PATCH "/groups/1" for ::1 at 2016-10-03 12:44:13 -0400
+Processing by GroupsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FUy11kxUYHQTOsf3ErCC0mjErsy1MmFvO/LPwRIEjJNq1moL7Wx89Qqa7rTBhIqFPo8KHovTjzrYbSs08tjYXw==", "group"=>{"name"=>"Test_Group_1"}, "commit"=>"submit", "id"=>"1"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/groups_controller.rb:20:in `update'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.5ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.5ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.8ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (437.7ms)
+Started PUT "/__web_console/repl_sessions/f8778a1aae7bc84448b47b111f1a987f" for ::1 at 2016-10-03 12:44:23 -0400
+Started PUT "/__web_console/repl_sessions/f8778a1aae7bc84448b47b111f1a987f" for ::1 at 2016-10-03 12:45:00 -0400
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started PUT "/__web_console/repl_sessions/f8778a1aae7bc84448b47b111f1a987f" for ::1 at 2016-10-03 12:45:10 -0400
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+Started PATCH "/groups/1" for ::1 at 2016-10-03 12:46:28 -0400
+Processing by GroupsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FUy11kxUYHQTOsf3ErCC0mjErsy1MmFvO/LPwRIEjJNq1moL7Wx89Qqa7rTBhIqFPo8KHovTjzrYbSs08tjYXw==", "group"=>{"name"=>"Test_Group_1"}, "commit"=>"submit", "id"=>"1"}
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+No template found for GroupsController#update, rendering head :no_content
+Completed 204 No Content in 349ms (ActiveRecord: 2.3ms)
+
+
+Started PATCH "/groups/1" for ::1 at 2016-10-03 12:46:38 -0400
+Processing by GroupsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FUy11kxUYHQTOsf3ErCC0mjErsy1MmFvO/LPwRIEjJNq1moL7Wx89Qqa7rTBhIqFPo8KHovTjzrYbSs08tjYXw==", "group"=>{"name"=>"Test_Group_1"}, "commit"=>"submit", "id"=>"1"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+No template found for GroupsController#update, rendering head :no_content
+Completed 204 No Content in 249ms (ActiveRecord: 0.4ms)
+
+
+Started PATCH "/groups/1" for ::1 at 2016-10-03 12:46:45 -0400
+Processing by GroupsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FUy11kxUYHQTOsf3ErCC0mjErsy1MmFvO/LPwRIEjJNq1moL7Wx89Qqa7rTBhIqFPo8KHovTjzrYbSs08tjYXw==", "group"=>{"name"=>"Test_Group_1"}, "commit"=>"submit", "id"=>"1"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+No template found for GroupsController#update, rendering head :no_content
+Completed 204 No Content in 242ms (ActiveRecord: 0.4ms)
+
+
+Started PATCH "/groups/1" for ::1 at 2016-10-03 12:47:10 -0400
+Processing by GroupsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FUy11kxUYHQTOsf3ErCC0mjErsy1MmFvO/LPwRIEjJNq1moL7Wx89Qqa7rTBhIqFPo8KHovTjzrYbSs08tjYXw==", "group"=>{"name"=>"Test_Group_1"}, "commit"=>"submit", "id"=>"1"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/groups/1
+Completed 302 Found in 46ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/groups/1" for ::1 at 2016-10-03 12:47:11 -0400
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mMembership Load (0.5ms)[0m  [1m[34mSELECT "memberships".* FROM "memberships" WHERE "memberships"."group_id" = ?[0m  [["group_id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."group_id" = ?[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (97.9ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 511ms (Views: 429.1ms | ActiveRecord: 4.8ms)
+
+
+Started PATCH "/groups/1" for ::1 at 2016-10-03 12:47:18 -0400
+Processing by GroupsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I1+dusa9MtB65YFR3cLRmjzLjRSYGygOT7RFczCffs1cxUJnZ4UuUWNFqBIO9tnNaoApxqb6xlusK6GG0EMqAQ==", "group"=>{"name"=>"Test_Group_A1"}, "commit"=>"submit", "id"=>"1"}
+  [1m[36mGroup Load (4.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (23.0ms)[0m  [1m[33mUPDATE "groups" SET "name" = ? WHERE "groups"."id" = ?[0m  [["name", "Test_Group_A1"], ["id", 1]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/groups/1
+Completed 302 Found in 39ms (ActiveRecord: 30.2ms)
+
+
+Started GET "/groups/1" for ::1 at 2016-10-03 12:47:18 -0400
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mMembership Load (3.0ms)[0m  [1m[34mSELECT "memberships".* FROM "memberships" WHERE "memberships"."group_id" = ?[0m  [["group_id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."group_id" = ?[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (13.3ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 81ms (Views: 70.7ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/groups/1" for ::1 at 2016-10-03 12:48:05 -0400
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mMembership Load (0.3ms)[0m  [1m[34mSELECT "memberships".* FROM "memberships" WHERE "memberships"."group_id" = ?[0m  [["group_id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."group_id" = ?[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_messages.html.erb (1.5ms)
+Completed 200 OK in 72ms (Views: 66.4ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/groups/1" for ::1 at 2016-10-03 12:48:12 -0400
+Processing by GroupsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JAYsOdmVNXbsggqlsKw7TKXoAWlB9Fmw1cpj6JhPfktbnPPkeK0p9/UiI+ZjmDMb86Olu38Vt+U2VYcdeJMqhw==", "group"=>{"name"=>"Test_Group_AA1"}, "commit"=>"submit", "id"=>"1"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (27.7ms)[0m  [1m[33mUPDATE "groups" SET "name" = ? WHERE "groups"."id" = ?[0m  [["name", "Test_Group_AA1"], ["id", 1]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/groups/1
+Completed 302 Found in 35ms (ActiveRecord: 30.3ms)
+
+
+Started GET "/groups/1" for ::1 at 2016-10-03 12:48:12 -0400
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mMembership Load (0.2ms)[0m  [1m[34mSELECT "memberships".* FROM "memberships" WHERE "memberships"."group_id" = ?[0m  [["group_id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."group_id" = ?[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 107ms (Views: 102.1ms | ActiveRecord: 0.8ms)
+
+
