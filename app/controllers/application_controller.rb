@@ -8,6 +8,17 @@ class ApplicationController < ActionController::Base
     request.env['omniauth.origin'] || root_path
   end
 
+
+#  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+#
+#  private
+#
+#  def user_not_authorized
+#    flash[:alert] = "You are not authorized to perform this action."
+#    redirect_to(request.referrer || root_path)
+#  end
+#end
+
 #  def authentication_required
 #    if !logged_in
 #      redirect_to login_path
