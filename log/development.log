@@ -33586,3 +33586,72 @@ Migrating to RemoveColumnGroupIdFromQuestions (20161004182553)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 [0m
+Started GET "/" for ::1 at 2016-10-04 14:33:38 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (1.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."group_id" = ?[0m  [["group_id", 0]]
+  Rendered questions/index.html.erb within layouts/application (8.6ms)
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 3.3ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: questions.group_id: SELECT "questions".* FROM "questions" WHERE "questions"."group_id" = ?):
+    10: <%= link_to "My Groups", groups_my_groups_path %>
+    11: 
+    12: <h2>Trending / public Questions</h2>
+    13: <% @questions.each do |q| %>
+    14:   <ul>
+    15:     <li><h3>¿<%= link_to "#{q.query}", question_path(q) %>?<h3></li>
+    16:   </ul>
+  
+app/views/questions/index.html.erb:13:in `_app_views_questions_index_html_erb___316914902081342781_70175414181660'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (16.2ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.2ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (152.7ms)
+Started GET "/" for ::1 at 2016-10-04 14:36:44 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mGroupQuestion Load (0.3ms)[0m  [1m[34mSELECT "group_questions".* FROM "group_questions" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 0]]
+  Rendered questions/index.html.erb within layouts/application (10.9ms)
+Completed 500 Internal Server Error in 96ms (ActiveRecord: 2.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `query' for #<GroupQuestion id: 2, group_id: 0, question_id: 60>):
+    12: <h2>Trending / public Questions</h2>
+    13: <% @group_questions.each do |q| %>
+    14:   <ul>
+    15:     <li><h3>¿<%= link_to "#{q.query}", question_path(q) %>?<h3></li>
+    16:   </ul>
+    17: <% end %>
+    18: 
+  
+app/views/questions/index.html.erb:15:in `block in _app_views_questions_index_html_erb___316914902081342781_70175390101720'
+app/views/questions/index.html.erb:13:in `_app_views_questions_index_html_erb___316914902081342781_70175390101720'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (22.3ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.8ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (179.5ms)
+Started GET "/" for ::1 at 2016-10-04 14:37:55 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mGroupQuestion Load (0.2ms)[0m  [1m[34mSELECT "group_questions".* FROM "group_questions" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 0]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  Rendered questions/index.html.erb within layouts/application (40.7ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 261ms (Views: 254.0ms | ActiveRecord: 1.7ms)
+
+

@@ -10,9 +10,12 @@
 <%= link_to "My Groups", groups_my_groups_path %>
 
 <h2>Trending / public Questions</h2>
-<% @questions.each do |q| %>
+<% @group_questions.each do |group_question| %>
+  <% question = Question.find_by(:id => group_question.question_id) %>
+    
+
   <ul>
-    <li><h3>¿<%= link_to "#{q.query}", question_path(q) %>?<h3></li>
+    <li><h3>¿<%= link_to "#{question.query}", question_path(question) %>?<h3></li>
   </ul>
 <% end %>
 
