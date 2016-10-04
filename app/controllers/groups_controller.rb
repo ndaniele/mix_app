@@ -23,11 +23,12 @@ class GroupsController < ApplicationController
       redirect_to group_path(@group)
     else
       flash[:error] = "#{@group.errors.full_messages.join(" & ")}"
-      #redirect_to group_path(@group)
+      redirect_to group_path(@group)
     end
   end
 
   def show
+    @user = current_user
     @group = Group.find(params[:id])
     @membership = Membership.new
     @questions = Question.all.where(:group_id => @group.id)

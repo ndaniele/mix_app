@@ -31736,3 +31736,493 @@ app/controllers/groups_controller.rb:13:in `create'
   Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
   Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (152.0ms)
+Started GET "/" for ::1 at 2016-10-04 12:05:23 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (13.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (26.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."group_id" = ?[0m  [["group_id", 0]]
+  Rendered questions/index.html.erb within layouts/application (81.7ms)
+  Rendered layouts/_messages.html.erb (2.1ms)
+Completed 200 OK in 1476ms (Views: 1278.2ms | ActiveRecord: 42.3ms)
+
+
+Started GET "/" for ::1 at 2016-10-04 12:06:13 -0400
+Processing by QuestionsController#index as HTML
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-10-04 12:06:13 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (2.2ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (330.9ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 498ms (Views: 473.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-10-04 12:06:22 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dHMIXPV3Ezmb+UyTaJ5ZdP4V/9BrUZN/SHVP2zC7ck8XyVV03LQ9lAV7F40TpWkU9lkMGIY+FPQ7NKm2QXR25A==", "user"=>{"email"=>"n.daniele@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (32.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "n.daniele@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 298ms (ActiveRecord: 32.6ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dHMIXPV3Ezmb+UyTaJ5ZdP4V/9BrUZN/SHVP2zC7ck8XyVV03LQ9lAV7F40TpWkU9lkMGIY+FPQ7NKm2QXR25A==", "user"=>{"email"=>"n.daniele@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (2.4ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (12.9ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 476ms (Views: 253.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-10-04 12:06:27 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gydMjJC3WwsxyAW5OOue1HLYeVnoLfStB6OA0fBDfBLgnRGkuXR1pq9KXqdD0K60epSKkQVCcyZ04ma8gYx4uQ==", "user"=>{"email"=>"n.daniele@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "n.daniele@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 220ms (ActiveRecord: 0.8ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gydMjJC3WwsxyAW5OOue1HLYeVnoLfStB6OA0fBDfBLgnRGkuXR1pq9KXqdD0K60epSKkQVCcyZ04ma8gYx4uQ==", "user"=>{"email"=>"n.daniele@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (2.2ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (11.1ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+Completed 200 OK in 277ms (Views: 89.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-10-04 12:06:34 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cR2SixKp9+KRjxamIPgC+jVb3tV0yooQauD0QXuUSPkSp8+jO2rZTw8NTbhbwzKaPRctHZmlDZsZoRIsCltMUg==", "user"=>{"email"=>"nick@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "nick@test.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.7ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cR2SixKp9+KRjxamIPgC+jVb3tV0yooQauD0QXuUSPkSp8+jO2rZTw8NTbhbwzKaPRctHZmlDZsZoRIsCltMUg==", "user"=>{"email"=>"nick@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (2.2ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_messages.html.erb (1.2ms)
+Completed 200 OK in 283ms (Views: 86.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2016-10-04 12:06:46 -0400
+Started GET "/users/auth/facebook" for ::1 at 2016-10-04 12:06:47 -0400
+Started GET "/users/sign_in" for ::1 at 2016-10-04 12:06:54 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (4.2ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (14.8ms)
+  Rendered layouts/_messages.html.erb (3.0ms)
+Completed 200 OK in 118ms (Views: 116.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_out" for ::1 at 2016-10-04 12:06:59 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 59ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-10-04 12:06:59 -0400
+Processing by QuestionsController#index as HTML
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-10-04 12:06:59 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (2.5ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (29.2ms)
+  Rendered layouts/_messages.html.erb (1.2ms)
+Completed 200 OK in 104ms (Views: 102.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2016-10-04 12:07:02 -0400
+Started GET "/users/auth/facebook" for ::1 at 2016-10-04 12:07:02 -0400
+Started GET "/users/auth/facebook/callback?code=AQCgR6V8L54q0bklrSjFYHonPxnqOv4EJUYVOPU1UZvZdYzQqVDEEzc8alu-1TtA6V6b6WKUsM5Pu4Q74a1hnaJHoKxSArswC0b2ybHtr3pZ2i-AtyQGakJaKD0Ct4BXilzSFuxXwUuqwNxBMt2Nh2Q75fwkFraJX8k4zWK701mby5sPGANoODumgiOmDnmdcJO_dUhylCsCvvAZ2Zj3mcaCARX3OuAKtYuRdQwECWAbj6zqLv4VBCyWmS1zxvCrg_wubYPrlKOXTwsfimRgQQ_X59FO4uIxx7RiKMPcqLRe750mAIsHcy5b5KlbsBzH6uJtgO5vVUiIfUtedsqQBPzMJlwZbVy9a7_fwA60tngeKQ&state=0aa77149ac4d470dadfb0a0e897dea32791af3ceed628286" for ::1 at 2016-10-04 12:07:02 -0400
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQCgR6V8L54q0bklrSjFYHonPxnqOv4EJUYVOPU1UZvZdYzQqVDEEzc8alu-1TtA6V6b6WKUsM5Pu4Q74a1hnaJHoKxSArswC0b2ybHtr3pZ2i-AtyQGakJaKD0Ct4BXilzSFuxXwUuqwNxBMt2Nh2Q75fwkFraJX8k4zWK701mby5sPGANoODumgiOmDnmdcJO_dUhylCsCvvAZ2Zj3mcaCARX3OuAKtYuRdQwECWAbj6zqLv4VBCyWmS1zxvCrg_wubYPrlKOXTwsfimRgQQ_X59FO4uIxx7RiKMPcqLRe750mAIsHcy5b5KlbsBzH6uJtgO5vVUiIfUtedsqQBPzMJlwZbVy9a7_fwA60tngeKQ", "state"=>"0aa77149ac4d470dadfb0a0e897dea32791af3ceed628286"}
+  [1m[36mUser Load (26.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "facebook"], ["uid", "10153602064052811"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-10-04 16:07:04 UTC], ["last_sign_in_at", 2016-09-08 21:56:04 UTC], ["sign_in_count", 7], ["updated_at", 2016-10-04 16:07:04 UTC], ["id", 7]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 53ms (ActiveRecord: 29.3ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-10-04 12:07:04 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-10-04 12:07:04 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (10.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."group_id" = ?[0m  [["group_id", 0]]
+  Rendered questions/index.html.erb within layouts/application (16.0ms)
+  Rendered layouts/_messages.html.erb (2.9ms)
+Completed 200 OK in 146ms (Views: 110.2ms | ActiveRecord: 11.2ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-10-04 12:07:09 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JBRdbJI8hPevTnBrHqv4MEgj/hnOptEqZToLVqpV2rFHrgBEu/+qWjHMK3VlkMhQQG8N0SPJVqEWe+0725reGg==", "user"=>{"email"=>"amira@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "amira@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-10-04 16:07:10 UTC], ["last_sign_in_at", 2016-10-01 16:33:42 UTC], ["last_sign_in_ip", "::1"], ["sign_in_count", 3], ["updated_at", 2016-10-04 16:07:10 UTC], ["id", 14]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 299ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2016-10-04 12:07:10 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."group_id" = ?[0m  [["group_id", 0]]
+  Rendered questions/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 60ms (Views: 55.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/questions/57" for ::1 at 2016-10-04 12:07:15 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"57"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 57], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered questions/show.html.erb within layouts/application (43.0ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 319ms (Views: 134.6ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/questions/57/answers" for ::1 at 2016-10-04 12:07:18 -0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"osxBGgGQ3gM+QqQ6nFVw8HXUSFl6IelC5EYHRpN/PqK7xyfD9gxlDRtMGYindfduK0G3Xgi/gHNRem0NntPtew==", "answer"=>{"input"=>"yes"}, "commit"=>"Create", "question_id"=>"57"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 57], ["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mAnswer Exists (21.5ms)[0m  [1m[34mSELECT  1 AS one FROM "answers" WHERE "answers"."user_id" = ? AND "answers"."question_id" = ? LIMIT ?[0m  [["user_id", 7], ["question_id", 57], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "answers" ("input", "question_id", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["input", "yes"], ["question_id", 57], ["created_at", 2016-10-04 16:07:18 UTC], ["updated_at", 2016-10-04 16:07:18 UTC], ["user_id", 7]]
+  [1m[35m (17.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/questions/57/answers/63
+Completed 302 Found in 90ms (ActiveRecord: 41.4ms)
+
+
+Started GET "/questions/57/answers/63" for ::1 at 2016-10-04 12:07:18 -0400
+Processing by AnswersController#show as HTML
+  Parameters: {"question_id"=>"57", "id"=>"63"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 57], ["LIMIT", 1]]
+  Rendering answers/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 57]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 57], ["input", "no"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 57], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 57], ["input", "yes"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "answers" WHERE "answers"."question_id" = ? AND "answers"."input" = ?[0m  [["question_id", 57], ["input", "no"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered answers/show.html.erb within layouts/application (13.8ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 154ms (Views: 89.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/questions" for ::1 at 2016-10-04 12:07:22 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."group_id" = ?[0m  [["group_id", 0]]
+  Rendered questions/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 86ms (Views: 54.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/groups" for ::1 at 2016-10-04 12:07:35 -0400
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (26.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (34.4ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 157ms (Views: 63.9ms | ActiveRecord: 27.5ms)
+
+
+Started GET "/groups/2" for ::1 at 2016-10-04 12:07:36 -0400
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGroup Load (1.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mMembership Load (11.2ms)[0m  [1m[34mSELECT "memberships".* FROM "memberships" WHERE "memberships"."group_id" = ?[0m  [["group_id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."group_id" = ?[0m  [["group_id", 2]]
+  Rendered groups/show.html.erb within layouts/application (28.5ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 132ms (Views: 85.7ms | ActiveRecord: 13.9ms)
+
+
+Started PATCH "/groups/2" for ::1 at 2016-10-04 12:07:41 -0400
+Processing by GroupsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wdQ8/W/UeZgHSwGHNWFP+qcj1/1DV442vR4TAyXvdKOsfpBAS0qayoywD/pYlyODGFDDAYeOgFp/VppqmDVVGA==", "group"=>{"name"=>"Test_Group_2NICK"}, "commit"=>"submit", "id"=>"2"}
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 1.1ms)
+
+
+  
+Pundit::NotAuthorizedError (not allowed to update? this #<Group id: 2, name: "Test_Group_2AA">):
+  
+app/controllers/groups_controller.rb:21:in `update'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.1ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (164.7ms)
+Started PATCH "/groups/2" for ::1 at 2016-10-04 12:08:52 -0400
+Processing by GroupsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wdQ8/W/UeZgHSwGHNWFP+qcj1/1DV442vR4TAyXvdKOsfpBAS0qayoywD/pYlyODGFDDAYeOgFp/VppqmDVVGA==", "group"=>{"name"=>"Test_Group_2NICK"}, "commit"=>"submit", "id"=>"2"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 113ms (ActiveRecord: 2.6ms)
+
+
+  
+Pundit::NotAuthorizedError (not allowed to update? this #<Group id: 2, name: "Test_Group_2AA">):
+  
+app/controllers/groups_controller.rb:21:in `update'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.8ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (144.8ms)
+Started PATCH "/groups/2" for ::1 at 2016-10-04 12:09:30 -0400
+Processing by GroupsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wdQ8/W/UeZgHSwGHNWFP+qcj1/1DV442vR4TAyXvdKOsfpBAS0qayoywD/pYlyODGFDDAYeOgFp/VppqmDVVGA==", "group"=>{"name"=>"Test_Group_2NICK"}, "commit"=>"submit", "id"=>"2"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 3.1ms)
+
+
+  
+Pundit::NotAuthorizedError (not allowed to update? this #<Group id: 2, name: "Test_Group_2AA">):
+  
+app/controllers/groups_controller.rb:21:in `update'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.8ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.6ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (161.2ms)
+Started PATCH "/groups/2" for ::1 at 2016-10-04 12:10:20 -0400
+Processing by GroupsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wdQ8/W/UeZgHSwGHNWFP+qcj1/1DV442vR4TAyXvdKOsfpBAS0qayoywD/pYlyODGFDDAYeOgFp/VppqmDVVGA==", "group"=>{"name"=>"Test_Group_2NICK"}, "commit"=>"submit", "id"=>"2"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 2.5ms)
+
+
+  
+Pundit::NotAuthorizedError (not allowed to update? this #<Group id: 2, name: "Test_Group_2AA">):
+  
+app/controllers/groups_controller.rb:21:in `update'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.2ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (154.1ms)
+Started PATCH "/groups/2" for ::1 at 2016-10-04 12:11:03 -0400
+Processing by GroupsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wdQ8/W/UeZgHSwGHNWFP+qcj1/1DV442vR4TAyXvdKOsfpBAS0qayoywD/pYlyODGFDDAYeOgFp/VppqmDVVGA==", "group"=>{"name"=>"Test_Group_2NICK"}, "commit"=>"submit", "id"=>"2"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 97ms (ActiveRecord: 3.3ms)
+
+
+  
+Pundit::NotAuthorizedError (not allowed to update? this #<Group id: 2, name: "Test_Group_2AA">):
+  
+app/controllers/groups_controller.rb:21:in `update'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.6ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.8ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (146.9ms)
+Started PATCH "/groups/2" for ::1 at 2016-10-04 12:11:10 -0400
+Processing by GroupsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wdQ8/W/UeZgHSwGHNWFP+qcj1/1DV442vR4TAyXvdKOsfpBAS0qayoywD/pYlyODGFDDAYeOgFp/VppqmDVVGA==", "group"=>{"name"=>"Test_Group_2NICK"}, "commit"=>"submit", "id"=>"2"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms)
+
+
+  
+Pundit::NotAuthorizedError (not allowed to update? this #<Group id: 2, name: "Test_Group_2AA">):
+  
+app/controllers/groups_controller.rb:21:in `update'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.9ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (152.2ms)
+Started GET "/" for ::1 at 2016-10-04 12:11:37 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."group_id" = ?[0m  [["group_id", 0]]
+  Rendered questions/index.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 393ms (Views: 305.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/groups" for ::1 at 2016-10-04 12:12:21 -0400
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 100ms (Views: 56.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/groups/1" for ::1 at 2016-10-04 12:12:23 -0400
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mMembership Load (15.8ms)[0m  [1m[34mSELECT "memberships".* FROM "memberships" WHERE "memberships"."group_id" = ?[0m  [["group_id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."group_id" = ?[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (33.8ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 101ms (Views: 66.6ms | ActiveRecord: 17.6ms)
+
+
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" ORDER BY "groups"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMembership Load (18.9ms)[0m  [1m[34mSELECT "memberships".* FROM "memberships" WHERE "memberships"."group_id" = ?[0m  [["group_id", 5]]
+Started GET "/groups/1" for ::1 at 2016-10-04 12:14:52 -0400
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  Rendered groups/show.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: <h1> Group Show Page </h1>
+    2: <h2><%= @group.name %></h2>
+    3: 
+    4: <% if @user.id == @group.memberships.first.user_id %>
+    5: 
+    6:   <%=form_for @group do |f| %>
+    7:     <%= f.label "rename this group" %><br>
+  
+app/views/groups/show.html.erb:4:in `_app_views_groups_show_html_erb__2051734038254887692_70122388792660'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (13.9ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.4ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (144.0ms)
+Started GET "/groups/1" for ::1 at 2016-10-04 12:15:17 -0400
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mMembership Load (44.1ms)[0m  [1m[34mSELECT  "memberships".* FROM "memberships" WHERE "memberships"."group_id" = ? ORDER BY "memberships"."id" ASC LIMIT ?[0m  [["group_id", 1], ["LIMIT", 1]]
+  [1m[36mMembership Load (0.4ms)[0m  [1m[34mSELECT "memberships".* FROM "memberships" WHERE "memberships"."group_id" = ?[0m  [["group_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."group_id" = ?[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (124.3ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 964ms (Views: 788.4ms | ActiveRecord: 50.6ms)
+
+
+Started GET "/groups" for ::1 at 2016-10-04 12:15:26 -0400
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 83ms (Views: 50.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/groups/1" for ::1 at 2016-10-04 12:15:27 -0400
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mMembership Load (0.3ms)[0m  [1m[34mSELECT  "memberships".* FROM "memberships" WHERE "memberships"."group_id" = ? ORDER BY "memberships"."id" ASC LIMIT ?[0m  [["group_id", 1], ["LIMIT", 1]]
+  [1m[36mMembership Load (0.2ms)[0m  [1m[34mSELECT "memberships".* FROM "memberships" WHERE "memberships"."group_id" = ?[0m  [["group_id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."group_id" = ?[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (11.3ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 79ms (Views: 68.3ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/groups/1/memberships" for ::1 at 2016-10-04 12:15:34 -0400
+Processing by MembershipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f33nfI+kABKfJpmRuC7Ytow8T334hgnR9yXn43udi49nzDZ164TJXQa40K0zLer4k1hVbv5k9Ai5jiMtvtgL4A==", "commit"=>"Join", "group_id"=>"1"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "memberships" ("user_id", "group_id") VALUES (?, ?)[0m  [["user_id", 14], ["group_id", 1]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/groups/1
+Completed 302 Found in 17ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/groups/1" for ::1 at 2016-10-04 12:15:35 -0400
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mMembership Load (0.3ms)[0m  [1m[34mSELECT  "memberships".* FROM "memberships" WHERE "memberships"."group_id" = ? ORDER BY "memberships"."id" ASC LIMIT ?[0m  [["group_id", 1], ["LIMIT", 1]]
+  [1m[36mMembership Load (0.2ms)[0m  [1m[34mSELECT "memberships".* FROM "memberships" WHERE "memberships"."group_id" = ?[0m  [["group_id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."group_id" = ?[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (12.3ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 70ms (Views: 61.8ms | ActiveRecord: 2.2ms)
+
+

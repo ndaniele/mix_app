@@ -1,11 +1,15 @@
 <h1> Group Show Page </h1>
 <h2><%= @group.name %></h2>
 
-<%=form_for @group do |f| %>
-  <%= f.label "rename this group" %><br>
-<h2><%= f.text_field :name %></h2><br>
-   <%= f.submit "submit" %>
-  <% end %>
+<% if @user.id == @group.memberships.first.user_id %>
+
+  <%=form_for @group do |f| %>
+    <%= f.label "rename this group" %><br>
+  <h2><%= f.text_field :name %></h2><br>
+     <%= f.submit "submit" %>
+    <% end %>
+    
+<% end %>
 
 
 <% @group.memberships.each do |membership| %>
