@@ -27,7 +27,8 @@ class QuestionsController < ApplicationController
       redirect_to questions_path  #=> goes to answers#show
     else
       flash[:error] = "#{@question.errors.full_messages.join(" & ")}"
-      redirect_to new_question_path
+      #binding.pry
+      redirect_to new_question_path(:group => @question.group.id)
     end
   end
 
