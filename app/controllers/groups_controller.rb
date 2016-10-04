@@ -31,8 +31,7 @@ class GroupsController < ApplicationController
     @user = current_user
     @group = Group.find(params[:id])
     @membership = Membership.new
-    @questions = GroupQuestion.where(:group_id => @group.id)
-    #@questions = Question.all.where(:group_id => @group.id)
+    @group_questions = GroupQuestion.where(:group_id => @group.id)
   end
 
   def destroy
