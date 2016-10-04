@@ -22,14 +22,14 @@ class QuestionsController < ApplicationController
   def create
     #raise params.inspect
     @question = current_user.asked_questions.build(question_params)
-    #@question.user_id = current_user.id #session[:user_id]
+    @group = Group.find_by(:id => params[:question][:group_id])
     if 
       @question.save
+      GroupQuestion.create(:group_id => @group.id, :question_id => @question.id)
       redirect_to questions_path  #=> goes to answers#show
     else
       flash[:error] = "#{@question.errors.full_messages.join(" & ")}"
-      #binding.pry
-      redirect_to new_question_path(:group => @question.group.id)
+      redirect_to new_question_path(:group => @group.id)
     end
   end
 
@@ -65,7 +65,7 @@ class QuestionsController < ApplicationController
 private 
 
   def question_params
-    params.require(:question).permit(:query, :group_id, {:answers_attributes => [:input, :user_id]})
+    params.require(:question).permit(:query, {:answers_attributes => [:input, :user_id]})
   end
 
 
