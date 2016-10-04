@@ -14,8 +14,14 @@ class MembershipsController < ApplicationController
   def create 
     #raise params.inspect
     @group = Group.find_by(:id => params[:group_id]) 
-    @membership = Membership.create(:user_id => current_user.id, :group_id => @group.id)
-    redirect_to group_path(@group)
+    @membership = Membership.new(:user_id => current_user.id, :group_id => @group.id)
+     if 
+      @membership.save
+      redirect_to group_path(@group) #=> goes to answers#show
+    else
+      flash[:error] = "#{@membership.errors.full_messages.join(" & ")}"
+      redirect_to group_path(@group)
+    end
   end
 
   def update
