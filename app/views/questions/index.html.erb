@@ -6,8 +6,8 @@
 <%= link_to "your questions", user_path(current_user) %> |
 <%= link_to "most popular question", questions_most_popular_path %> |
 <%= link_to "All Groups", groups_path %> |
-<%= link_to "Create A New Group", new_group_path %>|
-<%= link_to "My Groups", groups_my_groups_path %>
+<%= link_to "My Groups", groups_my_groups_path %> |
+<%= link_to "Create A New Group", new_group_path %>
 
 <h2>Trending / public Questions</h2>
 <% @group_questions.each do |group_question| %>

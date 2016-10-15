@@ -34,7 +34,7 @@ join this group
   <% @group_questions.each do |group_question| %>
     <% question = Question.find_by(:id => group_question.question_id) %>
     <ul>
-      <li><%= link_to "ANSWER #{question.query}", question_path(question) %></li>
-        <li><%= link_to "STATS FOR #{question.query}", question_answer_path(question) %></li>
+    <li><h2><%=question.query%></h2></li>
+      <li><%= link_to "ANSWER THIS QUESTION", question_path(question) %> || <%= link_to "GET STATS FOR THIS QUESTION", question_answer_path(question) %></li>
     </ul>
   <% end %>
