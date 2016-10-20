@@ -24,7 +24,7 @@ $(function () {
         var answers = question.answers
 
         answerStats(answers, id);
-       
+        
         });                     
       });
     });
@@ -40,7 +40,7 @@ var answerStats = function(answers, id) {
        } else if (answer.input === "no") {
         noArry.push(answer);
       };
-      if (yesArry.length == noArry.length) {
+      if (yesArry.length === noArry.length) {
         html = ''
         html += '<p>' + "Its A Tie!" 
         $('.questions-group-' + id).append(html);
