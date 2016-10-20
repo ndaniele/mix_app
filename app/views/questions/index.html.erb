@@ -3,12 +3,19 @@
 
 <h3>You're logged in as: <%= current_user.email %></h3>
 <%= link_to "logout", destroy_user_session_path %> |
-<%= link_to "your questions", user_path(current_user) %> |
-<%= link_to "most popular question", questions_most_popular_path %> |
-<%= link_to "All Groups", groups_path %> |
-<%= link_to "My Groups", groups_my_groups_path %> |
-<%= link_to "Create A New Group", new_group_path %>
 
+<a href="#" class="my-questions" data-id="<%=@user.id%>">MY Questions...</a>
+<%#= link_to "your questions", user_path(current_user) %> |
+<a href="#" class="most-popular-question" data-id="<%=@user.id%>">Most Popular Questions...</a>
+<%#= link_to "most popular question", questions_most_popular_path %> |
+<a href="#" class="all-groups" data-id="<%=@user.id%>">All Groups...</a>
+<%#= link_to "All Groups", groups_path %> |
+<a href="#" class="my-groups" data-id="<%=@user.id%>">MY Groups...</a>
+<%#= link_to "My Groups", groups_my_groups_path %> |
+<a href="#" class="create-new-group" data-id="<%=@user.id%>">Create a New Group..</a>
+<%#= link_to "Create A New Group", new_group_path %>
+
+<div class="main">
 <h2>Trending / public Questions</h2>
 <% @group_questions.each do |group_question| %>
   <% question = Question.find_by(:id => group_question.question_id) %>
@@ -22,6 +29,86 @@
 <h2>Or create a new Public Question</h2>
 
 <%= link_to "Post a question to the public group", {:controller => "questions", :action => "new", :group => 0}%>
+
+</div>
+
+
+<h3 class="myQuestions"></h3>
+
+<h3 class="mostPopularQuestion"></h3>
+
+<h3 class="allGroups"></h3>
+
+<h3 class="myGroups"></h3>
+
+<h3 class="newGroup"></h3>
+
+
+<script type="text/javascript" charset="utf-8">
+$(function () {
+  $(".my-questions").on("click", function() {
+    var id = parseInt($(".js-next").attr("data-id"));
+    $.get("/users/" + id, function(data) {
+      //console.log(data);
+      $(".main").html(data);
+    });
+  });
+});
+</script>
+
+
+
+<script type="text/javascript" charset="utf-8">
+$(function () {
+  $(".most-popular-question").on("click", function() {
+    //var id = parseInt($(".js-next").attr("data-id"));
+    $.get("/questions/most_popular", function(data) {
+      //console.log(data);
+      $(".main").html(data);
+    });
+  });
+});
+</script>
+
+
+<script type="text/javascript" charset="utf-8">
+$(function () {
+  $(".all-groups").on("click", function() {
+    var id = parseInt($(".js-next").attr("data-id"));
+    $.get("/groups/", function(data) {
+      //console.log(data);
+      $(".main").html(data);
+    });
+  });
+});
+</script>
+
+<script type="text/javascript" charset="utf-8">
+$(function () {
+  $(".my-groups").on("click", function() {
+    //var id = parseInt($(".js-next").attr("data-id"));
+    $.get("/groups/my_groups", function(data) {
+      //console.log(data);
+      $(".main").html(data);
+    });
+  });
+});
+</script>
+
+<script type="text/javascript" charset="utf-8">
+$(function () {
+  $(".create-new-group").on("click", function() {
+    //var id = parseInt($(".js-next").attr("data-id"));
+    $.get("/groups/new", function(data) {
+      //console.log(data);
+      $(".main").html(data);
+    });
+  });
+});
+</script>
+
+
+
 
 
 

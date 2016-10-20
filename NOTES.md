@@ -154,8 +154,35 @@ ADD PUNDIT (Sept. 30, 2016)
   - Questions can be marked private (for groups only) or public (group 0)
   
 
+JS VERSION REQ.
+[?] Must render at least one index resource/page via jQuery and an Active Model Serialization JSON Backend.
+  - all links on home page?
 
-  
+[?] Must render at least one show resource/page via jQuery and an Active Model Serialization JSON Backend.
+  - all links on home page?
+
+[X] The rails API must reveal at least one has-many relationship in the JSON that is then rendered to the page.
+  - class QuestionSerializer < ActiveModel::Serializer
+    attributes :id, :query, :user_id
+    has_many :answers
+    end
+
+
+[] Must use your Rails API and a form to create a resource and render the response without a page refresh.
+  - /questions/new #=> renders new question to page without refresh or redirect
+  - via JSON 
+
+[?] Must translate the JSON responses into Javascript Model Objects. The Model Objects must have at least one method on the prototype. Formatters work really well for this.
+  have a 
+  function(Question) 
+    format
+    Qustion.prototype.function format() {
+    return this.author.firstName + ' ' + this
+  }
+  'Question: ' + question.format()
+
+  test test 
+
   
 
   

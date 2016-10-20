@@ -1,15 +1,35 @@
 <h3>THE SHOW PAGE</h3>
 
-<h1><%= @question.query %></h1>
+<div class="questionUser"><%= @question.user.email %></div>
+<a href="#" class="js-next" data-id="<%=@question.id%>">Next Question...</a>
+<h1 class="questionQuery"><%= @question.query %></h1>
 
-<h4> see question STATS</h4>
-<%= link_to "stats", question_answer_path(@question) %>
+
+<script type="text/javascript" charset="utf-8">
+$(function () {
+  $(".js-next").on("click", function(e) {
+    e.preventDefault();
+    var nextId = parseInt($(".js-next").attr("data-id")) + 1;
+    $.get("/questions/" + nextId + ".json", function(data) {
+      var question = data["question"];
+      //$(".userName").text(data["user"]["email"]);
+      $(".questionQuery").text(data["question"]["query"]);
+      // re-set the id to current on the link
+      $(".js-next").attr("data-id", data["question"]["id"]);
+    });
+  });
+});
+</script>
+
+
+<h4> <%= link_to "see question STATS", question_answer_path(@question) %></h4>
+
 
 
 <h4>ANSWER THE QUESTION TO PARTICPATE</h4>
 
-
-<%= form_for [@question, @answer] do |f| %>
+<% answer = @question.answers.build %>
+<%= form_for [@question, answer] do |f| %>
 
   <h2><%= f.radio_button(:input, "yes") %>
   <%= f.label(:yes, "YES") %></h2>

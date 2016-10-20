@@ -15,7 +15,8 @@ class GroupsController < ApplicationController
     #raise params.inspect 
     @group = Group.create(group_params)
     @group.memberships.build(:user_id => params[:group][:user_id], :group_id => @group.id).save
-    redirect_to group_path(@group)
+    #redirect_to group_path(@group)
+    render json: @group, status: 201
   end
 
   def update
@@ -35,6 +36,10 @@ class GroupsController < ApplicationController
     @group = Group.find(params[:id])
     @membership = Membership.new
     @group_questions = GroupQuestion.where(:group_id => @group.id)
+     respond_to do |format|
+      format.html { render :show }
+      format.json { render json: @group}
+    end
   end
 
   def destroy

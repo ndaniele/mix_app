@@ -1,9 +1,16 @@
 class QuestionsController < ApplicationController
   #before_action :authentication_required
 
+   def question_data
+    question = Question.find(params[:id])
+    render json: QuestionSerializer.serialize(question)
+    #render question.to_json
+  end
+
   def index
     #if you're not logged in you can't see this, goto login page
     #raise params.inspect
+    @user = current_user
     if current_user.nil?
       redirect_to new_user_session_path
     else
@@ -25,8 +32,9 @@ class QuestionsController < ApplicationController
     @group = Group.find_by(:id => params[:question][:group_id])
     if 
       @question.save
-      GroupQuestion.create(:group_id => @group.id, :question_id => @question.id)
-      redirect_to questions_path  #=> goes to answers#show
+      @group_question = GroupQuestion.create(:group_id => @group.id, :question_id => @question.id)
+      #redirect_to questions_path 
+      render json: @question, status: 201
     else
       flash[:error] = "#{@question.errors.full_messages.join(" & ")}"
       redirect_to new_question_path(:group => @group.id)
@@ -40,9 +48,10 @@ class QuestionsController < ApplicationController
   end
 
   def show
-    @question = Question.find_by(id: params[:id])
-    if current_user 
-      @answer = @question.answers.build
+    @question = Question.find(params[:id])
+    respond_to do |format|
+      format.html { render :show }
+      format.json { render json: @question}
     end
   end
 

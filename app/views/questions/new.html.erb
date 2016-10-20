@@ -1,16 +1,78 @@
 <h3>Create a New Y/N question!!</h3>
 
 <%=form_for(@question) do |f| %>
+<div class="field">
   <%= f.label :query %><br>
 <h2>¿<%= f.text_field :query %>?</h2><br>
+</div>
+<div class="hidden field">
  <%= f.hidden_field :group_id, :value => @group.id %>
-
+ </div>
+<div class="field">
   <%=f.fields_for :answers do |a| %>
    <h2><%= a.radio_button(:input, "yes") %>
     <%= a.label(:yes, "YES") %></h2>
+  </div>
+  <div class="field">
     <h2><%= a.radio_button(:input, "no") %>
     <%= a.label(:no, "NO") %></h2><br></br>
+    </div>
+  <div class="hidden field">
     <%= a.hidden_field :user_id, :value => current_user.id %>
+  </div>
+     <div class="actions">
     <%= f.submit "submit" %>
+    </div>
   <% end %>
 <% end %> 
+
+<div id="postResult">
+  <h3 class="questionStats"></h3>
+    <ul></ul>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+  $(function () {
+    $('form').submit(function(event) {
+      //prevent form from submitting the default way
+      event.preventDefault();
+      var values = $(this).serialize();
+      
+      var posting = $.post('/questions', values);
+ 
+      posting.done(function(data) {
+        //console.log(data);
+
+        var question_id = data["question"]["id"];
+
+        $.get("/questions/" + question_id  + ".json", function(data) {
+          //debugger
+          $(".questionStats").text(data.question.query);
+        });
+
+        var answers = data.question.answers
+          $.each(answers, function(index, answer){
+            var yesArry = [];
+            var noArry = [];
+             if (answer.input === "yes") {
+              yesArry.push(answer);
+             } else if (answer.input === "no") {
+              noArry.push(answer);
+            };
+            if (yesArry.length > noArry.length) {
+              html = ''
+              html += '<li>' + "Winner is YES" 
+              $('ul').append(html);
+            } else if (noArry.length > yesArry.length) {
+              html = ''
+              html += '<li>' + "Winner is NO" 
+              $('ul').append(html);
+           };              
+        });
+      });    
+    });
+  });
+
+</script>
+
+

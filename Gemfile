@@ -36,6 +36,8 @@ gem 'devise'
 gem 'rack-flash3'
 gem "pundit"
 
+gem "active_model_serializers", "~> 0.9.0"
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

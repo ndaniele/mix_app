@@ -3,5 +3,50 @@
 <% @groups.each do |group| %>
 <ul>
   <li><%= link_to "#{group.name}", group_path(group) %></li>
+  <li><button class="js-more" data-id="<%= group.id %>">Questions For This Group</button><li>
+  <ul class="questions-group-<%= group.id %>">
+  </ul>
 </ul>
 <% end %>
+
+
+<script type="text/javascript" charset="utf-8">
+$(function () {
+  $(".js-more").on('click', function() {
+    // get the id from the data attribute
+    var id = $(this).data("id");
+    $.get(" /groups/" + id + ".json", function(data) {
+      var group_questions = data.group.questions.forEach(function(question) {
+        html = ''
+        html += '<li> ¿' + question.query + '?'
+        $('.questions-group-' + id).append(html)
+
+        var answers = question.answers
+        $.each(answers, function(index, answer){
+            var yesArry = [];
+            var noArry = [];
+             if (answer.input === "yes") {
+              yesArry.push(answer);
+             } else if (answer.input === "no") {
+              noArry.push(answer);
+            };
+            if (yesArry.length == noArry.length) {
+              html = ''
+              html += '<p>' + "Its A Tie!" 
+              $('.questions-group-' + id).append(html);
+            } else if (noArry.length > yesArry.length) {
+              html = ''
+              html += '<p>' + "Winner is NO" 
+              $('.questions-group-' + id).append(html);
+            } else if (yesArry.length > noArry.length) {
+              html = ''
+              html += '<p>' + "Winner is Yes" 
+              $('.questions-group-' + id).append(html);
+           };
+        });                     
+      });
+    });
+  });
+});
+</script>
+

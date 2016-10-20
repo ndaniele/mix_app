@@ -13,6 +13,12 @@ class AnswersController < ApplicationController
   def show
     @question = Question.find_by(id: params[:question_id])
     @answers = @question.answers.build
+
+    @question_answer = Question.find_by(:id => @question.id).answers.first
+    respond_to do |f|
+      f.html { render :show }
+      f.json { render json: @question_answer }
+    end
   end
 
   def create
