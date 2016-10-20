@@ -52,6 +52,10 @@
 
         var answers = data.question.answers
           $.each(answers, function(index, answer){
+            html = ''
+            html += '<li>' + 'Total Answers: ' + answers.length 
+            $('ul').append(html);
+
             var yesArry = [];
             var noArry = [];
              if (answer.input === "yes") {
