@@ -1,30 +1,6 @@
 <h3>Create a New Y/N question!!</h3>
 
-<%=form_for(@question) do |f| %>
-<div class="field">
-  <%= f.label :query %><br>
-<h2>¿<%= f.text_field :query %>?</h2><br>
-</div>
-<div class="hidden field">
- <%= f.hidden_field :group_id, :value => @group.id %>
- </div>
-<div class="field">
-  <%=f.fields_for :answers do |a| %>
-   <h2><%= a.radio_button(:input, "yes") %>
-    <%= a.label(:yes, "YES") %></h2>
-  </div>
-  <div class="field">
-    <h2><%= a.radio_button(:input, "no") %>
-    <%= a.label(:no, "NO") %></h2><br></br>
-    </div>
-  <div class="hidden field">
-    <%= a.hidden_field :user_id, :value => current_user.id %>
-  </div>
-     <div class="actions">
-    <%= f.submit "submit" %>
-    </div>
-  <% end %>
-<% end %> 
+<%= render :partial => 'questions/new_question' %>
 
 <div id="postResult">
   <h3 class="questionStats""></h3>
