@@ -184,7 +184,15 @@ JS VERSION REQ.
   test test 
 
 TEST COMMIT CHANGES
-  
+
+TO DO 
+create a prototype function in JS 
+has it's own attributes 
+create a new question / question answers 
+
+ this is like in ruby
+ - createing a class (question) - more like def initialize
+ - creating methods for that class (function()) 
 
   
 

@@ -27,9 +27,11 @@
 <% end %> 
 
 <div id="postResult">
-  <h3 class="questionStats"></h3>
-    <ul></ul>
+  <h3 class="questionStats""></h3>
+    <ul class="questions-group-0"></ul>
 </div>
+
+<div id="displayText"></div>
 
 <script type="text/javascript" charset="utf-8">
   $(function () {
@@ -37,46 +39,30 @@
       //prevent form from submitting the default way
       event.preventDefault();
       var values = $(this).serialize();
-      
       var posting = $.post('/questions', values);
  
       posting.done(function(data) {
-        //console.log(data);
 
         var question_id = data["question"]["id"];
+        var question_query = data["question"]["query"]
+        var question_user = data["question"]["user_id"]
+        var thisQuestion = new Question(question_id, question_query, question_user);
 
-        $.get("/questions/" + question_id  + ".json", function(data) {
-          //debugger
-          $(".questionStats").text(data.question.query);
-        });
+        $(".questionStats").text(thisQuestion.query);
 
-        var answers = data.question.answers
-          $.each(answers, function(index, answer){
-            html = ''
-            html += '<li>' + 'Total Answers: ' + answers.length 
-            $('ul').append(html);
-
-            var yesArry = [];
-            var noArry = [];
-             if (answer.input === "yes") {
-              yesArry.push(answer);
-             } else if (answer.input === "no") {
-              noArry.push(answer);
-            };
-            if (yesArry.length > noArry.length) {
-              html = ''
-              html += '<li>' + "Winner is YES" 
-              $('ul').append(html);
-            } else if (noArry.length > yesArry.length) {
-              html = ''
-              html += '<li>' + "Winner is NO" 
-              $('ul').append(html);
-           };              
-        });
-      });    
+        var answers = data["question"]["answers"]
+        var id = 0
+        answerStats(answers, id);
+      });              
     });
-  });
+  });    
 
+
+$('#question_query').keyup(function(event) {
+  var input = $(this).val();
+  $('#displayText').html(input);
+
+});
 </script>
 
 

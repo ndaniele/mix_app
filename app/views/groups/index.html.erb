@@ -24,12 +24,11 @@ $(function () {
         var answers = question.answers
 
         answerStats(answers, id);
-        
+
         });                     
       });
     });
   });
-
 
 var answerStats = function(answers, id) {
    $.each(answers, function(index, answer){
@@ -40,19 +39,16 @@ var answerStats = function(answers, id) {
        } else if (answer.input === "no") {
         noArry.push(answer);
       };
+      var html = ''
       if (yesArry.length === noArry.length) {
-        html = ''
         html += '<p>' + "Its A Tie!" 
-        $('.questions-group-' + id).append(html);
+    //debugger
       } else if (noArry.length > yesArry.length) {
-        html = ''
         html += '<p>' + "Winner is NO" 
-        $('.questions-group-' + id).append(html);
       } else if (yesArry.length > noArry.length) {
-        html = ''
         html += '<p>' + "Winner is Yes" 
-        $('.questions-group-' + id).append(html);
      };
+      $('.questions-group-' + id).append(html);
   });
 }
 </script>
