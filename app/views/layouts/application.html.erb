@@ -9,10 +9,14 @@
   </head>
 
   <body>
-  
 
+  <% @user = current_user %>
+  <%= render 'layouts/navbar', :locals => {:user => @user} %>
   <%= render 'layouts/messages' %>
 
     <%= yield %>
+
+
+
   </body>
 </html>

@@ -20,4 +20,8 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  #def my_memberships
+  #  raise params.inspect
+  #end
+
 end

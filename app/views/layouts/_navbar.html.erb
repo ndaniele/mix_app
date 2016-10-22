@@ -1,0 +1,10 @@
+<h1>MIX_APP</h1> 
+<h2>¿Are you in the mix?</h2>
+
+<h3>You're logged in as: <%= current_user.email %></h3>
+<%= link_to "logout", destroy_user_session_path %> |
+<a href="#" class="my-questions" data-id="<%=@user.id%>">MY Questions...</a> |
+<a href="#" class="most-popular-question" data-id="<%=@user.id%>">Most Popular Questions...</a> |
+<a href="#" class="all-groups" data-id="<%=@user.id%>">All Groups...</a> |
+<a href="#" class="my-groups" data-id="<%=@user.id%>">MY Groups...</a> |
+<a href="#" class="create-new-group" data-id="<%=@user.id%>">Create a New Group..</a>

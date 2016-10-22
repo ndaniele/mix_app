@@ -8,6 +8,8 @@ get '/groups/my_groups' => 'groups#my_groups'
 
 get 'questions/:id/question_data', to: 'questions#question_data'
 
+get '/memberships/:user_id/my_memberships', to: 'memberships#my_memberships'
+
 #get '/questions/:question_id/answers/:id', to: 'answers#show', as: 'questions_:question_id_answer'
 #get '/', to: 'questions#index', as: :root #=> maybe needs to be devise/sessions#new
 

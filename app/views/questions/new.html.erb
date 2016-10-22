@@ -3,7 +3,7 @@
 <%= render :partial => 'questions/new_question' %>
 
 <div id="postResult">
-  <h3 class="questionStats""></h3>
+  <h3 class="questionStats"></h3>
     <ul class="questions-group-0"></ul>
 </div>
 
@@ -22,6 +22,7 @@
         var question_id = data["question"]["id"];
         var question_query = data["question"]["query"]
         var question_user = data["question"]["user_id"]
+        
         var thisQuestion = new Question(question_id, question_query, question_user);
 
         $(".questionStats").text(thisQuestion.query);

@@ -47,6 +47,14 @@ class GroupsController < ApplicationController
 
   def my_groups
     @user = current_user
+    @memberships = Membership.where(:user_id => @user.id)
+     # @memberships.each do |membership|
+     #   @group = membership.group_id
+    #@group = Group.find_by(:id => @membership.group_id)
+     respond_to do |format|
+      format.html { render :show }
+      format.json { render json: @memberships}
+    end
   end
 
   private 
@@ -56,3 +64,5 @@ class GroupsController < ApplicationController
   end
 
 end
+
+

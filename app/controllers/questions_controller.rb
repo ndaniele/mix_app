@@ -68,6 +68,8 @@ class QuestionsController < ApplicationController
   end
 
   def most_popular
+    question_id = Question.most_popular
+    @question = Question.find_by(:id => question_id)
   end
 
 

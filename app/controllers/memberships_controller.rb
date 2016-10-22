@@ -34,8 +34,21 @@ class MembershipsController < ApplicationController
   def destroy
   end
 
-  #def my_groups
-    #@user = current_user
+  #def my_memberships
+    #raise params.inspect
+    #@user = User.find(params[:id])
+ #   @memberships = Membership.where(:user_id => params[:id])
+  #    @memberships.each do |membership|
+   
+   #     @membership = membership
+        #@group = Group.find_by(:id => membership.group_id)
+      #end
+    # respond_to do |format|
+     
+     # format.html { render :show }
+      #format.json { render json: @membership}
+   # end
+   # end
   #end
 
   private 

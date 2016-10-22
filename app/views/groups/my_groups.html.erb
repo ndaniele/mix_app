@@ -9,3 +9,30 @@
     <li><%= link_to group.name, group_path(group) %></li>
   </ul>
 <% end %>
+
+
+<script type="text/javascript">
+  var myGroups = function(memberships) {
+
+   $.each(memberships, function(index, membership){
+      var yesArry = [];
+      var noArry = [];
+       if (answer.input === "yes") {
+        yesArry.push(answer);
+       } else if (answer.input === "no") {
+        noArry.push(answer);
+      };
+      var html = ''
+      if (yesArry.length === noArry.length) {
+        html += '<p>' + "Its A Tie!" 
+    //debugger
+      } else if (noArry.length > yesArry.length) {
+        html += '<p>' + "Winner is NO" 
+      } else if (yesArry.length > noArry.length) {
+        html += '<p>' + "Winner is Yes" 
+     };
+      $('.questions-group-' + id).append(html);
+  });
+}
+
+</script>
