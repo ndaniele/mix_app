@@ -1,0 +1,13 @@
+
+<%= form_for @group do |f| %>
+<div class="field">
+  <%= f.label :group_name %><br>
+  <h2><%= f.text_field :name %></h2><br>
+</div>
+<div class="hidden-field">
+   <%= f.hidden_field :user_id, :value => current_user.id %>
+</div>
+<div class="actions">
+  <%= f.submit "Create" %>
+</div>
+<% end %>

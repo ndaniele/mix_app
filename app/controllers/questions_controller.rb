@@ -70,6 +70,10 @@ class QuestionsController < ApplicationController
   def most_popular
     question_id = Question.most_popular
     @question = Question.find_by(:id => question_id)
+    respond_to do |format|
+      format.html { render :show }
+      format.json { render json: @question}
+    end
   end
 
 

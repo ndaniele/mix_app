@@ -3,6 +3,10 @@ class UsersController < ApplicationController
     @user = current_user #User.find_by(:id => params[:id])
     @user_questions = @user.asked_questions
     @answers = Answer.where(:user_id => @user.id)
+     respond_to do |format|
+      format.html { render :show }
+      format.json { render json: @user}
+    end
   end
 
   def create

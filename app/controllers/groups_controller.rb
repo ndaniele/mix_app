@@ -2,10 +2,18 @@ class GroupsController < ApplicationController
   
   def index
     @groups = Group.all 
+     respond_to do |format|
+      format.html { render :show }
+      format.json { render json: @groups}
+    end
   end
 
   def new
     @group = Group.new
+     respond_to do |format|
+      format.html { render :show }
+      format.json { render json: @group}
+    end
     #@group.memberships.build(:user_id => current_user.id, :group_id => @group.id)
     #@membership = Membership.new(:user_id => current_user.id, :group_id => @group.id)
     #@membership.save

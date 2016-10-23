@@ -1,19 +1,7 @@
 <h1>New Group Page </h1>
 
 
-
-<%= form_for @group do |f| %>
-<div class="field">
-  <%= f.label :name %><br>
-  <h2><%= f.text_field :name %></h2><br>
-</div>
-<div class="hidden-field">
-   <%= f.hidden_field :user_id, :value => current_user.id %>
-</div>
-<div class="actions">
-  <%= f.submit "Create" %>
-</div>
-<% end %> 
+<%= render :partial => 'groups/new_group' %>
   <br/>
 
 <div id="postResult">
@@ -22,21 +10,5 @@
 
 
 <script type="text/javascript" charset="utf-8">
-  $(function () {
-    $('form').submit(function(event) {
-      //prevent form from submitting the default way
-      event.preventDefault();
-      var values = $(this).serialize();
-      
-      var posting = $.post('/groups', values);
- 
-      posting.done(function(data) {
-        //console.log(data);
-
-        var group = data["group"];
-
-        $("#groupTitle").text(group["name"]);   
-      });    
-    });
-  });
+createNewGroup();
 </script>
