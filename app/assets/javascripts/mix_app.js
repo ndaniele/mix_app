@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 function Question(id, query, user_id) {
     this.id = id;
     this.query = query;
@@ -5,7 +13,7 @@ function Question(id, query, user_id) {
 }
 
 
-var answerStats = function(answers, id) {
+function answerStats (answers, id) {
    $.each(answers, function(index, answer){
       var yesArry = [];
       var noArry = [];
@@ -28,7 +36,7 @@ var answerStats = function(answers, id) {
 }
 
 
-var eachGroup = function(groups) {
+function eachGroup(groups) {
   groups.forEach(function(group) {
     html = ''
     html += '<li>' + group.id + ". " + group.name
@@ -41,7 +49,7 @@ var eachGroup = function(groups) {
 
 
 
-var groupQuestionAnswers = function () {
+function groupQuestionAnswers () {
   $(".js-more").on('click', function() {
   // get the id from the data attribute
    var id = parseInt($(".js-more").attr("data-id"));
@@ -62,7 +70,7 @@ var groupQuestionAnswers = function () {
   });
 };
 
-  var createNewGroup = function () {
+  function createNewGroup () {
     $('form').submit(function(event) {
       //prevent form from submitting the default way
       event.preventDefault();
@@ -81,7 +89,7 @@ var groupQuestionAnswers = function () {
   };
 
 
-  var myQuestionsClick = function () {
+ function myQuestionsClick () {
   $(".my-questions").on("click", function() {
     var id = parseInt($(".js-next").attr("data-id"));
     $.get("/users/" + id + ".json", function(data) {
@@ -99,7 +107,7 @@ var groupQuestionAnswers = function () {
   });
 };
 
-var mostPopularQuestionClick = function () {
+function mostPopularQuestionClick () {
   $(".most-popular-question").on("click", function() {
     //var id = parseInt($(".js-next").attr("data-id"));
     $.get("/questions/most_popular" + ".json", function(data) {
@@ -112,7 +120,7 @@ var mostPopularQuestionClick = function () {
   });
 };
 
-var allGroupsClick = function () {
+function allGroupsClick () {
   $(".all-groups").on("click", function() {
     var id = parseInt($(".js-next").attr("data-id"));
     $.get("/groups" + ".json", function(data) {
@@ -125,7 +133,7 @@ var allGroupsClick = function () {
   });
 };
 
-var myGroupsClick = function () {
+function myGroupsClick () {
   $(".my-groups").on("click", function() {
     $.get("/groups/my_groups" + ".json", function(data) {
       var memberships = data.groups 
