@@ -1,8 +1,12 @@
+$(document).ready(function() {
+
+myQuestionsClick();
+mostPopularQuestionClick();
+allGroupsClick();
+myGroupsClick();
 
 
-
-
-
+});
 
 
 
@@ -150,3 +154,9 @@ function myGroupsClick () {
     });
   });
 };
+
+
+
+
+
+

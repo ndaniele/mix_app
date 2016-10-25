@@ -30,43 +30,7 @@
 </div>
 
 
-<script type="text/javascript" charset="utf-8">
-  myQuestionsClick();
-</script>
 
-<script type="text/javascript" charset="utf-8">
-mostPopularQuestionClick();
-</script>
-
-<script type="text/javascript" charset="utf-8">
-allGroupsClick();
-</script>
-
-<script type="text/javascript" charset="utf-8">
-myGroupsClick();
-</script>
-
-<script type="text/javascript" charset="utf-8">
-$(function () {
-  $(".create-new-group").on("click", function() {
-    //var id = parseInt($(".js-next").attr("data-id"));
-     <%#= render :partial => 'groups/new_group' %>
-    $.get("/groups/new" + ".json", function(data) {
-      console.log(data.group);
-
-      //var id = data.group.id
-     // var name = data.group.name
-
-    //function Group(id, name) {
-    //this.id = id;
-    //this.name = name;
-//}
-
-      //$(".newGroup").append(form);
-    });
-  });
-});
-</script>
 
 
 
