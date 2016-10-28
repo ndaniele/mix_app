@@ -1,12 +1,13 @@
-function Question(id, query, user_id) {
+function Question(id, query, user_id, answers) {
     this.id = id;
     this.query = query;
     this.user_id = user_id;
+    this.answers = answers
 }
 
 
-var answerStats = function(answers, id) {
-   $.each(answers, function(index, answer){
+Question.protoype.answerStats = function() {
+   $.each(this.answers, function(index, answer){
       var yesArry = [];
       var noArry = [];
        if (answer.input === "yes") {
@@ -23,6 +24,6 @@ var answerStats = function(answers, id) {
       } else if (yesArry.length > noArry.length) {
         html += '<p>' + "Winner is Yes" 
      };
-      $('.questions-group-' + id).append(html);
+      $('.questions-group-' + this.id).append(html);
   });
 }
